@@ -69,7 +69,114 @@
         </nav>
         <div class="__academics">
             <div class="__hero-section pb-5">
-                <p id="output"></p>
+                <div class="container">
+                    <p id="output"></p>
+
+                    <div class="__faculty d-none" data-toggle="tab">
+                        <ul class="list-group list-group-flush border border-success">
+                            <li class="list-group-item">
+                                <p>Muzzammil Haque</p>
+                                <span>Principal</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Abdul Hannan Shah</p>
+                                <span>Co-ordinator</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Abdul Qadir</p>
+                                <span>Senior Teacher</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Abdullah Al Kafi</p>
+                                <span>Accountant</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Md. Belayet</p>
+                                <span>Assistant Teacher (Math)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Shamim Bepari</p>
+                                <span>Assistant Teacher (English)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Saiful Arefin</p>
+                                <span>Assistant Teacher (Math)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Aslam Mahmud</p>
+                                <span>Assistant Teacher (Arabic)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Arafat Hussain</p>
+                                <span>Assistant Teacher (Arabic)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Hafiz Kabir Hossen</p>
+                                <span>Nurani Teacher</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Hafiz Ruhul Amin</p>
+                                <span>Hifz Teacher</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Mahmuda Akter</p>
+                                <span>Assistant Teacher</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Aklima</p>
+                                <span>Assistant Teacher</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Nahida Akter</p>
+                                <span>Assistant Teacher</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Khadija Akter</p>
+                                <span>Assistant Teacher (Arabic)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Mahmuda Akter</p>
+                                <span>Assistant Teacher</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Sadia Tamanna</p>
+                                <span>Assistant Teacher (Arabic)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Sabrina Sumona</p>
+                                <span>Assistant Teacher (English)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Nausheen Nasreen</p>
+                                <span>Assistant Teacher (Math)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Taslima Akter</p>
+                                <span>Assistant Teacher (Math)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Momtaz Begum</p>
+                                <span>Assistant Teacher</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Maimuna Akter</p>
+                                <span>Assistant Teacher</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Julekha Khatun</p>
+                                <span>Assistant Teacher</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Golam Robbi</p>
+                                <span>Peon</span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Tahsin</p>
+                                <span>Security</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <footer class="__footer-links d-flex justify-content-between py-3 my-4">
@@ -155,7 +262,11 @@
                 document.querySelectorAll('a[data-toggle="tab"]').forEach((el) => {
                     el.classList.remove("active");
                 });
-                document.querySelector(`a[href="academics.html?tab=${tab}"]`).classList.add("active");
+                document.querySelectorAll('div[data-toggle="tab"]').forEach((el) => {
+                    el.classList.add("d-none");
+                });
+                if(document.querySelector(`a[href="academics.html?tab=${tab}"]`)) document.querySelector(`a[href="academics.html?tab=${tab}"]`).classList.add("active");
+                if(document.querySelector(`div.__${tab}`)) document.querySelector(`div.__${tab}`).classList.remove("d-none");
             }
             switch (tab) {
                 case "class":
