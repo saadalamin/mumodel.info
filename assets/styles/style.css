@@ -11,6 +11,10 @@ body {
   font-weight: 300;
 }
 
+.__header {
+  background-color: #FEF6C5;
+}
+
 .__navbar .nav-link.active {
   color: #198754;
 }
