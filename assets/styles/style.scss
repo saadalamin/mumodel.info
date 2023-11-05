@@ -12,6 +12,12 @@ body {
   font-weight: 300;
 }
 
+.__navbar {
+  .nav-link.active {
+    color: #198754
+  }
+}
+
 .__home {
   .__hero-section {
     background-color: #fff;
