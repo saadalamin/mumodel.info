@@ -13,12 +13,12 @@ body {
 }
 
 .__header {
-  background-color: #FEF6C5;
+  background-color: #fef6c5;
 }
 
 .__navbar {
   .nav-link.active {
-    color: #198754
+    color: #198754;
   }
 }
 
@@ -47,7 +47,7 @@ body {
           border-top: none !important;
           border-top-left-radius: 0rem;
           border-top-right-radius: 0rem;
-          li{
+          li {
             position: relative;
             padding-left: 2rem;
           }
@@ -70,6 +70,20 @@ body {
           padding: 1rem;
         }
       }
+    }
+  }
+}
+
+.__academics {
+  .__hero-section {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
     }
   }
 }

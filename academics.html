@@ -44,16 +44,19 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="academics.html?tab=class">Class</a>
+                                    <a class="dropdown-item" href="academics.html?tab=class" data-toggle="tab">Class</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="academics.html?tab=syllabus">Syllabus</a>
+                                    <a class="dropdown-item" href="academics.html?tab=syllabus"
+                                        data-toggle="tab">Syllabus</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="academics.html?tab=results">Results</a>
+                                    <a class="dropdown-item" href="academics.html?tab=results"
+                                        data-toggle="tab">Results</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="academics.html?tab=faculty">Faculty</a>
+                                    <a class="dropdown-item" href="academics.html?tab=faculty"
+                                        data-toggle="tab">Faculty</a>
                                 </li>
                             </ul>
                         </li>
@@ -66,7 +69,7 @@
         </nav>
         <div class="__academics">
             <div class="__hero-section pb-5">
-
+                <p id="output"></p>
             </div>
         </div>
         <footer class="__footer-links d-flex justify-content-between py-3 my-4">
@@ -144,6 +147,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script>
+        const tabFunction = () => {
+            let tab = new URLSearchParams(window.location.search).get("tab");
+            let output;
+            if (tab) {
+                document.querySelectorAll('a[data-toggle="tab"]').forEach((el) => {
+                    el.classList.remove("active");
+                });
+                document.querySelector(`a[href="academics.html?tab=${tab}"]`).classList.add("active");
+            }
+            switch (tab) {
+                case "class":
+                    output = "Class";
+                    break;
+                case "syllabus":
+                    output = "Syllabus";
+                    break;
+                case "results":
+                    output = "Results";
+                    break;
+                case "faculty":
+                    output = "Faculty";
+                    break;
+                default:
+                    output = "Class";
+                    break;
+            }
+            document.getElementById("output").innerHTML = output;
+        }
+        window.onload = tabFunction;
+    </script>
 </body>
 
 </html>
