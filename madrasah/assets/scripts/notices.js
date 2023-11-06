@@ -15,7 +15,7 @@ window.onload = () => {
     if (noticesElm) {
       let snippet = "";
       notices.map((n) => {
-        snippet += `<li class="list-group-item d-block d-md-flex notice"><div class="me-3 bg-primary-subtle p-1 px-2">${n.publishedDate}</div><p class="p-0 mt-2 mt-md-0">${n.title}</p><div class="ms-auto"><a href="${n.pdfLink}" class="fs-5 border px-2 py-2 bg-success-subtle text-decoration-none">PDF</a></div></li>`;
+        snippet += `<li class="list-group-item d-auto d-md-flex notice"><span class="me-3 bg-primary-subtle p-1 px-2">${n.publishedDate}</span><p class="p-0 mt-2 mt-md-0">${n.title}</p><div class="ms-auto"><a href="${n.pdfLink}"><div class="fs-5 border px-2 py-1 bg-success-subtle">PDF</div></a></div></li>`;
       });
       noticesElm.innerHTML = snippet;
     }

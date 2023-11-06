@@ -72,6 +72,22 @@ body {
   position: relative;
   padding-left: 2rem;
 }
+.__home .__hero-section .__section-one .lists ul li.notice {
+  padding: 0.5rem 0;
+}
+@media screen and (max-width: 576px) {
+  .__home .__hero-section .__section-one .lists ul li.notice {
+    padding: 1rem 0;
+  }
+}
+.__home .__hero-section .__section-one .lists ul li.notice p {
+  margin-bottom: 0.2rem !important;
+}
+.__home .__hero-section .__section-one .lists ul li.notice a > div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .__home .__hero-section .__section-one .lists ul li:not(.notice)::before {
   content: "";
   position: absolute;

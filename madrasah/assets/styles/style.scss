@@ -76,6 +76,18 @@ body {
           li {
             position: relative;
             padding-left: 2rem;
+            &.notice {
+              padding: 0.5rem 0;
+              @media screen and(max-width: 576px) {
+                padding: 1rem 0;
+              }
+              p {
+                margin-bottom: 0.2rem !important;
+              }
+              a>div{
+                width: fit-content;
+              }
+            }
           }
           li:not(.notice)::before {
             content: "";
