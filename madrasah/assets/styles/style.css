@@ -15,8 +15,18 @@ body {
   background-color: #fef6c5;
 }
 
+.__navbar .navbar-toggler:hover, .__navbar .navbar-toggler:focus {
+  box-shadow: none;
+  border-color: #198754;
+}
 .__navbar .nav-link.active {
   color: #198754;
+  font-weight: 400;
+}
+@media screen and (max-width: 576px) {
+  .__navbar .navbar-brand p {
+    font-size: 0.9rem;
+  }
 }
 
 .__home .__hero-section {
@@ -33,6 +43,12 @@ body {
 .__home .__hero-section button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+}
+.__home .__hero-section img.banner {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 0.6rem;
+  margin: 1rem 0;
 }
 .__home .__hero-section .__features {
   margin-top: 4rem;
@@ -75,8 +91,22 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.__academics .__hero-section p {
+.__academics .__hero-section #output {
+  font-size: 1.2rem;
+}
+.__academics .__hero-section .__faculty {
+  max-width: 500px;
+}
+.__academics .__hero-section .__faculty .list-group {
+  border-style: dashed !important;
+}
+.__academics .__hero-section .__faculty p {
   font-size: 1.2rem;
   font-weight: 300;
   margin-bottom: 1rem;
+}
+.__academics .__hero-section .__faculty img {
+  width: 100px;
+  height: 100px;
+  background-color: #198754;
 }

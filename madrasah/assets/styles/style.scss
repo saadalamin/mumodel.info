@@ -17,8 +17,20 @@ body {
 }
 
 .__navbar {
+  .navbar-toggler {
+  &:hover,&:focus {
+     box-shadow: none;
+     border-color:#198754;
+  }
+  }
   .nav-link.active {
     color: #198754;
+    font-weight: 400;
+  }
+  @media screen and (max-width: 576px) {
+    .navbar-brand p {
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -36,6 +48,12 @@ body {
     button {
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
+    }
+    img.banner {
+      width: 100%;
+      background-color: #eee;
+      border-radius: 0.6rem;
+      margin: 1rem 0;
     }
     .__features {
       margin-top: 4rem;
@@ -80,10 +98,24 @@ body {
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    p {
+    #output {
       font-size: 1.2rem;
-      font-weight: 300;
-      margin-bottom: 1rem;
+    }
+    .__faculty {
+      max-width: 500px;
+      .list-group {
+        border-style: dashed !important;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+        background-color: #198754;
+      }
     }
   }
 }

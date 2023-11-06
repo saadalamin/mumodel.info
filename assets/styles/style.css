@@ -36,9 +36,6 @@ body {
 .__navbar a:hover {
   color: #00901e;
 }
-.__navbar .nav-link.active {
-  color: #198754;
-}
 
 .__home .__hero-section {
   width: 100%;
@@ -50,7 +47,7 @@ body {
   background-size: cover;
 }
 .__home .__hero-section .__main {
-  padding: 8rem 1rem;
+  padding: 4rem 1rem;
 }
 .__home .__hero-section .__main p {
   font-size: 1.2rem;
@@ -58,22 +55,18 @@ body {
   margin-bottom: 1rem;
 }
 .__home .__hero-section .__main img {
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 100rem;
   z-index: 2;
 }
 .__home .__hero-section .__main .box {
-  width: 100%;
-  height: 230px;
   background-color: #fef6c5;
-  border-top-right-radius: 1.9rem;
-  border-bottom-right-radius: 1.9rem;
-  margin-left: -60px;
-  margin-top: 35px;
-  padding: 3.5rem 1rem 2rem 5rem;
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 1.9rem;
   z-index: 1;
 }
 .__home .__hero-section .__main .box p {
@@ -84,4 +77,29 @@ body {
 .__home .__hero-section .__main button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+}
+@media screen and (min-width: 1400px) {
+  .__home .__hero-section .__main {
+    padding: 8rem 1rem;
+  }
+  .__home .__hero-section .__main img {
+    width: 300px;
+    height: 300px;
+  }
+  .__home .__hero-section .__main .box {
+    width: 100%;
+    height: 200px;
+    max-width: 400px;
+    border-radius: 0;
+    border-top-right-radius: 1.9rem;
+    border-bottom-right-radius: 1.9rem;
+    margin-left: -60px;
+    padding: 2.5rem 1rem 2rem 5rem;
+    z-index: 1;
+  }
+  .__home .__hero-section .__main .box p {
+    color: #00901e;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
 }
