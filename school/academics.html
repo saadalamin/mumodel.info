@@ -3,27 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>মিছবাহুল উম্মাহ মডেল স্কুল | Misbahul Ummah Model School</title>
-
-    <!-- Icons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <title>Academics - মিছবাহুল উম্মাহ মডেল স্কুল</title>
 
     <!-- Styles -->
     <link
@@ -62,7 +42,7 @@
           <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav mb-2 mb-lg-0 ms-auto gap-sm-1 gap-lg-4">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
+                <a class="nav-link" aria-current="page" href="index.html"
                   >Home</a
                 >
               </li>
@@ -77,7 +57,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle active"
                   href="academics.html"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -87,22 +67,34 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="academics.html?tab=class"
+                    <a
+                      class="dropdown-item"
+                      href="academics.html?tab=class"
+                      data-toggle="tab"
                       >Class</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="academics.html?tab=syllabus"
+                    <a
+                      class="dropdown-item"
+                      href="academics.html?tab=syllabus"
+                      data-toggle="tab"
                       >Syllabus</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="academics.html?tab=results"
+                    <a
+                      class="dropdown-item"
+                      href="academics.html?tab=results"
+                      data-toggle="tab"
                       >Results</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="academics.html?tab=faculty"
+                    <a
+                      class="dropdown-item"
+                      href="academics.html?tab=faculty"
+                      data-toggle="tab"
                       >Faculty</a
                     >
                   </li>
@@ -115,28 +107,24 @@
           </div>
         </div>
       </nav>
-      <div class="__home">
+      <div class="__academics">
         <div class="__hero-section pb-5">
           <div class="container">
-            <div class="row g-5">
-              <div
-                class="col-lg-6 d-flex align-items-center justify-content-center"
-              >
-                <img
-                  class="logo"
-                  src="assets/images/logo.png"
-                  alt="Misbahul Ummah Model Madrasah"
-                  width="50%"
-                />
-                <h1 class="ms-3">Misbahul Ummah<br />Model School</h1>
-              </div>
-              <div class="col-lg-6 d-flex justify-content-center">
-                <img
-                  class="banner"
-                  src="assets/images/welcome-banner.gif"
-                  alt=""
-                />
-              </div>
+            <p id="output"></p>
+
+            <div class="__faculty d-none" data-toggle="tab">
+              <ul class="row row-gap-3 lists">
+                <li class="list-group-item col-6 col-md-4 col-lg-3">
+                  <img
+                    src="assets/images/faculty/muzzammil_haque.jpg"
+                    alt="person"
+                  />
+                  <div class="item">
+                    <p>Muzzammil Haque</p>
+                    <span>Principal</span>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -243,5 +231,44 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const tabFunction = () => {
+        let tab = new URLSearchParams(window.location.search).get("tab");
+        let output;
+        if (tab) {
+          document.querySelectorAll('a[data-toggle="tab"]').forEach((el) => {
+            el.classList.remove("active");
+          });
+          document.querySelectorAll('div[data-toggle="tab"]').forEach((el) => {
+            el.classList.add("d-none");
+          });
+          if (document.querySelector(`a[href="academics.html?tab=${tab}"]`))
+            document
+              .querySelector(`a[href="academics.html?tab=${tab}"]`)
+              .classList.add("active");
+          if (document.querySelector(`div.__${tab}`))
+            document.querySelector(`div.__${tab}`).classList.remove("d-none");
+        }
+        switch (tab) {
+          case "class":
+            output = "Class";
+            break;
+          case "syllabus":
+            output = "Syllabus";
+            break;
+          case "results":
+            output = "Results";
+            break;
+          case "faculty":
+            output = "Faculty";
+            break;
+          default:
+            output = "Class";
+            break;
+        }
+        document.getElementById("output").innerHTML = output;
+      };
+      window.onload = tabFunction;
+    </script>
   </body>
 </html>
