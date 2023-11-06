@@ -68,6 +68,7 @@ body {
       .box {
         width: 100%;
         height: 230px;
+        max-width: 400px;
         background-color: #fef6c5;
         border-top-right-radius: 1.9rem;
         border-bottom-right-radius: 1.9rem;
@@ -79,6 +80,11 @@ body {
           color: #00901e;
           font-weight: 700;
           font-size: 1.1rem;
+        }
+        img {
+          width: 100px;
+          height: 100px;
+          background-color: #fefefe;
         }
       }
       button {
