@@ -55,24 +55,24 @@ body {
   border-radius: 0.6rem;
   margin: 1rem 0;
 }
-.__home .__hero-section .__features {
+.__home .__hero-section .__section-one {
   margin-top: 4rem;
 }
-.__home .__hero-section .__features .feature {
+.__home .__hero-section .__section-one .lists {
   height: 100%;
 }
-.__home .__hero-section .__features .feature ul {
+.__home .__hero-section .__section-one .lists ul {
   border-style: dashed !important;
   border-radius: 0.4rem;
   border-top: none !important;
   border-top-left-radius: 0rem;
   border-top-right-radius: 0rem;
 }
-.__home .__hero-section .__features .feature ul li {
+.__home .__hero-section .__section-one .lists ul li {
   position: relative;
   padding-left: 2rem;
 }
-.__home .__hero-section .__features .feature ul li::before {
+.__home .__hero-section .__section-one .lists ul li:not(.notice)::before {
   content: "";
   position: absolute;
   left: 0.5rem;
@@ -81,7 +81,7 @@ body {
   height: 16px;
   margin-top: 0.3rem;
 }
-.__home .__hero-section .__features .feature p {
+.__home .__hero-section .__section-one .lists p {
   font-size: 1.1rem;
   font-weight: 300;
   border-top-left-radius: 0.4rem;

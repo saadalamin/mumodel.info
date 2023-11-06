@@ -63,9 +63,9 @@ body {
       border-radius: 0.6rem;
       margin: 1rem 0;
     }
-    .__features {
+    .__section-one {
       margin-top: 4rem;
-      .feature {
+      .lists {
         height: 100%;
         ul {
           border-style: dashed !important;
@@ -77,7 +77,7 @@ body {
             position: relative;
             padding-left: 2rem;
           }
-          li::before {
+          li:not(.notice)::before {
             content: "";
             position: absolute;
             left: 0.5rem;
