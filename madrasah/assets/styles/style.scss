@@ -18,10 +18,11 @@ body {
 
 .__navbar {
   .navbar-toggler {
-  &:hover,&:focus {
-     box-shadow: none;
-     border-color:#198754;
-  }
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      border-color: #198754;
+    }
   }
   .nav-link.active {
     color: #198754;
@@ -34,12 +35,15 @@ body {
   }
 }
 
+.__hero-section {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .__home {
   .__hero-section {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     p {
       font-size: 1.2rem;
       font-weight: 300;
@@ -49,8 +53,12 @@ body {
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
     }
+    img.logo {
+      max-width: 200px;
+    }
     img.banner {
       width: 100%;
+      max-width: 500px;
       background-color: #eee;
       border-radius: 0.6rem;
       margin: 1rem 0;
@@ -99,23 +107,51 @@ body {
     border-radius: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     #output {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      width: 100%;
+      background-color: #eee;
+      padding: 1rem 2rem;
+      border-radius: 0.4rem;
+      margin-bottom: 2rem;
     }
     .__faculty {
-      max-width: 500px;
-      .list-group {
-        border-style: dashed !important;
+      .lists {
+        .list-group-item {
+          .item {
+            padding: 1rem;
+          }
+        }
       }
       p {
         font-size: 1.2rem;
         font-weight: 300;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
       img {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         background-color: #198754;
       }
+    }
+  }
+}
+
+.__facilities {
+  .__hero-section {
+    img {
+      border-radius: 0.7rem;
+    }
+    h4 {
+      text-align: center;
+      padding: 1rem;
+      background-color: #198754;
+      color: #fff;
+      width: fit-content;
+      z-index: 2;
+      margin: 0 auto;
+      margin-top: -80px;
+      text-shadow: 1px 1px 1px #333;
+      z-index: 2;
     }
   }
 }

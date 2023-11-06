@@ -29,12 +29,13 @@ body {
   }
 }
 
-.__home .__hero-section {
+.__hero-section {
   background-color: #fff;
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .__home .__hero-section p {
   font-size: 1.2rem;
   font-weight: 300;
@@ -44,8 +45,12 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
+.__home .__hero-section img.logo {
+  max-width: 200px;
+}
 .__home .__hero-section img.banner {
   width: 100%;
+  max-width: 500px;
   background-color: #eee;
   border-radius: 0.6rem;
   margin: 1rem 0;
@@ -92,21 +97,41 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .__academics .__hero-section #output {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  width: 100%;
+  background-color: #eee;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  margin-bottom: 2rem;
 }
-.__academics .__hero-section .__faculty {
-  max-width: 500px;
-}
-.__academics .__hero-section .__faculty .list-group {
-  border-style: dashed !important;
+.__academics .__hero-section .__faculty .lists .list-group-item .item {
+  padding: 1rem;
 }
 .__academics .__hero-section .__faculty p {
   font-size: 1.2rem;
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .__academics .__hero-section .__faculty img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-color: #198754;
+}
+
+.__facilities .__hero-section img {
+  border-radius: 0.7rem;
+}
+.__facilities .__hero-section h4 {
+  text-align: center;
+  padding: 1rem;
+  background-color: #198754;
+  color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 2;
+  margin: 0 auto;
+  margin-top: -80px;
+  text-shadow: 1px 1px 1px #333;
+  z-index: 2;
 }
