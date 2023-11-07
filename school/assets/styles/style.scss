@@ -18,6 +18,7 @@ body {
 
 .__navbar {
   .navbar-toggler {
+    transform: scale(0.7);
     &:hover,
     &:focus {
       box-shadow: none;
@@ -142,6 +143,7 @@ body {
       img {
         width: 150px;
         height: 150px;
+        border-radius: 0.6rem;
         background-color: #0064c8;
       }
     }
@@ -156,7 +158,6 @@ body {
     h4 {
       text-align: center;
       padding: 1rem;
-      background-color: #0064c8;
       color: #fff;
       width: fit-content;
       z-index: 2;

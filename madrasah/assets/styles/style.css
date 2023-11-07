@@ -15,6 +15,9 @@ body {
   background-color: #fef6c5;
 }
 
+.__navbar .navbar-toggler {
+  transform: scale(0.7);
+}
 .__navbar .navbar-toggler:hover, .__navbar .navbar-toggler:focus {
   box-shadow: none;
   border-color: #198754;
@@ -131,16 +134,17 @@ body {
 .__academics .__hero-section .__faculty img {
   width: 150px;
   height: 150px;
+  border-radius: 0.6rem;
   background-color: #198754;
 }
 
 .__facilities .__hero-section img {
+  width: 100%;
   border-radius: 0.7rem;
 }
 .__facilities .__hero-section h4 {
   text-align: center;
   padding: 1rem;
-  background-color: #198754;
   color: #fff;
   width: -webkit-fit-content;
   width: -moz-fit-content;

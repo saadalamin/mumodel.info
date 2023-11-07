@@ -14,7 +14,7 @@ body {
 
 .__navbar {
   background-color: #fff;
-  border-bottom: 4px solid #00901e;
+  border-top: 4px solid #00901e;
   a {
     color: #00901e;
     font-weight: 700;
@@ -28,7 +28,7 @@ body {
       font-weight: 300;
       letter-spacing: 1px;
     }
-    &:hover {
+    &:hover,&:focus {
       color: #00901e;
     }
   }
@@ -43,6 +43,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-image: url("../images/banner.jpg");
     background-size: cover;
+    backdrop-filter: blur(26px);
+    -webkit-backdrop-filter: blur(26px);
     .__main {
       padding: 4rem 1rem;
       p {
@@ -58,13 +60,13 @@ body {
         z-index: 2;
       }
       .box {
-        background-color: #fef6c5;
+        background-color: #fbf6d8;
         padding: 2rem;
         margin-top: 1rem;
         border-radius: 1.9rem;
         z-index: 1;
         p {
-          color: #00901e;
+          color: #333;
           font-weight: 700;
           font-size: 1.1rem;
         }
@@ -91,11 +93,6 @@ body {
           margin-left: -60px;
           padding: 2.5rem 1rem 2rem 5rem;
           z-index: 1;
-          p {
-            color: #00901e;
-            font-weight: 700;
-            font-size: 1.1rem;
-          }
         }
       }
     }
