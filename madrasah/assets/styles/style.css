@@ -20,14 +20,15 @@ body {
 }
 .__navbar .navbar-toggler:hover, .__navbar .navbar-toggler:focus {
   box-shadow: none;
-  border-color: #198754;
+  border-color: #1ab06a;
 }
 .__navbar .nav-link {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
 }
 .__navbar .nav-link.active {
-  color: #198754;
+  color: #1ab06a;
+  border: 1px solid #1ab06a;
   font-weight: 500;
 }
 @media screen and (max-width: 576px) {

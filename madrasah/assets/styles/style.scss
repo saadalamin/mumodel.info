@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Open+Sans:wght@400;500&display=swap");
 
+$primary-action: #1ab06a;
+
 * {
  margin: 0;
  padding: 0;
@@ -22,7 +24,7 @@ body {
   &:hover,
   &:focus {
    box-shadow: none;
-   border-color: #198754;
+   border-color: $primary-action;
   }
  }
  .nav-link {
@@ -30,7 +32,8 @@ body {
   font-size: 0.9rem;
  }
  .nav-link.active {
-  color: #198754;
+  color: $primary-action;
+  border: 1px solid $primary-action;
   font-weight: 500;
  }
  @media screen and (max-width: 576px) {
