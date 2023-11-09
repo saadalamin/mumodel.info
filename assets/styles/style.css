@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 body {
   background-color: #f5f5f5;
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
 }
 
@@ -35,14 +35,13 @@ body {
 
 .__home .__hero-section {
   width: 100%;
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: #fff;
-  padding: 1rem;
+  padding: 5rem 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-image: url("../images/banner.jpg");
   background-size: cover;
-  backdrop-filter: blur(26px);
-  -webkit-backdrop-filter: blur(26px);
+  backdrop-filter: blur(6px);
 }
 .__home .__hero-section .__main {
   padding: 4rem 1rem;

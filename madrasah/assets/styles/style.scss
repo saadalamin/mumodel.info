@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Open+Sans:wght@400;500&display=swap");
 
 * {
  margin: 0;
@@ -25,9 +25,13 @@ body {
    border-color: #198754;
   }
  }
+ .nav-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+ }
  .nav-link.active {
   color: #198754;
-  font-weight: 400;
+  font-weight: 500;
  }
  @media screen and (max-width: 576px) {
   .navbar-brand p {
@@ -65,7 +69,7 @@ body {
    margin: 1rem 0;
   }
   .__section-one {
-   margin-top: 4rem;
+   margin-top: 2rem;
    .lists {
     height: 100%;
     ul {
@@ -173,4 +177,8 @@ body {
    z-index: 2;
   }
  }
+}
+
+.__footer-links {
+ padding-top: 3.5rem !important;
 }
