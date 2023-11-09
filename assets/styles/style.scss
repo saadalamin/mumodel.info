@@ -45,19 +45,6 @@ body {
   background-image: url("../images/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  backdrop-filter: blur(6px);
-  animation: heroAnimation 1.3s infinite ease-in-out forwards;
-  @keyframes heroAnimation {
-   0% {
-    padding: 5rem 1rem;
-   }
-   50% {
-    padding: 6rem 1rem;
-   }
-   100% {
-    padding: 5rem 1rem;
-   }
-  }
   .__main {
    padding: 4rem 1rem;
    p {
