@@ -40,8 +40,21 @@ body {
   padding: 5rem 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-image: url("../images/banner.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(6px);
+  animation: heroAnimation 1.3s infinite ease-in-out forwards;
+}
+@keyframes heroAnimation {
+  0% {
+    padding: 5rem 1rem;
+  }
+  50% {
+    padding: 6rem 1rem;
+  }
+  100% {
+    padding: 5rem 1rem;
+  }
 }
 .__home .__hero-section .__main {
   padding: 4rem 1rem;
@@ -59,9 +72,9 @@ body {
   z-index: 2;
 }
 .__home .__hero-section .__main .box {
-  background-color: #fbf6d8;
+  background-color: #fff;
   padding: 2rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   border-radius: 1.9rem;
   z-index: 1;
 }
@@ -69,6 +82,9 @@ body {
   color: #333;
   font-weight: 700;
   font-size: 1.1rem;
+}
+.__home .__hero-section .__main .box a {
+  border: 1px solid rgba(51, 51, 51, 0.15);
 }
 .__home .__hero-section .__main button {
   padding: 0.5rem 1rem;
@@ -90,6 +106,7 @@ body {
     border-top-right-radius: 1.9rem;
     border-bottom-right-radius: 1.9rem;
     margin-left: -60px;
+    margin-top: 0;
     padding: 2.5rem 1rem 2rem 5rem;
     z-index: 1;
   }
