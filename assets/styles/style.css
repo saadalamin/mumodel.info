@@ -71,9 +71,6 @@ body {
   font-weight: 700;
   font-size: 1.1rem;
 }
-.__home .__hero-section .__main .box a {
-  border: 1px solid rgba(51, 51, 51, 0.15);
-}
 .__home .__hero-section .__main button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;

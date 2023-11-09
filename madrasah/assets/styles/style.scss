@@ -52,26 +52,42 @@ body {
 
 .__home {
  .__hero-section {
-  p {
-   font-size: 1.2rem;
-   font-weight: 300;
-   margin-bottom: 1rem;
-  }
-  button {
-   padding: 0.5rem 1rem;
-   border-radius: 0.5rem;
-  }
-  img.logo {
-   max-width: 200px;
-  }
-  img.banner {
-   width: 100%;
-   max-width: 500px;
-   background-color: #eee;
-   border-radius: 0.6rem;
-   margin: 1rem 0;
-  }
+    padding: 0;
   .__section-one {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+   }
+   button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+   }
+   img.logo {
+    max-width: 200px;
+   }
+   img.banner {
+    width: 100%;
+    max-width: 540px;
+    background-color: #eee;
+    border-radius: 0.6rem;
+    margin: 1rem 0;
+   }
+  }
+  .__section-two {
+   width: 100%;
+   background-color: #ccc;
+   color: #fff;
+   padding: 5rem 2rem;
+   margin-top: 1rem;
+   border-radius: 0.7rem;
+  }
+  .__section-three {
    margin-top: 2rem;
    .lists {
     height: 100%;
