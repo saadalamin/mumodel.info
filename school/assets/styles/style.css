@@ -87,8 +87,6 @@ body {
   margin-bottom: 0.2rem !important;
 }
 .__home .__hero-section .__section-one .lists ul li.notice a > div {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .__home .__hero-section .__section-one .lists ul li:not(.notice)::before {
@@ -119,7 +117,7 @@ body {
   font-size: 1.4rem;
   width: 100%;
   background-color: #eee;
-  padding: 1rem 2rem;
+  padding: 2rem;
   border-radius: 0.4rem;
   margin-bottom: 2rem;
 }
@@ -129,13 +127,18 @@ body {
 .__academics .__hero-section .__faculty p {
   font-size: 1.2rem;
   font-weight: 300;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.__academics .__hero-section .__faculty span {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #333;
 }
 .__academics .__hero-section .__faculty img {
   width: 150px;
   height: 150px;
   border-radius: 0.6rem;
-  background-color: #0064c8;
+  background-color: #ccc;
 }
 
 .__facilities .__hero-section img {
@@ -145,8 +148,6 @@ body {
   text-align: center;
   padding: 1rem;
   color: #fff;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   z-index: 2;
   margin: 0 auto;

@@ -55,8 +55,7 @@ body {
 .__home .__hero-section .__main img {
   height: 200px;
   width: 200px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border-radius: 100rem;
   z-index: 2;
 }
