@@ -75,9 +75,11 @@ body {
 .__home .__hero-section .__section-one img.banner {
   width: 100%;
   max-width: 540px;
+  min-height: 300px;
   background-color: #eee;
   border-radius: 0.6rem;
   margin: 1rem 0;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .__home .__hero-section .__section-two {
   margin-top: 2rem;
