@@ -20,6 +20,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   p {
+   margin-bottom: 0;
+   padding-bottom: 0;
    border-bottom: 1px solid #00901e;
   }
   span {
@@ -81,8 +83,34 @@ body {
  }
 }
 
+@media screen and (max-width: 768px) {
+ .__navbar {
+  a {
+   p {
+    font-size: 0.8rem;
+   }
+   span {
+    font-size: 0.6rem;
+   }
+  }
+ }
+ .__home .__hero-section .__main {
+  p {
+   font-size: 0.8rem;
+  }
+  .box {
+   p {
+    font-size: 0.8rem !important;
+   }
+   .btn {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+   }
+  }
+ }
+}
 @media screen and (min-width: 1400px) {
- .__home .__main {
+ .__home .__hero-section .__main {
   padding: 8rem 1rem;
   img {
    width: 300px;
@@ -99,32 +127,6 @@ body {
    margin-top: 0;
    padding: 2.5rem 1rem 2rem 5rem;
    z-index: 1;
-  }
- }
-}
-@media screen and (max-width: 768px) {
- .__navbar {
-  a {
-   p {
-    font-size: 0.8rem;
-   }
-   span {
-    font-size: 0.6rem;
-   }
-  }
- }
- .__home .__main {
-  p {
-   font-size: 0.8rem;
-  }
-  .box {
-   p {
-    font-size: 0.8rem !important;
-   }
-   .btn {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.5rem;
-   }
   }
  }
 }
