@@ -25,10 +25,11 @@ body {
 .__navbar .nav-link {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
+  padding: 0.5rem 1rem;
 }
 .__navbar .nav-link.active {
   color: #0064c8;
-  border: 1px solid #0064c8;
+  background-color: rgba(0, 100, 200, 0.1);
   font-weight: 400;
 }
 @media screen and (max-width: 576px) {

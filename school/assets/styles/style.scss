@@ -30,10 +30,11 @@ body {
  .nav-link {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
+  padding: 0.5rem 1rem;
  }
  .nav-link.active {
   color: $primary-action;
-  border: 1px solid $primary-action;
+  background-color: rgba($primary-action, 0.1);
   font-weight: 400;
  }
  @media screen and (max-width: 576px) {
