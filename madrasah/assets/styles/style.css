@@ -84,6 +84,7 @@ body {
 }
 .__home .__hero-section .__section-two .lists {
   height: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .__home .__hero-section .__section-two .lists ul {
   border-radius: 0.4rem;
