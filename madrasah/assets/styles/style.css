@@ -48,7 +48,7 @@ body {
 }
 
 .__home .__hero-section {
-  background-color: rgba(26, 176, 106, 0.05);
+  background-color: #f0fdf7;
   padding: 0;
 }
 .__home .__hero-section .__section-one {
@@ -145,6 +145,18 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 576px) {
+  .__home .__hero-section .__section-one img.logo {
+    max-width: 150px;
+  }
+  .__home .__hero-section .__section-one img.banner {
+    max-width: 100%;
+    min-height: 200px;
+  }
+  .__home .__hero-section .__section-one h1 {
+    font-size: 1.25rem;
+  }
+}
 .__about .__hero-section div > p {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
@@ -163,7 +175,7 @@ body {
 .__academics .__hero-section #output {
   font-size: 1.4rem;
   width: 100%;
-  background-color: #eee;
+  background-color: rgba(26, 176, 106, 0.08);
   padding: 2rem;
   border-radius: 0.4rem;
   margin-bottom: 2rem;

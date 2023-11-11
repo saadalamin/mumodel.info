@@ -54,7 +54,7 @@ body {
 
 .__home {
  .__hero-section {
-  background-color: rgba($primary-action, 0.05);
+  background-color: lighten($primary-action, 57%);
   padding: 0;
   .__section-one {
    width: 100%;
@@ -149,6 +149,24 @@ body {
   }
  }
 }
+@media screen and (max-width: 576px) {
+ .__home {
+  .__hero-section {
+   .__section-one {
+    img.logo {
+     max-width: 150px;
+    }
+    img.banner {
+     max-width: 100%;
+     min-height: 200px;
+    }
+    h1 {
+     font-size: 1.25rem;
+    }
+   }
+  }
+ }
+}
 
 .__about {
  .__hero-section {
@@ -172,7 +190,7 @@ body {
   #output {
    font-size: 1.4rem;
    width: 100%;
-   background-color: #eee;
+   background-color: rgba($primary-action, 0.08);
    padding: 2rem;
    border-radius: 0.4rem;
    margin-bottom: 2rem;
