@@ -12,6 +12,11 @@ body {
 }
 
 /* #fef6c5; */
+.__header {
+  padding: 0;
+  height: 7px;
+}
+
 .__navbar {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   padding: 0.7rem 0;
@@ -32,6 +37,9 @@ body {
 .__navbar .nav-link.active {
   font-weight: 500;
   color: #13844f;
+  padding: 0.2rem 0.8rem;
+  margin: 0.2rem 0;
+  border: 1px solid #1ab06a;
 }
 @media screen and (max-width: 576px) {
   .__navbar .navbar-brand p {
@@ -152,22 +160,20 @@ body {
   font-size: 1rem;
 }
 
+.__academics #title {
+  font-size: 1.4rem;
+  width: 100%;
+  background-color: #eee;
+  padding: 2.5rem;
+  text-align: center;
+  margin-bottom: 0;
+}
 .__academics .__hero-section {
   background-color: #fff;
   padding: 1rem;
-  padding-top: 0;
+  padding-top: 2rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.__academics .__hero-section #title {
-  font-size: 1.4rem;
-  width: 100%;
-  background-color: rgba(26, 176, 106, 0.08);
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  padding: 2.5rem;
-  border-radius: 0.4rem;
-  margin-bottom: 2.5rem;
-  text-align: center;
+  box-shadow: none;
 }
 .__academics .__hero-section p,
 .__academics .__hero-section li,

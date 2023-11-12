@@ -17,6 +17,11 @@ body {
 
 /* #fef6c5; */
 
+.__header {
+ padding: 0;
+ height: 7px;
+}
+
 .__navbar {
  box-shadow: $shadow;
  padding: 0.7rem 0;
@@ -37,6 +42,9 @@ body {
  .nav-link.active {
   font-weight: 500;
   color: darken($primary-action, 10%);
+  padding: 0.2rem 0.8rem;
+  margin: 0.2rem 0;
+  border: 1px solid $primary-action;
  }
  @media screen and (max-width: 576px) {
   .navbar-brand p {
@@ -163,22 +171,20 @@ body {
 }
 
 .__academics {
+ #title {
+  font-size: 1.4rem;
+  width: 100%;
+  background-color: #eee;
+  padding: 2.5rem;
+  text-align: center;
+  margin-bottom: 0;
+ }
  .__hero-section {
   background-color: #fff;
   padding: 1rem;
-  padding-top: 0;
+  padding-top: 2rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  #title {
-   font-size: 1.4rem;
-   width: 100%;
-   background-color: rgba($primary-action, 0.08);
-   box-shadow: $shadow;
-   padding: 2.5rem;
-   border-radius: 0.4rem;
-   margin-bottom: 2.5rem;
-   text-align: center;
-  }
+  box-shadow: none;
   p,
   li,
   b {
