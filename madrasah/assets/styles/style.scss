@@ -21,6 +21,7 @@ body {
 
 .__navbar {
  box-shadow: $shadow;
+ padding: 0.7rem 0;
  .navbar-toggler {
   transform: scale(0.7);
   &:hover,

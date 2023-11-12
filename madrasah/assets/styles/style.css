@@ -17,6 +17,7 @@ body {
 
 .__navbar {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  padding: 0.7rem 0;
 }
 .__navbar .navbar-toggler {
   transform: scale(0.7);
