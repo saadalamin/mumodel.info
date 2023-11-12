@@ -482,6 +482,16 @@
         if (document.querySelector(`div.__${tab}`))
           document.querySelector(`div.__${tab}`).classList.remove("d-none");
         document.getElementById("title").innerHTML = tab.toUpperCase();
+      } else {
+        document.querySelectorAll('a[data-toggle="tab"]').forEach((el) => {
+          el.classList.remove("active");
+        });
+        document.querySelectorAll('div[data-toggle="tab"]').forEach((el) => {
+          el.classList.add("d-none");
+        });
+        document.querySelector(`a[href="academics.html?tab=class"]`).classList.add("active");
+        document.querySelector(`div.__class`).classList.remove("d-none");
+        document.getElementById("title").innerHTML = "CLASS";
       }
     };
     window.onload = tabFunction;
