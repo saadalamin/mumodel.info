@@ -36,8 +36,8 @@ body {
   border-radius: 0.2rem;
  }
  .nav-link.active {
-  color: $primary-action;
   font-weight: 500;
+  color: darken($primary-action, 10%);
  }
  @media screen and (max-width: 576px) {
   .navbar-brand p {
@@ -149,24 +149,6 @@ body {
   }
  }
 }
-@media screen and (max-width: 576px) {
- .__home {
-  .__hero-section {
-   .__section-one {
-    img.logo {
-     max-width: 150px;
-    }
-    img.banner {
-     max-width: 100%;
-     min-height: 200px;
-    }
-    h1 {
-     font-size: 1.25rem;
-    }
-   }
-  }
- }
-}
 
 .__about {
  .__hero-section {
@@ -185,15 +167,40 @@ body {
  .__hero-section {
   background-color: #fff;
   padding: 1rem;
+  padding-top: 0;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  #output {
+  #title {
    font-size: 1.4rem;
    width: 100%;
    background-color: rgba($primary-action, 0.08);
-   padding: 2rem;
+   box-shadow: $shadow;
+   padding: 2.5rem;
    border-radius: 0.4rem;
-   margin-bottom: 2rem;
+   margin-bottom: 2.5rem;
+   text-align: center;
+  }
+  p,
+  li,
+  b {
+   font-family: "Open Sans", sans-serif;
+  }
+  b {
+   font-weight: 700;
+  }
+  .__results {
+   table {
+    max-width: 800px;
+   }
+   .__year-of {
+    background-color: $primary-action;
+    text-align: center;
+    color: #fff;
+   }
+   td,
+   th {
+    font-family: "Open Sans", sans-serif;
+   }
   }
   .__faculty {
    .lists {
@@ -249,4 +256,23 @@ body {
 
 .__footer-links {
  padding-top: 3.5rem !important;
+}
+
+@media screen and (max-width: 576px) {
+ .__home {
+  .__hero-section {
+   .__section-one {
+    img.logo {
+     max-width: 150px;
+    }
+    img.banner {
+     max-width: 100%;
+     min-height: 200px;
+    }
+    h1 {
+     font-size: 1.25rem;
+    }
+   }
+  }
+ }
 }

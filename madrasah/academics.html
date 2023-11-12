@@ -71,8 +71,7 @@
     <div class="__academics">
       <div class="__hero-section pb-5">
         <div class="container">
-          <p id="output"></p>
-
+          <h4 id="title"></h4>
           <div class="__faculty d-none" data-toggle="tab">
             <ul class="row row-gap-4 lists">
               <li class="list-group-item col-6 col-md-4 col-lg-3">
@@ -252,6 +251,125 @@
               </li>
             </ul>
           </div>
+          <div class="__class d-none" data-toggle="tab">
+            <div>
+              <h4 class="text-success mb-3">Education Levels</h4>
+              <p>This Madrasah offers education spanning from the elementary level (Ebtedayi) to the secondary level
+                (Dakhil).</p>
+              <div class="row">
+                <div class="col-md-3">
+                  <b>Elementary (Primary) Level:</b>
+                  <ul>
+                    <li>Play</li>
+                    <li>Nursery</li>
+                    <li>Class 1</li>
+                    <li>Class 2</li>
+                    <li>Class 3</li>
+                    <li>Class 4</li>
+                    <li>Class 5</li>
+                  </ul>
+                </div>
+                <div class="col-md-3">
+                  <b>Secondary (Dakhil) Level:</b>
+                  <ul>
+                    <li>Class 6</li>
+                    <li>Class 7</li>
+                    <li>Class 8</li>
+                    <li>Class 9</li>
+                    <li>Class 10</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5">
+              <h4 class="text-success mb-3">Curriculum</h4>
+              <p>In this Madrasa, the curriculum follows the approved and accredited syllabus from the Bangladesh
+                Madrasa Education Board, Dhaka, covering from the primary level to the secondary level.</p>
+              <p><b>At every level</b>, the curriculum includes the following subjects:</p>
+              <ul>
+                <li>Bangladesh Madrasa Education Board, Dhaka's approved curriculum (from first grade to Dakhil).</li>
+              </ul>
+              <b>Extra Curricular Activities:</b>
+              <ul>
+                <li>Cultural Competition</li>
+                <li>Annual Sports Competition</li>
+                <li>Handwriting Competition</li>
+                <li>Wall Magazine Competition</li>
+                <li>Annual Educational Tour</li>
+                <li>Training in Hamd-Naat</li>
+              </ul>
+            </div>
+          </div>
+          <div class="__results d-none" data-toggle="tab">
+            <h5 class="pb-2">Last Year's Results</h5>
+            <table class="table table-bordered table-success">
+              <thead>
+                <tr>
+                  <th>Exam Name</th>
+                  <th>Total Candidates</th>
+                  <th>Passed</th>
+                  <th>Pass Rate</th>
+                  <th>A+</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th colspan="5" class="__year-of">2022</th>
+                </tr>
+                <tr>
+                  <td>Dakhil</td>
+                  <td>03</td>
+                  <td>01 (A), 02 (A-)</td>
+                  <td>100%</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th colspan="5" class="__year-of">2021</th>
+                </tr>
+                <tr>
+                  <td>Dakhil</td>
+                  <td>06</td>
+                  <td>02 (A)</td>
+                  <td>100%</td>
+                  <td>03 (A+), 01 (Golden)</td>
+                </tr>
+                <tr>
+                  <td>JDC</td>
+                  <td>11</td>
+                  <td>11</td>
+                  <td>100%</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th colspan="5" class="__year-of">2020</th>
+                </tr>
+                <tr>
+                  <td>JDC</td>
+                  <td>20</td>
+                  <td>20</td>
+                  <td>100%</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th colspan="5" class="__year-of">2019</th>
+                </tr>
+                <tr>
+                  <td>JDC</td>
+                  <td>04</td>
+                  <td>04 (A)</td>
+                  <td>100%</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>Ebtedayi</td>
+                  <td>12</td>
+                  <td>03 (A)</td>
+                  <td>100%</td>
+                  <td>09 (A)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -363,25 +481,8 @@
             .classList.add("active");
         if (document.querySelector(`div.__${tab}`))
           document.querySelector(`div.__${tab}`).classList.remove("d-none");
+        document.getElementById("title").innerHTML = tab.toUpperCase();
       }
-      switch (tab) {
-        case "class":
-          output = "Class";
-          break;
-        case "syllabus":
-          output = "Syllabus";
-          break;
-        case "results":
-          output = "Results";
-          break;
-        case "faculty":
-          output = "Faculty";
-          break;
-        default:
-          output = "Class";
-          break;
-      }
-      document.getElementById("output").innerHTML = output;
     };
     window.onload = tabFunction;
   </script>

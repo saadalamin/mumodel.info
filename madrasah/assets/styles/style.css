@@ -32,8 +32,8 @@ body {
   border-radius: 0.2rem;
 }
 .__navbar .nav-link.active {
-  color: #1ab06a;
   font-weight: 500;
+  color: #13844f;
 }
 @media screen and (max-width: 576px) {
   .__navbar .navbar-brand p {
@@ -145,18 +145,6 @@ body {
   text-align: center;
 }
 
-@media screen and (max-width: 576px) {
-  .__home .__hero-section .__section-one img.logo {
-    max-width: 150px;
-  }
-  .__home .__hero-section .__section-one img.banner {
-    max-width: 100%;
-    min-height: 200px;
-  }
-  .__home .__hero-section .__section-one h1 {
-    font-size: 1.25rem;
-  }
-}
 .__about .__hero-section div > p {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
@@ -169,16 +157,39 @@ body {
 .__academics .__hero-section {
   background-color: #fff;
   padding: 1rem;
+  padding-top: 0;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.__academics .__hero-section #output {
+.__academics .__hero-section #title {
   font-size: 1.4rem;
   width: 100%;
   background-color: rgba(26, 176, 106, 0.08);
-  padding: 2rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
   border-radius: 0.4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.__academics .__hero-section p,
+.__academics .__hero-section li,
+.__academics .__hero-section b {
+  font-family: "Open Sans", sans-serif;
+}
+.__academics .__hero-section b {
+  font-weight: 700;
+}
+.__academics .__hero-section .__results table {
+  max-width: 800px;
+}
+.__academics .__hero-section .__results .__year-of {
+  background-color: #1ab06a;
+  text-align: center;
+  color: #fff;
+}
+.__academics .__hero-section .__results td,
+.__academics .__hero-section .__results th {
+  font-family: "Open Sans", sans-serif;
 }
 .__academics .__hero-section .__faculty .lists .list-group-item {
   display: flex;
@@ -224,4 +235,17 @@ body {
 
 .__footer-links {
   padding-top: 3.5rem !important;
+}
+
+@media screen and (max-width: 576px) {
+  .__home .__hero-section .__section-one img.logo {
+    max-width: 150px;
+  }
+  .__home .__hero-section .__section-one img.banner {
+    max-width: 100%;
+    min-height: 200px;
+  }
+  .__home .__hero-section .__section-one h1 {
+    font-size: 1.25rem;
+  }
 }
