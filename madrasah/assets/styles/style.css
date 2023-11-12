@@ -11,10 +11,7 @@ body {
   font-weight: 300;
 }
 
-.__header {
-  background-color: #fef6c5;
-}
-
+/* #fef6c5; */
 .__navbar {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   padding: 0.7rem 0;
