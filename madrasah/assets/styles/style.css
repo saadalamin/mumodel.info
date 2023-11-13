@@ -14,7 +14,10 @@ body {
 /* #fef6c5; */
 .__header {
   padding: 0;
-  height: 7px;
+}
+.__header p {
+  margin: 0;
+  padding: 0.1rem 0;
 }
 
 .__navbar {
@@ -38,7 +41,7 @@ body {
   color: #333;
   padding: 0.2rem 0.8rem;
   margin: 0.2rem 0;
-  border: 1px solid rgba(51, 51, 51, 0.4);
+  border: 1px solid rgba(51, 51, 51, 0.3);
 }
 @media screen and (max-width: 576px) {
   .__navbar .navbar-brand p {
