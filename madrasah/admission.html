@@ -106,10 +106,17 @@
                     style="min-height: 100px;max-height: 130px;width: 100%;" />
                 </div>
                 <div class="d-flex flex-column justify-content-center">
-                  <img src="assets/images/admission-photosample.png" alt="Passport Size Photo" height="100px"
+                  <img src="assets/images/admission-photosample.png" alt="Passport Size Photo" height="100px" style="max-width: 80px;object-fit: cover;"
                     id="admissionPhoto" />
-                  <input type="file" class="form-control" placeholder="Upload photo" required style="max-width: 80px;"
-                    id="admissionPhotoUpload" />
+                  <input type="file" class="form-control p-0 px-1 mt-2" placeholder="Upload photo" required
+                    style="max-width: 80px;" id="admissionPhotoUpload" accept="image/jpg, image/png, image/jpeg"
+                    oninput="
+                    let file = document.getElementById('admissionPhotoUpload').files[0];
+                    let reader = new FileReader();
+                    reader.onload = function(e) {
+                      document.getElementById('admissionPhoto').src = e.target.result;
+                    }
+                    reader.readAsDataURL(file);" />
                 </div>
               </div>
               <div style="display: flex;justify-content: center;">
