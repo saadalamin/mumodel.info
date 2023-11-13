@@ -10,11 +10,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="stylesheet" href="assets/styles/style.css" />
-  <style type="text/css" media="print">
-    .noprint {
-      display: none;
-    }
-  </style>
 
 </head>
 
@@ -102,9 +97,74 @@
             <h1 class="modal-title fs-5" id="modalAdmissionLabel">Admission</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            <div class="__admissionForm">
-              <h5 class="text-center">Admission Form</h5>
+          <div class="modal-body d-flex justify-content-md-center">
+            <div id="admissionForm" style="max-width: 1000px;">
+              <div
+                style="display: flex;justify-content: center;align-items: center;border-bottom: 5px solid #333;padding-bottom: 0.35rem;">
+                <div>
+                  <img src="assets/images/detailed-logo.png" alt="Logo of"
+                    style="min-height: 100px;max-height: 130px;width: 100%;" />
+                </div>
+                <div class="d-flex flex-column justify-content-center">
+                  <img src="assets/images/admission-photosample.png" alt="Passport Size Photo" height="100px"
+                    id="admissionPhoto" />
+                  <input type="file" class="form-control" placeholder="Upload photo" required style="max-width: 80px;"
+                    id="admissionPhotoUpload" />
+                </div>
+              </div>
+              <div style="display: flex;justify-content: center;">
+                <h5 style="padding: 0.5rem; margin: 1rem 0; border: 3px solid red;">ভর্তির আবেদন ফরম</h5>
+              </div>
+              <style type="text/css">
+                table {
+                  width: 100%;
+                  border-collapse: collapse;
+                }
+
+                td:not(.np) {
+                  padding: 0 0.5rem;
+                  border: 1px solid #333;
+                }
+
+                td.np {
+                  background-color: #f5f4f4;
+                }
+
+                td>input {
+                  width: 100%;
+                  border: none;
+                  outline: none;
+                  text-align: center;
+                  background-color: transparent;
+                }
+              </style>
+              <table border="1" style="margin-bottom: 1rem;">
+                <tr>
+                  <td rowspan="2">বিভাগ</td>
+                  <td>জেনারেল</td>
+                  <td class="np" style="padding: 0 0.8rem;">
+                    <input type="radio" name="division" id="divisionGeneral" checked />
+                  </td>
+                  <td rowspan="2">শ্রেণী</td>
+                  <td rowspan="2" class="np">
+                    <input type="text" placeholder="শ্রেণী">
+                  </td>
+                  <td rowspan="2">শিক্ষাবর্ষ</td>
+                  <td rowspan="2" class="np">
+                    <input type="text" placeholder="শিক্ষাবর্ষ">
+                  </td>
+                  <td rowspan="2">তারিখ</td>
+                  <td rowspan="2" class="np">
+                    <input type="text" placeholder="তারিখ">
+                  </td>
+                </tr>
+                <tr>
+                  <td>হিফয</td>
+                  <td class="np" style="padding: 0 0.8rem;">
+                    <input type="radio" name="division" id="divisionHifz" />
+                  </td>
+                </tr>
+              </table>
               <p class="text-muted">(All information given below must be filled as per registration form in English)</p>
               <div class="row border p-1 py-2 row-gap-4" style="max-width: 1000px;">
                 <div class="col-6">
@@ -122,20 +182,18 @@
                 <div class="col-6">
                 </div>
               </div>
-              <iframe id="iframeprint" style="display:none"></iframe>
-              <button class="btn btn-primary btn-sm mt-3 noprint" onclick="
-               document.getElementById('iframeprint').contentWindow.document.body.innerHTML = document.querySelectorAll('.__admissionForm')[0].innerHTML;
-                document.getElementById('iframeprint').contentWindow.print();
-              ">Print</button>
             </div>
           </div>
-          <div class="modal-footer noprint">
+          <div class=" modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-primary" id="printButton" onclick="printJS({printable:'admissionForm', type:'html', ignoreElements:[
+                'admissionPhotoUpload', 'printButton'
+                ]})">Print</button>
           </div>
         </div>
       </div>
     </div>
-
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
     <script>
       function admissionFormOpen() {
         let keyboard = true;
@@ -173,7 +231,8 @@
               </a>
             </li>
             <li class="nav-item mb-2">
-              <a class="nav-link p-0 text-muted" href="http://www.dhakaeducationboard.gov.bd/" target="_blank">Board of
+              <a class="nav-link p-0 text-muted" href="http://www.dhakaeducationboard.gov.bd/" target="_blank">Board
+                of
                 Intermediate and Secondary Education, Dhaka</a>
             </li>
           </ul>
