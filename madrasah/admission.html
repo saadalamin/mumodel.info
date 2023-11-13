@@ -127,7 +127,7 @@
                 }
 
                 td.np {
-                  background-color: #f5f4f4;
+                  background-color: #f5f5f5;
                 }
 
                 td>input {
@@ -138,49 +138,78 @@
                   background-color: transparent;
                 }
               </style>
-              <table border="1" style="margin-bottom: 1rem;">
-                <tr>
-                  <td rowspan="2">বিভাগ</td>
-                  <td>জেনারেল</td>
-                  <td class="np" style="padding: 0 0.8rem;">
-                    <input type="radio" name="division" id="divisionGeneral" checked />
-                  </td>
-                  <td rowspan="2">শ্রেণী</td>
-                  <td rowspan="2" class="np">
-                    <input type="text" placeholder="শ্রেণী">
-                  </td>
-                  <td rowspan="2">শিক্ষাবর্ষ</td>
-                  <td rowspan="2" class="np">
-                    <input type="text" placeholder="শিক্ষাবর্ষ">
-                  </td>
-                  <td rowspan="2">তারিখ</td>
-                  <td rowspan="2" class="np">
-                    <input type="text" placeholder="তারিখ">
-                  </td>
-                </tr>
-                <tr>
-                  <td>হিফয</td>
-                  <td class="np" style="padding: 0 0.8rem;">
-                    <input type="radio" name="division" id="divisionHifz" />
-                  </td>
-                </tr>
-              </table>
-              <p class="text-muted">(All information given below must be filled as per registration form in English)</p>
+              <div>
+                <table border="1" style="margin-bottom: 1rem;">
+                  <tr>
+                    <td rowspan="2" style="color: green;">বিভাগ</td>
+                    <td>জেনারেল</td>
+                    <td class="np" style="padding: 0 0.8rem;">
+                      <input type="radio" name="division" id="divisionGeneral" checked />
+                    </td>
+                    <td rowspan="2" style="color: green;">শ্রেণী</td>
+                    <td rowspan="2" class="np">
+                      <input type="text" placeholder="শ্রেণী">
+                    </td>
+                    <td rowspan="2" style="color: green;">শিক্ষাবর্ষ</td>
+                    <td rowspan="2" class="np">
+                      <input type="text" placeholder="শিক্ষাবর্ষ">
+                    </td>
+                    <td rowspan="2" style="color: green;">তারিখ</td>
+                    <td rowspan="2" class="np">
+                      <input type="date" placeholder="তারিখ">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>হিফয</td>
+                    <td class="np" style="padding: 0 0.8rem;">
+                      <input type="radio" name="division" id="divisionHifz" />
+                    </td>
+                  </tr>
+                </table>
+                <p>
+                  বরাবর<br />
+                  প্রিন্সিপাল<br />
+                  আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ।<br />
+                  যথাবিহিত সম্মান প্রদর্শন পূর্বক বিনীত নিবেদন এই যে, আমি নিম্ন লিখিত “অঙ্গীকারনামা” পাঠ করত: দৃঢ়
+                  অঙ্গীকার
+                  করছি যে, আল্লাহ তা’য়ালার সন্তুষ্টি বিধানের লক্ষ্যে ইলমে দ্বীন শিক্ষার মানসে মাদরাসার সকল নিয়ম-কানুন
+                  মেনে
+                  চলতে বাধ্য থাকবো ইনশাআল্লাহ।<br />
+                  অতএব, অনুগ্রহ পূর্বক আমার আবেদন মঞ্জুর করত: ইলমে দ্বীন হাসিল করে যোগ্য আলিম হওয়ার সুযোগ দানে স্যারের
+                  মর্জি হয়।
+                </p>
+                <p class="text-muted">(All information given below must be filled as per registration form in English)
+                </p>
+              </div>
               <div class="row border p-1 py-2 row-gap-4" style="max-width: 1000px;">
                 <div class="col-6">
-                  <label for="admissionName">Student's Name (বাংলায়)<span class="text-danger">*</span></label>
+                  <label for="admissionName">Student's Name (বাংলায়)<span style="color:red;">*</span></label>
                   <input type="text" class="form-control" id="admissionName" placeholder="Student's Name" required />
                 </div>
                 <div class="col-6">
-                  <label for="admissionNameEn">Father's Name (English)<span class="text-danger">*</span></label>
+                  <label for="admissionNameEn">Father's Name (English)<span style="color:red;">*</span></label>
                   <input type="text" class="form-control" id="admissionNameEn" placeholder="Father's Name" required />
                 </div>
                 <div class="col-6">
-                  <label for="admissionName">Mother's Name (English)<span class="text-danger">*</span></label>
+                  <label for="admissionName">Mother's Name (English)<span style="color:red;">*</span></label>
                   <input type="text" class="form-control" id="admissionName" placeholder="Mother's Name" required />
                 </div>
                 <div class="col-6">
                 </div>
+              </div>
+              <div>
+                <div style="display: flex;justify-content: center;margin-top: 1rem;">
+                  <h5 style="padding: 0.5rem; margin: 1rem 0; border: 3px solid green;">অঙ্গীকারনামা</h5>
+                </div>
+                <ol>
+                  <li>মাদরাসার লক্ষ্য-উদ্দেশ্যের বিপরীত কোনো কাজ করবো না।</li>
+                  <li>প্রতিষ্ঠানের সকল নিয়ম কানুন অবশ্যই মেনে চলবো।</li>
+                  <li>দেশ ও ধর্মের ক্ষতিকর কোনো কাজ করবো না।</li>
+                  <li>মাদরাসার সকল কর্মসূচিতে সক্রিয় অংশ গ্রহণ করবো। যেমন- শিক্ষা, জাতীয় দিবস ও আর্ত-মানবতার সেবা
+                    ইত্যাদি।</li>
+                  <li>আমার দ্বারা প্রতিষ্ঠান ও রাষ্ট্র বিরোধী কোনো কাজ হলে মাদরাসা কর্তৃপক্ষ যে ব্যবস্থা বা শাস্তি
+                    প্রদান করবেন তা মেনে নিতে বাধ্য থাকবো।</li>
+                </ol>
               </div>
             </div>
           </div>
