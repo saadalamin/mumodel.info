@@ -98,16 +98,105 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body d-flex justify-content-md-center">
-            <div id="admissionForm" style="max-width: 1000px;">
-              <div
-                style="display: flex;justify-content: center;align-items: center;border-bottom: 5px solid #333;padding-bottom: 0.35rem;">
+            <div id="admissionForm" style="max-width: 1000px;min-width: 600px;">
+              <style type="text/css">
+                #admissionForm table {
+                  width: 100%;
+                  border-collapse: collapse;
+                }
+
+                #admissionForm td:not(.np) {
+                  padding: 0 0.5rem;
+                  border: 1px solid #333;
+                  text-align: center;
+                }
+
+                #admissionForm td.np {
+                  background: #f5f5f5;
+                }
+
+                #admissionForm td>input,
+                #admissionForm td>select {
+                  width: 100%;
+                  min-width: 70px;
+                  border: none;
+                  outline: none;
+                  text-align: center;
+                  background-color: transparent;
+                }
+
+                #admissionForm .form input,
+                #admissionForm p,
+                #admissionForm ol {
+                  font-size: 0.85rem;
+                }
+
+                #admissionForm .form input {
+                  max-width: 250px;
+                  padding: 0.25rem 0.5rem;
+                  margin-left: 0.3rem;
+                  margin-right: 0.75rem;
+                }
+
+                #admissionForm label {
+                  font-size: 0.75rem;
+                }
+
+                #admissionForm .form>div {
+                  padding: 0rem;
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+                }
+
+                #admissionForm .form>div>div {
+                  flex: 1;
+                  display: flex;
+                }
+
+                #admissionForm .form > div > div:first-child span {
+                  margin-left: 0.35rem;
+                }
+
+                @media print {
+                  #admissionForm .form {
+                    row-gap: 0 !important;
+                  }
+
+                  #admissionForm .form input,
+                  #admissionForm label {
+                    font-size: 0.7rem;
+                  }
+
+                  #admissionForm .form>div {
+                    margin: 0;
+                    padding-right: 0.8rem !important;
+                  }
+
+                  #admissionForm .form input {
+                    padding: 0 0.3rem !important;
+                    border: 0 !important;
+                    border-radius: 0 !important;
+                    border-bottom: 3px dotted #333 !important;
+                  }
+
+                  #admissionForm ::placeholder {
+                    color: transparent;
+                  }
+                }
+              </style>
+              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+                crossorigin="anonymous" />
+              <div class="d-flex justify-content-around align-items-center"
+                style="border-bottom: 5px solid #333;padding-bottom: 0.35rem;">
                 <div>
                   <img src="assets/images/detailed-logo.png" alt="Logo of"
                     style="min-height: 100px;max-height: 130px;width: 100%;" />
                 </div>
                 <div class="d-flex flex-column justify-content-center">
-                  <img src="assets/images/admission-photosample.png" alt="Passport Size Photo" height="100px" style="max-width: 80px;object-fit: cover;"
-                    id="admissionPhoto" />
+                  <img src="assets/images/admission-photosample.png" alt="Passport Size Photo" height="100px"
+                    style="max-width: 80px;object-fit: cover;" id="admissionPhoto" />
                   <input type="file" class="form-control p-0 px-1 mt-2" placeholder="Upload photo" required
                     style="max-width: 80px;" id="admissionPhotoUpload" accept="image/jpg, image/png, image/jpeg"
                     oninput="
@@ -119,105 +208,297 @@
                     reader.readAsDataURL(file);" />
                 </div>
               </div>
-              <div style="display: flex;justify-content: center;">
+              <div class="d-flex justify-content-center">
                 <h5 style="padding: 0.5rem; margin: 1rem 0; border: 3px solid red;">ভর্তির আবেদন ফরম</h5>
               </div>
-              <style type="text/css">
-                table {
-                  width: 100%;
-                  border-collapse: collapse;
-                }
-
-                td:not(.np) {
-                  padding: 0 0.5rem;
-                  border: 1px solid #333;
-                }
-
-                td.np {
-                  background-color: #f5f5f5;
-                }
-
-                td>input {
-                  width: 100%;
-                  border: none;
-                  outline: none;
-                  text-align: center;
-                  background-color: transparent;
-                }
-              </style>
-              <div>
-                <table border="1" style="margin-bottom: 1rem;">
-                  <tr>
-                    <td rowspan="2" style="color: green;">বিভাগ</td>
-                    <td>জেনারেল</td>
-                    <td class="np" style="padding: 0 0.8rem;">
-                      <input type="radio" name="division" id="divisionGeneral" checked />
-                    </td>
-                    <td rowspan="2" style="color: green;">শ্রেণী</td>
-                    <td rowspan="2" class="np">
-                      <input type="text" placeholder="শ্রেণী">
-                    </td>
-                    <td rowspan="2" style="color: green;">শিক্ষাবর্ষ</td>
-                    <td rowspan="2" class="np">
-                      <input type="text" placeholder="শিক্ষাবর্ষ">
-                    </td>
-                    <td rowspan="2" style="color: green;">তারিখ</td>
-                    <td rowspan="2" class="np">
-                      <input type="date" placeholder="তারিখ">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>হিফয</td>
-                    <td class="np" style="padding: 0 0.8rem;">
-                      <input type="radio" name="division" id="divisionHifz" />
-                    </td>
-                  </tr>
-                </table>
-                <p>
-                  বরাবর<br />
-                  প্রিন্সিপাল<br />
-                  আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ।<br />
-                  যথাবিহিত সম্মান প্রদর্শন পূর্বক বিনীত নিবেদন এই যে, আমি নিম্ন লিখিত “অঙ্গীকারনামা” পাঠ করত: দৃঢ়
-                  অঙ্গীকার
-                  করছি যে, আল্লাহ তা’য়ালার সন্তুষ্টি বিধানের লক্ষ্যে ইলমে দ্বীন শিক্ষার মানসে মাদরাসার সকল নিয়ম-কানুন
-                  মেনে
-                  চলতে বাধ্য থাকবো ইনশাআল্লাহ।<br />
-                  অতএব, অনুগ্রহ পূর্বক আমার আবেদন মঞ্জুর করত: ইলমে দ্বীন হাসিল করে যোগ্য আলিম হওয়ার সুযোগ দানে স্যারের
-                  মর্জি হয়।
-                </p>
-                <p class="text-muted">(All information given below must be filled as per registration form in English)
-                </p>
+              <table border="1" style="margin-bottom: 1rem;">
+                <tr>
+                  <td rowspan="2" style="color: green;">বিভাগ</td>
+                  <td>জেনারেল</td>
+                  <td class="np" style="padding: 0 0.8rem;">
+                    <input type="radio" name="division" id="divisionGeneral" checked />
+                  </td>
+                  <td rowspan="2" style="color: green;">শ্রেণী</td>
+                  <td rowspan="2" class="np">
+                    <select id="admissionClass">
+                      <option value="প্লে">প্লে</option>
+                      <option value="নার্সারী">নার্সারী</option>
+                      <option value="প্রথম">প্রথম</option>
+                      <option value="দ্বিতীয়">দ্বিতীয়</option>
+                      <option value="তৃতীয়">তৃতীয়</option>
+                      <option value="চতুর্থ">চতুর্থ</option>
+                      <option value="পঞ্চম">পঞ্চম</option>
+                      <option value="ষষ্ঠ">ষষ্ঠ</option>
+                      <option value="সপ্তম">সপ্তম</option>
+                      <option value="অষ্টম">অষ্টম</option>
+                      <option value="নবম">নবম</option>
+                      <option value="দশম">দশম</option>
+                    </select>
+                  </td>
+                  <td rowspan="2" style="color: green;">শিক্ষাবর্ষ</td>
+                  <td rowspan="2" class="np">
+                    <input type="text" placeholder="শিক্ষাবর্ষ">
+                  </td>
+                  <td rowspan="2" style="color: green;">তারিখ</td>
+                  <td rowspan="2" class="np">
+                    <input type="date" placeholder="তারিখ">
+                  </td>
+                </tr>
+                <tr>
+                  <td>হিফয</td>
+                  <td class="np" style="padding: 0 0.8rem;">
+                    <input type="radio" name="division" id="divisionHifz" />
+                  </td>
+                </tr>
+              </table>
+              <p>
+                বরাবর<br />
+                প্রিন্সিপাল<br />
+                আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ।<br />
+                যথাবিহিত সম্মান প্রদর্শন পূর্বক বিনীত নিবেদন এই যে, আমি নিম্ন লিখিত “অঙ্গীকারনামা” পাঠ করত: দৃঢ়
+                অঙ্গীকার
+                করছি যে, আল্লাহ তা’য়ালার সন্তুষ্টি বিধানের লক্ষ্যে ইলমে দ্বীন শিক্ষার মানসে মাদরাসার সকল নিয়ম-কানুন
+                মেনে
+                চলতে বাধ্য থাকবো ইনশাআল্লাহ।<br />
+                <span class="d-block mt-2">অতএব, অনুগ্রহ পূর্বক আমার আবেদন মঞ্জুর করত: ইলমে দ্বীন হাসিল করে যোগ্য আলিম
+                  হওয়ার সুযোগ দানে স্যারের
+                  মর্জি হয়।</span>
+              </p>
+              <div class="form row p-0 mx-0 row-gap-1">
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">ছাত্র-ছাত্রীর নাম (বাংলায়)<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Student's Name (Bangla)"
+                      required />
+                  </div>
+                </div>
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">(ইংরেজিতে)<span style="color:red;">*</span></label>
+                  </div>
+                  <span>: </span><input type="text" class="form-control w-100" id="admissionName"
+                    placeholder="Student's Name (English)" required />
+                </div>
+                <!--  -->
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">পিতা (বাংলায়)<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Father's Name (Bangla)"
+                      required />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div>
+                    <label for="admissionName">(ইংরেজিতে)<span style="color:red;">*</span></label>
+                  </div>
+                  <span>: </span><input type="text" class="form-control w-100" id="admissionName"
+                    placeholder="Father's Name (English)" required />
+                </div>
+                <div class="col-2">
+                  <div>
+                    <label for="admissionName">পেশা<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Occupation" required
+                      style="min-width: 90px;" />
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">মাতা (বাংলায়)<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Mother's Name (Bangla)"
+                      required />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div>
+                    <label for="admissionName">(ইংরেজিতে)<span style="color:red;">*</span></label>
+                  </div>
+                  <span>: </span><input type="text" class="form-control w-100" id="admissionName"
+                    placeholder="Mother's Name (English)" required />
+                </div>
+                <div class="col-2">
+                  <div>
+                    <label for="admissionName">পেশা<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Occupation" required
+                      style="min-width: 90px;" />
+                  </div>
+                </div>
+                <!-- hhhh -->
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">বর্তমান ঠিকানা (গ্রাম)<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Current Address"
+                      required />
+                  </div>
+                </div>
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">পোস্ট<span style="color:red;">*</span></label>
+                  </div>
+                  <span>: </span><input type="text" class="form-control w-100" id="admissionName"
+                    placeholder="Post" required />
+                </div>
+                <!--  -->
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">থানা<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Thana"
+                      required />
+                  </div>
+                </div>
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">জেলা<span style="color:red;">*</span></label>
+                  </div>
+                  <span>: </span><input type="text" class="form-control w-100" id="admissionName"
+                    placeholder="District" required />
+                </div>
+                <!--  -->
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">স্থায়ী ঠিকানা (গ্রাম)<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Permanent Address"
+                      required />
+                  </div>
+                </div>
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">পোস্ট<span style="color:red;">*</span></label>
+                  </div>
+                  <span>: </span><input type="text" class="form-control w-100" id="admissionName"
+                    placeholder="Post" required />
+                </div>
+                <!--  -->
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">থানা<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Thana"
+                      required />
+                  </div>
+                </div>
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">জেলা<span style="color:red;">*</span></label>
+                  </div>
+                  <span>: </span><input type="text" class="form-control w-100" id="admissionName"
+                    placeholder="District" required />
+                </div>
+                <!--  -->
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">মোবাইল (পিতা)<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="number" class="form-control" id="admissionName" placeholder="Mobile Number"
+                      required />
+                  </div>
+                </div>
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">মোবাইল (মাতা)<span style="color:red;">*</span></label>
+                  </div>
+                  <span>: </span><input type="number" class="form-control w-100" id="admissionName"
+                    placeholder="Mobile Number" required />
+                </div>
+                <!--  -->
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">পিতার অবর্তমানে অভিভাবকের নাম<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Guardian's Name"
+                      required />
+                  </div>
+                </div>
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">সম্পর্ক<span style="color:red;">*</span></label>
+                  </div>
+                  <span>: </span><input type="text" class="form-control w-100" id="admissionName"
+                    placeholder="Relation" required />
+                </div>
+                <!--  -->
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">ঠিকানা<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Guardian's Address"
+                      required />
+                  </div>
+                </div>
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">মোবাইল<span style="color:red;">*</span></label>
+                  </div>
+                  <span>: </span><input type="number" class="form-control w-100" id="admissionName"
+                    placeholder="Mobile Number" required />
+                </div>
+                <!--  -->
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">জন্ম তারিখ (জন্ম নিবন্ধন অনুসারে)<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="date" class="form-control" id="admissionName" placeholder="Date of Birth"
+                      required />
+                  </div>
+                </div>
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">রক্তের গ্ৰুপ</label>
+                  </div>
+                  <span>: </span><input type="number" class="form-control w-100" id="admissionName"
+                    placeholder="Blood Group" required />
+                </div>
+                <!--  -->
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">পূর্বে অধ্যয়নরত প্রতিষ্ঠানের নাম<span style="color:red;">*</span></label>
+                  </div>
+                  <div>
+                    : <input type="text" class="form-control" id="admissionName" placeholder="Previous Institution's Name"
+                      required />
+                  </div>
+                </div>
+                <div class="col-6" style="max-width: 450px;">
+                  <div>
+                    <label for="admissionName">যে শ্রেণিতে পড়তো<span style="color:red;">*</span></label>
+                  </div>
+                  <span>: </span><input type="text" class="form-control w-100" id="admissionName"
+                    placeholder="Class" required />
+                </div>
               </div>
-              <div class="row border p-1 py-2 row-gap-4" style="max-width: 1000px;">
-                <div class="col-6">
-                  <label for="admissionName">Student's Name (বাংলায়)<span style="color:red;">*</span></label>
-                  <input type="text" class="form-control" id="admissionName" placeholder="Student's Name" required />
-                </div>
-                <div class="col-6">
-                  <label for="admissionNameEn">Father's Name (English)<span style="color:red;">*</span></label>
-                  <input type="text" class="form-control" id="admissionNameEn" placeholder="Father's Name" required />
-                </div>
-                <div class="col-6">
-                  <label for="admissionName">Mother's Name (English)<span style="color:red;">*</span></label>
-                  <input type="text" class="form-control" id="admissionName" placeholder="Mother's Name" required />
-                </div>
-                <div class="col-6">
-                </div>
+              <div class="d-flex justify-content-center" style="margin-top: 1rem;">
+                <h5 style="padding: 0.5rem; margin: 1rem 0; border: 3px solid green;">অঙ্গীকারনামা</h5>
               </div>
-              <div>
-                <div style="display: flex;justify-content: center;margin-top: 1rem;">
-                  <h5 style="padding: 0.5rem; margin: 1rem 0; border: 3px solid green;">অঙ্গীকারনামা</h5>
-                </div>
-                <ol>
-                  <li>মাদরাসার লক্ষ্য-উদ্দেশ্যের বিপরীত কোনো কাজ করবো না।</li>
-                  <li>প্রতিষ্ঠানের সকল নিয়ম কানুন অবশ্যই মেনে চলবো।</li>
-                  <li>দেশ ও ধর্মের ক্ষতিকর কোনো কাজ করবো না।</li>
-                  <li>মাদরাসার সকল কর্মসূচিতে সক্রিয় অংশ গ্রহণ করবো। যেমন- শিক্ষা, জাতীয় দিবস ও আর্ত-মানবতার সেবা
-                    ইত্যাদি।</li>
-                  <li>আমার দ্বারা প্রতিষ্ঠান ও রাষ্ট্র বিরোধী কোনো কাজ হলে মাদরাসা কর্তৃপক্ষ যে ব্যবস্থা বা শাস্তি
-                    প্রদান করবেন তা মেনে নিতে বাধ্য থাকবো।</li>
-                </ol>
-              </div>
+              <ol style="padding: 0 1rem;">
+                <li>মাদরাসার লক্ষ্য-উদ্দেশ্যের বিপরীত কোনো কাজ করবো না।</li>
+                <li>প্রতিষ্ঠানের সকল নিয়ম কানুন অবশ্যই মেনে চলবো।</li>
+                <li>দেশ ও ধর্মের ক্ষতিকর কোনো কাজ করবো না।</li>
+                <li>মাদরাসার সকল কর্মসূচিতে সক্রিয় অংশ গ্রহণ করবো। যেমন- শিক্ষা, জাতীয় দিবস ও আর্ত-মানবতার সেবা
+                  ইত্যাদি।</li>
+                <li>আমার দ্বারা প্রতিষ্ঠান ও রাষ্ট্র বিরোধী কোনো কাজ হলে মাদরাসা কর্তৃপক্ষ যে ব্যবস্থা বা শাস্তি
+                  প্রদান করবেন তা মেনে নিতে বাধ্য থাকবো।</li>
+              </ol>
             </div>
           </div>
           <div class=" modal-footer">
