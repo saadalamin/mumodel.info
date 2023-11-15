@@ -463,7 +463,7 @@
                 </div>
                 <div class="col-6" style="max-width: 450px;">
                   <div>
-                    <label for="admissionName">যে শ্রেণিতে পড়তো<span style="color:red;">*</span></label>
+                    <label for="admissionName">যে শ্রেণিতে<span style="color:red;">*</span></label>
                   </div>
                   <span>: </span><input type="text" class="form-control w-100" placeholder="Class (Previous)" required />
                 </div>
@@ -538,7 +538,7 @@
         alert("Saved to local storage");
       }
       function printForm() {
-        if (!document.getElementById('date').value) {
+        if (!document.getElementById('date').value || !document.getElementById('birthDate').value) {
           document.getElementById('date').type = "text";
           document.getElementById('birthDate').type = "text";
         }
