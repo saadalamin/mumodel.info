@@ -72,19 +72,11 @@ body {
 }
 .__home .__hero-section .__section-one {
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.__home .__hero-section .__section-one p {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
-}
-.__home .__hero-section .__section-one button {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  background-color: #fff;
 }
 .__home .__hero-section .__section-one img.logo {
   max-width: 200px;
@@ -96,19 +88,18 @@ body {
   background-color: #eee;
   border-radius: 0.6rem;
   margin: 1rem 0;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .__home .__hero-section .__section-two {
   padding: 4rem 2rem;
-  background-color: #fff;
 }
 .__home .__hero-section .__section-two .title1,
 .__home .__hero-section .__section-two .title2 {
+  background-color: #fff;
   font-family: "Open Sans", sans-serif;
 }
 .__home .__hero-section .__section-two .lists {
-  border: 1px solid rgba(204, 204, 204, 0.5);
   height: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .__home .__hero-section .__section-two .lists ul {
   border-radius: 0.4rem;

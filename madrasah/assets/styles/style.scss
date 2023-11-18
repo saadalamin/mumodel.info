@@ -78,19 +78,11 @@ body {
   padding-bottom: 0 !important;
   .__section-one {
    width: 100%;
-   padding: 1rem;
+   padding: 2rem 1rem;
    display: flex;
    justify-content: center;
    align-items: center;
-   p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-   }
-   button {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-   }
+   background-color: #fff;
    img.logo {
     max-width: 200px;
    }
@@ -101,19 +93,18 @@ body {
     background-color: #eee;
     border-radius: 0.6rem;
     margin: 1rem 0;
-    box-shadow: $shadow;
    }
   }
   .__section-two {
    padding: 4rem 2rem;
-   background-color: #fff;
    .title1,
    .title2 {
+    background-color: #fff;
     font-family: "Open Sans", sans-serif;
    }
    .lists {
-    border: 1px solid rgba(204, 204, 204, 0.5);
     height: 100%;
+    box-shadow: $shadow;
     ul {
      border-radius: 0.4rem;
      border-top-left-radius: 0rem;
