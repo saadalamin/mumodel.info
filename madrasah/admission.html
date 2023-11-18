@@ -220,11 +220,12 @@
                   <td rowspan="2" style="color: green;">বিভাগ</td>
                   <td>জেনারেল</td>
                   <td class="np" style="padding: 0 0.8rem;">
-                    <input type="radio" name="division" id="divisionGeneral" checked />
+                    <input type="radio" name="General" class="division" />
                   </td>
                   <td rowspan="2" style="color: green;">শ্রেণী</td>
                   <td rowspan="2" class="np">
-                    <select id="admissionClass">
+                    <select id="admissionClassSelect">
+                      <option value="">Select</option>
                       <option value="প্লে">প্লে</option>
                       <option value="নার্সারী">নার্সারী</option>
                       <option value="প্রথম">প্রথম</option>
@@ -238,6 +239,7 @@
                       <option value="নবম">নবম</option>
                       <option value="দশম">দশম</option>
                     </select>
+                    <input type="text" id="admissionClass" placeholder="শ্রেণী" style="display: none;">
                   </td>
                   <td rowspan="2" style="color: green;">শিক্ষাবর্ষ</td>
                   <td rowspan="2" class="np">
@@ -251,7 +253,7 @@
                 <tr>
                   <td>হিফয</td>
                   <td class="np" style="padding: 0 0.8rem;">
-                    <input type="radio" name="division" id="divisionHifz" />
+                    <input type="radio" name="Hifz" class="division" />
                   </td>
                 </tr>
               </table>
@@ -264,7 +266,7 @@
                 করছি যে, আল্লাহ তা’য়ালার সন্তুষ্টি বিধানের লক্ষ্যে ইলমে দ্বীন শিক্ষার মানসে মাদরাসার সকল নিয়ম-কানুন
                 মেনে
                 চলতে বাধ্য থাকবো ইনশাআল্লাহ।<br />
-                <span class="d-block mt-2">অতএব, অনুগ্রহ পূর্বক আমার আবেদন মঞ্জুর করত: ইলমে দ্বীন হাসিল করে যোগ্য আলিম
+                <span class="d-block mt-2">অতএব, অনুগ্রহ পূর্বক আমার আবেদন মঞ্জর করত: ইলমে দ্বীন হাসিল করে যোগ্য আলিম
                   হওয়ার সুযোগ দানে স্যারের
                   মর্জি হয়।</span>
               </p>
@@ -407,7 +409,10 @@
                   </div>
                 </div>
                 <div class="col-6" style="max-width: 450px;">
-
+                  <div>
+                    <label for="admissionName">মোবাইল (মাতা)</label>
+                  </div>
+                  <span>: </span><input type="text" class="form-control w-100" placeholder="Mobile Number (Mother)" />
                 </div>
                 <!--  -->
                 <div class="col-6" style="max-width: 450px;">
@@ -582,6 +587,7 @@
     crossorigin="anonymous"></script>
   <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
   <script>
+    let localStorageName = 'mumodel-madrasah-admissionForm';
     function clearForm() {
       let form = document.querySelector('#admissionForm .form');
       for (let i = 0; i < form.length; i++) {
@@ -590,10 +596,12 @@
         }
       }
       document.getElementById('admissionPhoto').src = "assets/images/admission-photosample.png";
-      document.getElementById('divisionGeneral').checked = true;
       document.getElementById('admissionClass').value = "প্লে";
       document.getElementById('date').value = "";
-      localStorage.removeItem('admissionForm');
+      document.querySelectorAll('.division').forEach(function (e) {
+        e.checked = false;
+      });
+      localStorage.removeItem(localStorageName);
     }
     function saveForm() {
       let form = document.querySelector('#admissionForm .form');
@@ -605,24 +613,32 @@
         }
       }
       data['photo'] = document.getElementById('admissionPhoto').src;
-      data['division'] = document.getElementById('divisionGeneral').checked ? "General" : "Hifz";
+      document.querySelectorAll('.division').forEach(function (e) {
+        if (e.checked) data['division'] = e.name;
+      });
+      document.getElementById('admissionClass').value = document.getElementById('admissionClassSelect').value;
       data['class'] = document.getElementById('admissionClass').value;
       data['date'] = document.getElementById('date').value;
 
-      localStorage.setItem('admissionForm', JSON.stringify(data));
-      alert("Saved to local storage");
+      localStorage.setItem(localStorageName, JSON.stringify(data));
+      alert("Saved to local storage (web browser)");
     }
     function printForm() {
       if (!document.getElementById('date').value || !document.getElementById('birthDate').value) {
         document.getElementById('date').type = "text";
         document.getElementById('birthDate').type = "text";
       }
+      document.getElementById('admissionClassSelect').style.display = "none";
+      document.getElementById('admissionClass').style.display = "block";
+      document.getElementById('admissionClass').value = document.getElementById('admissionClassSelect').value;
       printJS({
         printable: 'admissionForm', type: 'html', ignoreElements: [
           'admissionPhotoUpload', 'printButton'
         ], onPrintDialogClose: function () {
           document.getElementById('date').type = "date";
           document.getElementById('birthDate').type = "date";
+          document.getElementById('admissionClassSelect').style.display = "block";
+          document.getElementById('admissionClass').style.display = "none";
         }, css: [
           'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'
         ]
@@ -643,8 +659,11 @@
     }
     window.onload = function () {
       if (window.location.hash.includes("#admissionForm")) admissionFormOpen();
-      if (localStorage.getItem('admissionForm')) {
-        let data = JSON.parse(localStorage.getItem('admissionForm'));
+      document.querySelectorAll('.division').forEach(function (e) {
+        e.checked = false;
+      });
+      if (localStorage.getItem(localStorageName)) {
+        let data = JSON.parse(localStorage.getItem(localStorageName));
         let form = document.querySelector('#admissionForm .form');
         for (let i = 0; i < form.length; i++) {
           if (form[i].tagName == "INPUT") {
@@ -653,7 +672,10 @@
           }
         }
         document.getElementById('admissionPhoto').src = data['photo'];
-        document.getElementById('divisionGeneral').checked = data['division'] == "General";
+        document.querySelectorAll('.division').forEach(function (e) {
+          if (e.name == data['division']) e.checked = true;
+          else e.checked = false;
+        });
         document.getElementById('admissionClass').value = data['class'];
         document.getElementById('date').value = data['date'];
       }
