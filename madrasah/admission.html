@@ -75,8 +75,11 @@
           <h3>Admission</h3>
           <h5 class="mt-5">Select Your Required Form :</h5>
           <div class="row justify-content-center row-gap-2 my-3">
-            <div class="col-md-6" style="max-width: 300px;">
+            <div class="col-md-6" style="max-width: 200px;">
               <button class="btn btn-primary p-3" onclick="admissionFormOpen()">Admission Form</button>
+            </div>
+            <div class="col-md-6" style="max-width: 200px;">
+              <button class="btn btn-primary p-3" disabled>Download Form</button>
             </div>
           </div>
           <h5 class="mt-5">Admission Fee Payment :</h5>
@@ -93,7 +96,7 @@
       style="z-index: 100000;font-family: 'Open Sans', sans-serif;">
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
-          <div class="modal-header noprint">
+          <div class="modal-header">
             <h1 class="modal-title fs-5" id="modalAdmissionLabel">Admission</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
@@ -505,11 +508,67 @@
               </div>
             </div>
           </div>
-          <div class=" modal-footer">
+          <div class="modal-footer">
             <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button class="btn btn-danger" onclick="clearForm()">Clear</button>
             <button class="btn btn-primary" id="printButton" onclick="printForm()">Print</button>
             <button class="btn btn-success" onclick="saveForm()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalAdmissionSave" tabindex="-1" aria-labelledby="modalAdmissionSaveLabel"
+      aria-hidden="true" style="z-index: 100000;font-family: 'Open Sans', sans-serif;">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalAdmissionSaveLabel">Save</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="accordion" id="accordionSaving">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#saveToBrowser" aria-expanded="true" aria-controls="saveToBrowser">
+                    Save Form To Browser
+                  </button>
+                </h2>
+                <div id="saveToBrowser" class="accordion-collapse collapse show" data-bs-parent="#accordionSaving">
+                  <div class="accordion-body">
+                    <p class="text-muted">The action will save the form to your browser's local storage. You can access
+                      the form later
+                      from the same browser (so don't clear the browser's data). All the data will automatically be
+                      filled in the form.</p>
+                    <button class="btn btn-primary" onclick="saveFormToBrowser()">Save Now</button>
+                    <strong class="result"></strong>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#saveToServer" aria-expanded="false" aria-controls="saveToServer">
+                    Save Form To Server
+                  </button>
+                </h2>
+                <div id="saveToServer" class="accordion-collapse collapse" data-bs-parent="#accordionSaving">
+                  <div class="accordion-body">
+                    <div>
+                      <h5>Enter a mobile number:</h5>
+                      <p class="text-muted">
+                        You can access the form later from any browser by entering the mobile number.
+                      </p>
+                      <input type="number" class="form-control" placeholder="Mobile Number" value="880" oninput="
+                        if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);
+                        this.value = this.value.replace(/[^0-9]/g, '');
+                        " maxlength="14" onkeypress="alert('Coming soon this feauture...')" />
+                      <p class="text-muted mt-2">Press <kbd>Enter</kbd> to confirm.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -588,6 +647,8 @@
   <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
   <script>
     let localStorageName = 'mumodel-madrasah-admissionForm';
+    const modalAdmission = new bootstrap.Modal('#modalAdmission');
+    const modalAdmissionSave = new bootstrap.Modal('#modalAdmissionSave');
     function clearForm() {
       let form = document.querySelector('#admissionForm .form');
       for (let i = 0; i < form.length; i++) {
@@ -604,6 +665,13 @@
       localStorage.removeItem(localStorageName);
     }
     function saveForm() {
+      modalAdmissionSave.show();
+      modalAdmission.hide();
+      document.getElementById("modalAdmissionSave").addEventListener('hidden.bs.modal', function (event) {
+        modalAdmission.show();
+      });
+    }
+    function saveFormToBrowser() {
       let form = document.querySelector('#admissionForm .form');
       let data = {};
       for (let i = 0; i < form.length; i++) {
@@ -645,17 +713,13 @@
       });
     }
     function admissionFormOpen() {
-      let keyboard = true;
-      const myModal = new bootstrap.Modal('#modalAdmission', {
-        keyboard
-      }).show();
+      modalAdmission.show();
       document.getElementById("modalAdmission").addEventListener('hidden.bs.modal', function (event) {
         window.location.hash = "";
       });
       document.getElementById("modalAdmission").addEventListener('shown.bs.modal', function (event) {
         window.location.hash = "#admissionForm";
       });
-      document.getElementById("modalAdmissionLabel").innerHTML = "Admission Form";
     }
     window.onload = function () {
       if (window.location.hash.includes("#admissionForm")) admissionFormOpen();
