@@ -10,7 +10,7 @@ $shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 body {
- background-color: rgba($primary-action, 0.08);
+ background-color: #fff;
  font-family: "Oswald", sans-serif;
  font-weight: 300;
 }
@@ -47,6 +47,7 @@ body {
   padding: 0.2rem 0.8rem;
   margin: 0.2rem 0;
   border: 1px solid rgb(51, 51, 51, 0.3);
+  border-radius: 100rem;
  }
  @media screen and (max-width: 576px) {
   .navbar-brand p {
@@ -56,14 +57,23 @@ body {
 }
 
 .__hero-section {
+ min-height: 70vh;
  background-color: #fff;
  padding: 1rem;
+ padding-bottom: 5rem !important;
  border-radius: 0.5rem;
+ .t {
+  color: #457;
+  border: 1px solid #457;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+ }
 }
 
 .__home {
  .__hero-section {
-  background-color: lighten($primary-action, 57%);
+  background-color: #f5f5f5;
   padding: 0;
   .__section-one {
    width: 100%;
@@ -173,7 +183,10 @@ body {
 }
 
 .__admission {
- p,button {font-family: "Open Sans", sans-serif;}
+ p,
+ button {
+  font-family: "Open Sans", sans-serif;
+ }
 }
 
 .__academics {
@@ -204,9 +217,8 @@ body {
     max-width: 800px;
    }
    .__year-of {
-    background-color: $primary-action;
+    background-color: rgba($primary-action, 0.25);
     text-align: center;
-    color: #fff;
    }
    td,
    th {
@@ -262,6 +274,21 @@ body {
    text-shadow: 1px 1px 1px #333;
    z-index: 2;
   }
+ }
+}
+
+footer {
+ background-color: $primary-action;
+ p,
+ h5,
+ a,
+ span {
+  color: #fff !important;
+ }
+ a,
+ p {
+  font-size: 0.8rem !important;
+  font-family: "Open Sans", sans-serif;
  }
 }
 
