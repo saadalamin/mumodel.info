@@ -68,6 +68,7 @@ body {
 .__home .__hero-section {
   background-color: #f5f5f5;
   padding: 0;
+  padding-bottom: 0 !important;
 }
 .__home .__hero-section .__section-one {
   width: 100%;
@@ -98,11 +99,16 @@ body {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .__home .__hero-section .__section-two {
-  margin-top: 2rem;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+.__home .__hero-section .__section-two .title1,
+.__home .__hero-section .__section-two .title2 {
+  font-family: "Open Sans", sans-serif;
 }
 .__home .__hero-section .__section-two .lists {
+  border: 1px solid rgba(204, 204, 204, 0.5);
   height: 100%;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .__home .__hero-section .__section-two .lists ul {
   border-radius: 0.4rem;
@@ -286,5 +292,8 @@ footer p {
   }
   .__home .__hero-section .__section-one h1 {
     font-size: 1.25rem;
+  }
+  .__home .__hero-section .__section-two {
+    padding: 2rem 1rem;
   }
 }
