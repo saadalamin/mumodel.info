@@ -256,6 +256,10 @@ body {
 footer {
   background-color: #1ab06a;
 }
+footer .__footer-bottom {
+  padding: 2rem 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
 footer p,
 footer h5,
 footer a,

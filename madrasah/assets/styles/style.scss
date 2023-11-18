@@ -279,6 +279,10 @@ body {
 
 footer {
  background-color: $primary-action;
+ .__footer-bottom{
+    padding: 2rem 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+ }
  p,
  h5,
  a,
