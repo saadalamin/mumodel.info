@@ -9,8 +9,8 @@ import {
  ref as dbRef,
  set,
 } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
-const modalAdmission = new bootstrap.Modal("#modalAdmission");
-const modalAdmissionSave = new bootstrap.Modal("#modalAdmissionSave");
+
+const db = getDatabase(app);
 
 document.getElementById("saveFormToServerInput").onkeydown = function (e) {
  if (e.key == "Enter") {
@@ -55,7 +55,7 @@ document.getElementById("saveFormToServerInput").onkeydown = function (e) {
   set(ref, data)
    .then(() => {
     alert("Admission form submitted successfully");
-    modalAdmission.show();
+    modalAdmission.hide();
     modalAdmissionSave.hide();
     clearForm();
    })
