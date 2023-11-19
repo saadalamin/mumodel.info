@@ -62,7 +62,7 @@
   line-height: 1.2rem !important;
  }
 
- #admissionForm .form span {
+ #admissionForm .form span[style="color:red;"] {
   display: none;
  }
 
