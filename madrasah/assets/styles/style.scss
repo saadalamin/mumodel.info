@@ -184,6 +184,9 @@ body {
  button {
   font-family: "Open Sans", sans-serif;
  }
+ .accordion-button:focus, .form-control:focus {
+  box-shadow: none !important;
+ }
 }
 
 .__academics {

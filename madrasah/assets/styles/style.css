@@ -173,6 +173,9 @@ body {
 .__admission button {
   font-family: "Open Sans", sans-serif;
 }
+.__admission .accordion-button:focus, .__admission .form-control:focus {
+  box-shadow: none !important;
+}
 
 .__academics #title {
   font-size: 1.4rem;
