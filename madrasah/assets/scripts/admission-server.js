@@ -51,7 +51,7 @@ document.getElementById("saveFormToServerInput").onkeydown = function (e) {
    return;
   }
 
-  let ref = dbRef(db, "admissions/" + mobile);
+  let ref = dbRef(db, "admissions/applications/" + mobile);
   set(ref, data)
    .then(() => {
     alert("Admission form submitted successfully");

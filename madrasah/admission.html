@@ -73,13 +73,13 @@
       <div class="__hero-section py-5">
         <div class="container text-center">
           <h3>Admission</h3>
-          <h5 class="mt-5">Select Your Required Form :</h5>
+          <h5 class="mt-5">Select Your Required Option :</h5>
           <div class="row justify-content-center row-gap-2 my-3">
             <div class="col-md-6" style="max-width: 200px;">
-              <button class="btn btn-primary p-3" onclick="admissionFormOpen()">Admission Form</button>
+              <button class="btn btn-primary p-3" onclick="admissionFormOpen()">Online Application</button>
             </div>
             <div class="col-md-6" style="max-width: 200px;">
-              <button class="btn btn-secondary p-3" disabled>Download Form</button>
+              <button class="btn btn-secondary p-3" disabled>Find Saved Form</button>
             </div>
           </div>
           <h5 class="mt-5">Admission Fee Payment :</h5>
@@ -91,12 +91,12 @@
           </div>
         </div>
       </div>
-      <div class="modal fade" id="modalAdmission" tabindex="-1" aria-labelledby="modalAdmissionLabel" aria-hidden="true"
+      <div class="modal" id="modalAdmission" tabindex="-1" aria-labelledby="modalAdmissionLabel" aria-hidden="true"
         style="z-index: 100000;font-family: 'Open Sans', sans-serif;">
         <div class="modal-dialog modal-fullscreen">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="modalAdmissionLabel">Admission</h1>
+                <h1 class="modal-title fs-5" id="modalAdmissionLabel">Application Form</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex justify-content-md-center">
@@ -132,7 +132,7 @@
                     <td class="np" style="padding: 0 0.8rem;">
                       <input type="radio" name="General" class="division" />
                     </td>
-                    <td rowspan="2" style="color: green;">শ্রেণী</td>
+                    <td rowspan="2" style="color: green;">শ্রেণি</td>
                     <td rowspan="2" class="np">
                       <select id="admissionClassSelect">
                         <option value="">Select</option>
@@ -246,7 +246,7 @@
                         style="min-width: 90px;" />
                     </div>
                   </div>
-                  <!-- hhhh -->
+                  <!-- -->
                   <div class="col-6" style="max-width: 450px;">
                     <div>
                       <label for="admissionName">বর্তমান ঠিকানা (গ্রাম)<span style="color:red;">*</span></label>

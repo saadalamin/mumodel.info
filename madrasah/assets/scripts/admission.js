@@ -1,4 +1,4 @@
-let localStorageName = "mumodel-madrasah-admissionForm";
+let localStorageName = "mumodel-madrasah-applicationForAdmission";
 const modalAdmission = new bootstrap.Modal("#modalAdmission");
 const modalAdmissionSave = new bootstrap.Modal("#modalAdmissionSave");
 
@@ -43,7 +43,9 @@ function saveFormToBrowser() {
    data[n] = form[i].value;
   }
  }
- if (!document.getElementById("admissionPhoto").src.includes("assets/images/")) {
+ if (
+  !document.getElementById("admissionPhoto").src.includes("assets/images/")
+ ) {
   data["photo"] = document.getElementById("admissionPhoto").src;
  }
  document.querySelectorAll(".division").forEach(function (e) {
@@ -86,7 +88,7 @@ function printForm() {
    document.getElementById("admissionClass").style.display = "none";
   },
   css: [
-   "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+   "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css",
   ],
  });
 }
@@ -96,22 +98,25 @@ function admissionFormOpen() {
  document
   .getElementById("modalAdmission")
   .addEventListener("hidden.bs.modal", function (event) {
-   window.location.hash = "";
+    window.location.hash = "";
   });
  document
   .getElementById("modalAdmission")
   .addEventListener("shown.bs.modal", function (event) {
-   window.location.hash = "#admissionForm";
+   window.location.hash = "#application";
   });
 }
 
 window.onload = function () {
- if (window.location.hash.includes("#admissionForm")) admissionFormOpen();
+ if (window.location.hash.includes("#application")) admissionFormOpen();
  document.querySelectorAll(".division").forEach(function (e) {
   e.checked = false;
  });
  if (localStorage.getItem(localStorageName)) {
   let data = JSON.parse(localStorage.getItem(localStorageName));
+  for (let i in data) {
+   if (data[i] == undefined) data[i] = "";
+  }
   let form = document.querySelector("#admissionForm .form");
   for (let i = 0; i < form.length; i++) {
    if (form[i].tagName == "INPUT") {
