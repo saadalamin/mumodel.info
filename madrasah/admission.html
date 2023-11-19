@@ -62,8 +62,8 @@
               <a class="nav-link" href="notices.html">Notices</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="padding-top: 0.4rem;" href="/"><button
-                  class="btn bg-secondary-subtle btn-sm p-0 px-2">mumodel.info</button></a>
+              <a class="nav-link" style="padding-top: 0.4rem;" href="https://www.sikkhaloy.com/login.aspx"><button
+                  class="btn bg-success-subtle btn-sm p-0 px-2">Login</button></a>
             </li>
           </ul>
         </div>
@@ -96,7 +96,7 @@
         <div class="modal-dialog modal-fullscreen">
           <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modalAdmissionLabel">Application Form</h1>
+              <h1 class="modal-title fs-5" id="modalAdmissionLabel">Application Form</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex justify-content-md-center">
@@ -422,7 +422,7 @@
               <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               <button class="btn btn-danger" onclick="clearForm()">Clear</button>
               <button class="btn btn-primary" id="printButton" onclick="printForm()">Print</button>
-              <button class="btn btn-success" onclick="saveForm()">Save</button>
+              <button class="btn btn-success" onclick="saveForm()">Submit</button>
             </div>
           </div>
         </div>
@@ -432,34 +432,16 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="modalAdmissionSaveLabel">Save</h1>
+              <h1 class="modal-title fs-5" id="modalAdmissionSaveLabel">Application</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="accordion" id="accordionSaving">
                 <div class="accordion-item">
                   <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#saveToBrowser" aria-expanded="true" aria-controls="saveToBrowser">
-                      Save Form To Browser
-                    </button>
-                  </h2>
-                  <div id="saveToBrowser" class="accordion-collapse collapse" data-bs-parent="#accordionSaving">
-                    <div class="accordion-body">
-                      <p class="text-muted">The action will save the form to your browser's local storage. You can
-                        access
-                        the form later
-                        from the same browser (so don't clear the browser's data). All the data will automatically be
-                        filled in the form.</p>
-                      <button class="btn btn-primary" onclick="saveFormToBrowser()">Save Now</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                       data-bs-target="#saveToServer" aria-expanded="false" aria-controls="saveToServer">
-                      Save Form To Server
+                      Submit the Form
                     </button>
                   </h2>
                   <div id="saveToServer" class="accordion-collapse collapse show" data-bs-parent="#accordionSaving">
@@ -475,6 +457,24 @@
                           " maxlength="14" id="saveFormToServerInput" />
                         <p class="text-muted mt-2">Press <code>Enter</code> to confirm.</p>
                       </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#saveToBrowser" aria-expanded="true" aria-controls="saveToBrowser">
+                      Save the Form
+                    </button>
+                  </h2>
+                  <div id="saveToBrowser" class="accordion-collapse collapse" data-bs-parent="#accordionSaving">
+                    <div class="accordion-body">
+                      <p class="text-muted">The action will save the form to your browser's local storage. You can
+                        access
+                        the form later
+                        from the same browser (so don't clear the browser's data). All the data will automatically be
+                        filled in the form.</p>
+                      <button class="btn btn-primary" onclick="saveFormToBrowser()">Save Now</button>
                     </div>
                   </div>
                 </div>
