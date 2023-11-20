@@ -75,12 +75,17 @@
           <h3>Admission</h3>
           <h5 class="mt-5">Select Your Required Option :</h5>
           <div class="d-flex justify-content-center">
-            <div class="row row-gap-2 my-3 w-100" style="max-width: 600px;">
+            <div class="row row-gap-2 my-3 w-100" style="max-width: 550px;">
               <div class="col-md-6">
                 <button class="btn btn-primary p-3" onclick="admissionFormOpen()">Online Application</button>
               </div>
               <div class="col-md-6">
-                <button class="btn btn-secondary p-3" disabled>Terms & Conditions</button>
+                <button class="btn btn-secondary p-3" onclick="
+                    var link = document.createElement('a');
+                    link.href = 'assets/scripts/Form.pdf';
+                    link.download = 'Form.pdf';
+                    link.dispatchEvent(new MouseEvent('click'));
+                  ">Offline Application</button>
               </div>
             </div>
           </div>
