@@ -16,9 +16,9 @@ const alertBox = document.getElementById("alertBox");
 
 document.getElementById("submitFormInput").onkeydown = function (e) {
  if (e.key == "Enter") {
+  alertBox.innerHTML = "<span class='text-muted'>Please wait...</span>";
   const form = document.querySelector("#admissionForm .form");
   let data = {};
-  alertBox.innerHTML = "<span class='text-muted'>Please wait...</span>";
   for (let i = 0; i < form.length; i++) {
    if (form[i].tagName == "INPUT") {
     let n = form[i].placeholder
@@ -45,7 +45,7 @@ document.getElementById("submitFormInput").onkeydown = function (e) {
    "admissionAcademicYear"
   ).value;
   data["date"] = document.getElementById("date").value;
-  //if (!validateForm(data)) return;
+  if (!validateForm(data)) return;
   alertBox.innerHTML = "";
   let mobile =
    "880" + document.querySelector('#submit input[type="number"]').value;
