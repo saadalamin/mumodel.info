@@ -20,7 +20,7 @@ function clearForm() {
  localStorage.removeItem(localStorageName);
 }
 
-function saveForm() {
+function submitAlert() {
  modalAdmissionSave.show();
  modalAdmission.hide();
  document
@@ -33,35 +33,32 @@ function saveForm() {
 function saveFormToBrowser() {
  let form = document.querySelector("#admissionForm .form");
  let data = {};
- for (let i = 0; i < form.length; i++) {
-  if (form[i].tagName == "INPUT") {
-   let n = form[i].placeholder
-    .replace(/ /g, "_")
-    .replace(/'s/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9_]/g, "");
-   data[n] = form[i].value;
+ setTimeout(function () {
+  for (let i = 0; i < form.length; i++) {
+   if (form[i].tagName == "INPUT") {
+    let n = form[i].placeholder
+     .replace(/ /g, "_")
+     .replace(/'s/g, "")
+     .toLowerCase()
+     .replace(/[^a-z0-9_]/g, "");
+    data[n] = form[i].value;
+   }
   }
- }
- if (
-  !document.getElementById("admissionPhoto").src.includes("assets/images/")
- ) {
   data["photo"] = document.getElementById("admissionPhoto").src;
- }
- document.querySelectorAll(".division").forEach(function (e) {
-  if (e.checked) data["division"] = e.name;
- });
- document.getElementById("admissionClass").value = document.getElementById(
-  "admissionClassSelect"
- ).value;
- data["class"] = document.getElementById("admissionClass").value;
- data["academic_year"] = document.getElementById("admissionAcademicYear").value;
- data["date"] = document.getElementById("date").value;
+  document.querySelectorAll(".division").forEach(function (e) {
+   if (e.checked) data["division"] = e.name;
+  });
+  document.getElementById("admissionClass").value = document.getElementById(
+   "admissionClassSelect"
+  ).value;
+  data["class"] = document.getElementById("admissionClass").value;
+  data["academic_year"] = document.getElementById(
+   "admissionAcademicYear"
+  ).value;
+  data["date"] = document.getElementById("date").value;
 
- localStorage.setItem(localStorageName, JSON.stringify(data));
- alert("Saved to local storage (web browser)");
- modalAdmissionSave.hide();
- modalAdmission.show();
+  localStorage.setItem(localStorageName, JSON.stringify(data));
+ }, 10);
 }
 
 function printForm() {
@@ -98,7 +95,7 @@ function admissionFormOpen() {
  document
   .getElementById("modalAdmission")
   .addEventListener("hidden.bs.modal", function (event) {
-    window.location.hash = "";
+   window.location.hash = "";
   });
  document
   .getElementById("modalAdmission")
@@ -128,7 +125,8 @@ window.onload = function () {
     form[i].value = data[n];
    }
   }
-  document.getElementById("admissionPhoto").src = data["photo"];
+  if (data["photo"])
+   document.getElementById("admissionPhoto").src = data["photo"];
   document.querySelectorAll(".division").forEach(function (e) {
    if (e.name == data["division"]) e.checked = true;
    else e.checked = false;

@@ -57,6 +57,7 @@
 }
 
 @media print {
+
  #admissionForm .form {
   row-gap: 0 !important;
   line-height: 1.2rem !important;

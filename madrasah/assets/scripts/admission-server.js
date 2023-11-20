@@ -12,9 +12,10 @@ import {
 
 const db = getDatabase(app);
 
-document.getElementById("saveFormToServerInput").onkeydown = function (e) {
+document.getElementById("submitFormInput").onkeydown = function (e) {
  if (e.key == "Enter") {
-  let form = document.querySelector("#admissionForm .form");
+  const alertBox = document.getElementById("alertBox");
+  const form = document.querySelector("#admissionForm .form");
   let data = {};
   for (let i = 0; i < form.length; i++) {
    if (form[i].tagName == "INPUT") {
@@ -43,11 +44,10 @@ document.getElementById("saveFormToServerInput").onkeydown = function (e) {
   ).value;
   data["date"] = document.getElementById("date").value;
   if (!validateForm(data)) return;
-  let mobile = document.querySelector(
-   '#saveToServer input[type="number"]'
-  ).value;
-  if (mobile.length < 11) {
-   alert("Invalid mobile number");
+  alertBox.innerHTML = "";
+  let mobile = "880"+document.querySelector('#submit input[type="number"]').value;
+  if (mobile.length < 10) {
+   alertBox.innerHTML = "<span style='color: red'>Invalid mobile number</span>";
    return;
   }
 
@@ -98,15 +98,19 @@ function validateForm(data) {
   if (!data[r]) missing.push(r);
  });
  if (missing.length > 0) {
-  alert(
-   "Please fill all the required fields: " +
-    missing
-     .join(", ")
-     .replace(/_/g, " ")
-     .replace(/\w\S*/g, function (txt) {
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-     })
-  );
+  alertBox.innerHTML =
+   "<span style='color: red'>Please fill all the required fields:<br/><ul>" +
+   missing
+    .map(function (m) {
+     return m
+      .replace(/_/g, " ")
+      .replace(/(^\w|\s\w)/g, function (m) {
+       return m.toUpperCase();
+      })
+      .replace(/(^|\n)/g, "$1<li>");
+    })
+    .join("") +
+   "</ul></span>";
   return false;
  }
  return true;
