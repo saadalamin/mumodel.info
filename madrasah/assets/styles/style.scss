@@ -75,7 +75,7 @@ body {
    justify-content: center;
    align-items: center;
    background-color: #eaeaea;
-   border-bottom: 10px solid rgba($primary-action, 0.34);
+   border-bottom: 15px solid rgba($primary-action, 0.34);
    img.logo {
     max-width: 200px;
    }
@@ -337,6 +337,7 @@ footer {
     }
     h1 {
      font-size: 1.25rem;
+     background-color: transparent !important;
     }
    }
    .__section-two {
@@ -352,7 +353,7 @@ footer {
    padding-bottom: 10rem !important;
   }
   .__section-two{
-    margin-top: -8rem !important;
+    margin-top: -9rem !important;
   }
  }
 }

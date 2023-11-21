@@ -69,7 +69,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #eaeaea;
-  border-bottom: 10px solid rgba(26, 176, 106, 0.34);
+  border-bottom: 15px solid rgba(26, 176, 106, 0.34);
 }
 .__home .__hero-section .__section-one img.logo {
   max-width: 200px;
@@ -306,6 +306,7 @@ footer p {
   }
   .__home .__hero-section .__section-one h1 {
     font-size: 1.25rem;
+    background-color: transparent !important;
   }
   .__home .__hero-section .__section-two {
     padding: 2rem 1rem;
@@ -316,6 +317,6 @@ footer p {
     padding-bottom: 10rem !important;
   }
   .__home .__section-two {
-    margin-top: -8rem !important;
+    margin-top: -9rem !important;
   }
 }
