@@ -68,7 +68,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fdfdfd;
+  background-color: #eaeaea;
+  border-bottom: 10px solid rgba(26, 176, 106, 0.34);
 }
 .__home .__hero-section .__section-one img.logo {
   max-width: 200px;
@@ -82,41 +83,52 @@ body {
   margin: 1rem 0;
 }
 .__home .__hero-section .__section-two {
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
+  padding-bottom: 0;
 }
-.__home .__hero-section .__section-two .title1,
-.__home .__hero-section .__section-two .title2 {
+.__home .__hero-section .__section-two .boxes > div .card {
+  height: 100%;
+  padding: 1rem;
+  border: 0;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+.__home .__hero-section .__section-three {
+  padding: 4rem 1rem;
+  margin-top: -2rem;
+}
+.__home .__hero-section .__section-three .title1,
+.__home .__hero-section .__section-three .title2 {
   background-color: #fff;
   font-family: "Open Sans", sans-serif;
 }
-.__home .__hero-section .__section-two .lists {
+.__home .__hero-section .__section-three .lists {
   height: 100%;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
-.__home .__hero-section .__section-two .lists ul {
+.__home .__hero-section .__section-three .lists ul {
   border-radius: 0.4rem;
   border-top-left-radius: 0rem;
   border-top-right-radius: 0rem;
 }
-.__home .__hero-section .__section-two .lists ul li {
+.__home .__hero-section .__section-three .lists ul li {
   position: relative;
   padding-left: 2rem;
 }
-.__home .__hero-section .__section-two .lists ul li.notice {
+.__home .__hero-section .__section-three .lists ul li.notice {
   padding: 0.5rem 0;
 }
 @media screen and (max-width: 576px) {
-  .__home .__hero-section .__section-two .lists ul li.notice {
+  .__home .__hero-section .__section-three .lists ul li.notice {
     padding: 1rem 0;
   }
 }
-.__home .__hero-section .__section-two .lists ul li.notice p {
+.__home .__hero-section .__section-three .lists ul li.notice p {
   margin-bottom: 0.2rem !important;
 }
-.__home .__hero-section .__section-two .lists ul li.notice a > div {
+.__home .__hero-section .__section-three .lists ul li.notice a > div {
   width: fit-content;
 }
-.__home .__hero-section .__section-two .lists ul li:not(.notice)::before {
+.__home .__hero-section .__section-three .lists ul li:not(.notice)::before {
   content: "";
   position: absolute;
   left: 0.5rem;
@@ -125,31 +137,13 @@ body {
   height: 16px;
   margin-top: 0.3rem;
 }
-.__home .__hero-section .__section-two .lists p {
+.__home .__hero-section .__section-three .lists p {
   font-size: 1.1rem;
   font-weight: 300;
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
   margin: 0;
   padding: 1rem;
-}
-.__home .__hero-section .__section-three {
-  width: 100%;
-  background-color: #ccc;
-  color: #fff;
-  padding: 4rem 2rem;
-  margin-top: 2rem;
-  border-radius: 0.7rem;
-  background-image: url("../images/banner.jpg");
-  background-size: cover;
-}
-.__home .__hero-section .__section-three .box {
-  padding: 1rem;
-  border: 1px dashed rgba(26, 176, 106, 0.8);
-  border-radius: 0.4rem;
-}
-.__home .__hero-section .__section-three .box h3 {
-  text-align: center;
 }
 
 .__about .__hero-section div > p {
@@ -287,6 +281,9 @@ footer .__footer-bottom {
   padding: 2rem 0 !important;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
+footer .__footer-links {
+  padding-top: 3.5rem !important;
+}
 footer p,
 footer h5,
 footer a,
@@ -297,10 +294,6 @@ footer a,
 footer p {
   font-size: 0.8rem !important;
   font-family: "Open Sans", sans-serif;
-}
-
-.__footer-links {
-  padding-top: 3.5rem !important;
 }
 
 @media screen and (max-width: 576px) {
@@ -316,5 +309,13 @@ footer p {
   }
   .__home .__hero-section .__section-two {
     padding: 2rem 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .__home .__section-one {
+    padding-bottom: 10rem !important;
+  }
+  .__home .__section-two {
+    margin-top: -8rem !important;
   }
 }
