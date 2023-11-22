@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Open+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Open+Sans:wght@400;500;700&family=Hind+Siliguri:wght@300&display=swap");
 
 $primary-action: #1ab06a;
 $shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
@@ -15,7 +15,22 @@ body {
  font-weight: 300;
 }
 
-/* #fef6c5; */
+.__animation {
+ -webkit-transform: translateY(100px) scale(0.9);
+ transform: translateY(100px) scale(0.9);
+ -webkit-transition-delay: 0.3s;
+ -o-transition-delay: 0.3s;
+ transition-delay: 0.3s;
+ -webkit-transition: 0.4s;
+ -o-transition: 0.4s;
+ opacity: 0.3;
+ transition: all 0.4s, opacity 1s;
+ &.active {
+  opacity: 1;
+  -webkit-transform: translateY(0px) scale(1);
+  transform: translateY(0px) scale(1);
+ }
+}
 
 .__navbar {
  box-shadow: $shadow;
@@ -23,6 +38,7 @@ body {
  background-color: rgba(255, 255, 255, 0.9);
  backdrop-filter: blur(10px);
  -webkit-backdrop-filter: blur(10px);
+ z-index: 99999999;
  .navbar-toggler {
   transform: scale(0.7);
   &:hover,
@@ -77,7 +93,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: #fff;
+   background-color:rgba(254, 246, 195, .306);
    border-bottom: 15px solid rgba($primary-action, 0.34);
    img.logo {
     max-width: 200px;
@@ -149,6 +165,7 @@ body {
        }
        p {
         margin-bottom: 0.2rem !important;
+        font-family: "Hind Siliguri", sans-serif;
        }
        a > div {
         width: fit-content;
@@ -180,13 +197,13 @@ body {
 
 .__about {
  .__hero-section {
-  div > p {
-   font-family: "Open Sans", sans-serif;
-   font-size: 0.9rem;
+  div > p,
+  div > b {
+   font-family: "Hind Siliguri", sans-serif;
+   font-size: 1.1rem;
   }
   b {
    font-weight: 700;
-   font-size: 1rem;
   }
  }
 }
@@ -300,6 +317,7 @@ body {
    li {
     position: relative;
     padding-left: 2rem;
+    font-family: "Hind Siliguri", sans-serif;
     &.notice {
      padding: 0.5rem 0;
      @media screen and (max-width: 576px) {
@@ -361,7 +379,6 @@ footer {
     }
     h1 {
      font-size: 1.25rem;
-     background-color: transparent !important;
     }
    }
    .__section-two {
@@ -369,6 +386,14 @@ footer {
    }
    .__section-three {
     padding: 2rem 1rem;
+   }
+  }
+ }
+ .__about {
+  .__hero-section {
+   div > p,
+   div > b {
+    font-size: 0.85rem;
    }
   }
  }
