@@ -88,7 +88,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(254, 246, 195, 0.306);
+  background-color: rgba(254, 246, 195, 0.08);
   border-bottom: 15px solid rgba(26, 176, 106, 0.34);
 }
 .__home .__hero-section .__section-one img.logo {
