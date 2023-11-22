@@ -68,7 +68,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eaeaea;
+  background-color: #fff;
   border-bottom: 15px solid rgba(26, 176, 106, 0.34);
 }
 .__home .__hero-section .__section-one img.logo {
@@ -112,7 +112,7 @@ body {
   color: #457;
 }
 .__home .__hero-section .__section-three {
-  padding: 4rem 1rem;
+  padding: 8rem 1rem;
   margin-top: -2rem;
 }
 .__home .__hero-section .__section-three .title1,
@@ -330,10 +330,13 @@ footer p {
   .__home .__hero-section .__section-two {
     padding: 2rem 1rem;
   }
+  .__home .__hero-section .__section-three {
+    padding: 2rem 1rem;
+  }
 }
 @media screen and (min-width: 1200px) {
   .__home .__section-one {
-    padding-bottom: 10rem !important;
+    padding-bottom: 9rem !important;
   }
   .__home .__section-two {
     margin-top: -9rem !important;
