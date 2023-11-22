@@ -91,12 +91,33 @@ body {
   .__section-two {
    padding: 1rem 2rem;
    padding-bottom: 0;
-   .boxes > div {
-    .card {
-     height: 100%;
-     padding: 1rem;
-     border: 0;
-     box-shadow: $shadow;
+   .boxes {
+    & > div {
+     .card {
+      height: 100%;
+      padding: 1rem;
+      border: 0;
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: none;
+      &:hover {
+       background-color: #fff;
+       box-shadow: $shadow;
+      }
+      svg {
+       margin: 0 auto;
+       display: block;
+       color: #6c757d;
+      }
+      h5 {
+       text-align: center;
+       margin: 0.5rem 0;
+      }
+      p {
+       color: #457;
+      }
+     }
     }
    }
   }
@@ -352,8 +373,8 @@ footer {
   .__section-one {
    padding-bottom: 10rem !important;
   }
-  .__section-two{
-    margin-top: -9rem !important;
+  .__section-two {
+   margin-top: -9rem !important;
   }
  }
 }

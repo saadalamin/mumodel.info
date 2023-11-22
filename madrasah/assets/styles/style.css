@@ -90,7 +90,26 @@ body {
   height: 100%;
   padding: 1rem;
   border: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: none;
+}
+.__home .__hero-section .__section-two .boxes > div .card:hover {
+  background-color: #fff;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+.__home .__hero-section .__section-two .boxes > div .card svg {
+  margin: 0 auto;
+  display: block;
+  color: #6c757d;
+}
+.__home .__hero-section .__section-two .boxes > div .card h5 {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.__home .__hero-section .__section-two .boxes > div .card p {
+  color: #457;
 }
 .__home .__hero-section .__section-three {
   padding: 4rem 1rem;
