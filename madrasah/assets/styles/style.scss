@@ -292,7 +292,9 @@ body {
   img {
    width: 100%;
    min-height: 100px;
+   aspect-ratio: 16/9;
    border-radius: 0.7rem;
+   background-color: #ccc;
   }
   h4 {
    text-align: center;
