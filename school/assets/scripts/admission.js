@@ -1,4 +1,4 @@
-let localStorageName = "mumodel-mumm-applicationForAdmission";
+let localStorageName = "mumodel-mums-applicationForAdmission";
 const modalAdmission = new bootstrap.Modal("#modalAdmission");
 const modalAdmissionSave = new bootstrap.Modal("#modalAdmissionSave");
 

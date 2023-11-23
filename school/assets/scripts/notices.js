@@ -6,7 +6,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
 
 const db = getDatabase(app);
-const noticeRef = ref(db, "mumm/notices/");
+const noticeRef = ref(db, "mums/notices/");
 
 window.onload = () => {
  let notices = [];

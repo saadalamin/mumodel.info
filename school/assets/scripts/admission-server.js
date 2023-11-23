@@ -57,7 +57,7 @@ document.getElementById("submitFormInput").onkeydown = function (e) {
   let ref = push(dbRef(db, "admissions/apply/"));
   let id = ref.key.replace(/-/g, "").replace(/_/g, "");
   data["id"] = id;
-  set(dbRef(db, "mumm/admissions/apply/" + id), data)
+  set(dbRef(db, "mums/admissions/apply/" + id), data)
    .then(() => {
     document.getElementById("submitFormInput").disabled = true;
     alertBox.innerHTML =
