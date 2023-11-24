@@ -81,10 +81,10 @@
               style="max-width: 550px;">
               <button class="btn btn-primary p-3" onclick="admissionFormOpen()">Online Application</button>
               <button class="btn btn-secondary p-3" onclick="
-                    /*var link = document.createElement('a');
+                    var link = document.createElement('a');
                     link.href = 'assets/scripts/Form.pdf';
                     link.download = 'Form.pdf';
-                    link.dispatchEvent(new MouseEvent('click'));*/
+                    link.dispatchEvent(new MouseEvent('click'));
                   ">Download Form</button>
             </div>
           </div>
@@ -184,7 +184,7 @@
                   আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ।<br />
                   যথাবিহিত সম্মান প্রদর্শন পূর্বক বিনীত নিবেদন এই যে, আমি নিম্ন লিখিত “অঙ্গীকারনামা” পাঠ করত: দৃঢ়
                   অঙ্গীকার
-                  করছি যে, আল্লাহ তা’য়ালার সন্তুষ্টি বিধানের লক্ষ্যে ইলমে দ্বীন শিক্ষার মানসে মাদরাসার সকল নিয়ম-কানুন
+                  করছি যে, আল্লাহ তা’য়ালার সন্তুষ্টি বিধানের লক্ষ্যে ইলমে দ্বীন শিক্ষার মানসে স্কুলের সকল নিয়ম-কানুন
                   মেনে
                   চলতে বাধ্য থাকবো ইনশাআল্লাহ।<br />
                   <span class="d-block mt-2">অতএব, অনুগ্রহ পূর্বক আমার আবেদন মঞ্জর করত: ইলমে দ্বীন হাসিল করে যোগ্য আলিম
@@ -400,17 +400,35 @@
                     <span>: </span><input type="text" class="form-control w-100" placeholder="Class (Previous)"
                       required />
                   </div>
+                  <!--  -->
+                  <div class="w-100 d-flex align-items-center">
+                    <label>এই প্রতিষ্ঠানে অধ্যয়নরত সহোদর ভাই-বোন (যদি থাকে)<span class="ps-2 pe-3">: </span></label>
+                    <div class="col-4" style="max-width: 300px;">
+                      <div>
+                        <label for="admissionName">নাম</label>
+                      </div>
+                      <span class="ps-2">: </span><input type="text" class="form-control w-100"
+                        placeholder="Name (Sibling Student)" />
+                    </div>
+                    <div class="col-4" style="max-width: 300px;">
+                      <div>
+                        <label for="admissionName">শ্রেণি</label>
+                      </div>
+                      <span class="ps-2">: </span><input type="text" class="form-control w-100"
+                        placeholder="Class (Sibling Student)" />
+                    </div>
+                  </div>
                 </form>
                 <div class="d-flex justify-content-center" style="margin-top: 1rem;">
                   <h5 style="padding: 0.5rem; margin: 1rem 0; border: 3px solid green;">অঙ্গীকারনামা</h5>
                 </div>
                 <ol style="padding: 0 1rem;">
-                  <li>মাদরাসার লক্ষ্য-উদ্দেশ্যের বিপরীত কোনো কাজ করবো না।</li>
+                  <li>স্কুলের লক্ষ্য-উদ্দেশ্যের বিপরীত কোনো কাজ করবো না।</li>
                   <li>প্রতিষ্ঠানের সকল নিয়ম কানুন অবশ্যই মেনে চলবো।</li>
                   <li>দেশ ও ধর্মের ক্ষতিকর কোনো কাজ করবো না।</li>
-                  <li>মাদরাসার সকল কর্মসূচিতে সক্রিয় অংশ গ্রহণ করবো। যেমন- শিক্ষা, জাতীয় দিবস ও আর্ত-মানবতার সেবা
+                  <li>স্কুলের সকল কর্মসূচিতে সক্রিয় অংশ গ্রহণ করবো। যেমন- শিক্ষা, জাতীয় দিবস ও আর্ত-মানবতার সেবা
                     ইত্যাদি।</li>
-                  <li>আমার দ্বারা প্রতিষ্ঠান ও রাষ্ট্র বিরোধী কোনো কাজ হলে মাদরাসা কর্তৃপক্ষ যে ব্যবস্থা বা শাস্তি
+                  <li>আমার দ্বারা প্রতিষ্ঠান ও রাষ্ট্র বিরোধী কোনো কাজ হলে স্কুল কর্তৃপক্ষ যে ব্যবস্থা বা শাস্তি
                     প্রদান করবেন তা মেনে নিতে বাধ্য থাকবো।</li>
                 </ol>
                 <div class="d-flex mt-5 justify-content-between">
@@ -541,13 +559,13 @@
     document.getElementById("cpYear").innerHTML = new Date().getFullYear();
   </script>
   <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
-  <!-- <script src="assets/scripts/admission.js"></script>
-    <script type="module" src="assets/scripts/admission-server.js"></script>
-  
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://scripts.sandbox.bka.sh/versions/1.1.0-beta/checkout/bKash-checkout-sandbox.js"></script>
-    <script src="assets/scripts/payment.js"></script> -->
+  <script src="assets/scripts/admission.js"></script>
+  <script type="module" src="assets/scripts/admission-server.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://scripts.sandbox.bka.sh/versions/1.1.0-beta/checkout/bKash-checkout-sandbox.js"></script>
+  <script src="assets/scripts/payment.js"></script>
 
 </body>
 

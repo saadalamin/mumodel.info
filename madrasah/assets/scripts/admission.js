@@ -91,7 +91,6 @@ function printForm() {
 }
 
 function admissionFormOpen() {
- modalAdmission.show();
  document
   .getElementById("modalAdmission")
   .addEventListener("hidden.bs.modal", function (event) {
@@ -102,6 +101,7 @@ function admissionFormOpen() {
   .addEventListener("shown.bs.modal", function (event) {
    window.location.hash = "#application";
   });
+ modalAdmission.show();
 }
 
 window.onload = function () {

@@ -1,0 +1,96 @@
+#admissionForm table {
+ width: 100%;
+ border-collapse: collapse;
+}
+
+#admissionForm td:not(.np) {
+ padding: 0 0.5rem;
+ border: 1px solid #333;
+ text-align: center;
+}
+
+#admissionForm td.np {
+ background: #f5f5f5;
+}
+
+#admissionForm td > input,
+#admissionForm td > select {
+ width: 100%;
+ min-width: 70px;
+ border: none;
+ outline: none;
+ text-align: center;
+ background-color: transparent;
+}
+
+#admissionForm .form input,
+#admissionForm p,
+#admissionForm ol {
+ font-size: 0.85rem;
+}
+
+#admissionForm .form input {
+ max-width: 250px;
+ padding: 0.25rem 0.5rem;
+ margin-left: 0.3rem;
+ margin-right: 0.75rem;
+}
+
+#admissionForm label {
+ font-size: 0.75rem;
+}
+
+#admissionForm .form > div {
+ padding: 0rem;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+}
+
+#admissionForm .form > div > div {
+ flex: 1;
+ display: flex;
+}
+
+#admissionForm .form > div > div:first-child span {
+ margin-left: 0.35rem;
+}
+
+@media print {
+
+ #admissionForm .form {
+  row-gap: 0 !important;
+  line-height: 1.2rem !important;
+ }
+
+ #admissionForm .form span[style="color:red;"] {
+  display: none;
+ }
+
+ #admissionForm .form input,
+ #admissionForm label {
+  font-size: 0.7rem;
+ }
+
+ #admissionForm .form > div {
+  margin: 0;
+  padding-right: 0.8rem !important;
+ }
+
+ #admissionForm .form input {
+  padding: 0 0.3rem !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 3px dotted #333 !important;
+ }
+
+ #admissionForm ::placeholder {
+  color: transparent;
+ }
+}
+
+#admissionForm .signdiv {
+ border-top: 2px dotted #333;
+ margin: 0 0.5rem;
+ padding: 0 1rem;
+}
