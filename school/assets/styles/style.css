@@ -62,6 +62,15 @@ body {
   }
 }
 
+#title {
+  font-size: 1.4rem;
+  width: 100%;
+  background-color: #eee;
+  padding: 2.5rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
 .__hero-section {
   min-height: 70vh;
   background-color: #fff;
@@ -204,14 +213,6 @@ body {
   box-shadow: none !important;
 }
 
-.__academics #title {
-  font-size: 1.4rem;
-  width: 100%;
-  background-color: #eee;
-  padding: 2.5rem;
-  text-align: center;
-  margin-bottom: 0;
-}
 .__academics .__hero-section {
   background-color: #fff;
   padding: 1rem;

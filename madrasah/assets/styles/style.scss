@@ -67,6 +67,14 @@ body {
  }
 }
 
+#title {
+ font-size: 1.4rem;
+ width: 100%;
+ background-color: #eee;
+ padding: 2.5rem;
+ text-align: center;
+ margin-bottom: 0;
+}
 .__hero-section {
  min-height: 70vh;
  background-color: #fff;
@@ -93,7 +101,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color:rgba(254, 246, 195, .08);
+   background-color: rgba(254, 246, 195, 0.08);
    border-bottom: 15px solid rgba($primary-action, 0.34);
    img.logo {
     max-width: 200px;
@@ -213,6 +221,14 @@ body {
  button {
   font-family: "Open Sans", sans-serif;
  }
+ .btn-success {
+  background-color: $primary-action;
+  border-color: $primary-action;
+  &:hover {
+   background-color: darken($primary-action, 10%);
+   border-color: darken($primary-action, 10%);
+  }
+ }
  .accordion-button:focus,
  .form-control:focus {
   box-shadow: none !important;
@@ -220,14 +236,6 @@ body {
 }
 
 .__academics {
- #title {
-  font-size: 1.4rem;
-  width: 100%;
-  background-color: #eee;
-  padding: 2.5rem;
-  text-align: center;
-  margin-bottom: 0;
- }
  .__hero-section {
   background-color: #fff;
   padding: 1rem;

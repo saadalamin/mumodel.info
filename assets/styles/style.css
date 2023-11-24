@@ -79,6 +79,28 @@ body {
   border-radius: 0.5rem;
 }
 
+footer {
+  background-color: #333;
+}
+footer .__footer-bottom {
+  padding: 2rem 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+footer .__footer-links {
+  padding-top: 3.5rem !important;
+}
+footer p,
+footer h5,
+footer a,
+footer span {
+  color: #fff !important;
+}
+footer a,
+footer p {
+  font-size: 0.8rem !important;
+  font-family: "Open Sans", sans-serif;
+}
+
 @media screen and (max-width: 768px) {
   .__navbar a p {
     font-size: 0.8rem;

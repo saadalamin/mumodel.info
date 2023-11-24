@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 
+$primary-action: #333;
+
 * {
  margin: 0;
  padding: 0;
@@ -80,6 +82,28 @@ body {
     border-radius: 0.5rem;
    }
   }
+ }
+}
+
+footer {
+ background-color: $primary-action;
+ .__footer-bottom {
+  padding: 2rem 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+ }
+ .__footer-links {
+  padding-top: 3.5rem !important;
+ }
+ p,
+ h5,
+ a,
+ span {
+  color: #fff !important;
+ }
+ a,
+ p {
+  font-size: 0.8rem !important;
+  font-family: "Open Sans", sans-serif;
  }
 }
 
