@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;700&display=swap");
+
+#admissionForm *, #admissionForm *::before, #admissionForm *::after {
+ font-family: "Noto Serif Bengali", sans-serif !important;
+}
+
 #admissionForm table {
  width: 100%;
  border-collapse: collapse;
@@ -56,6 +62,10 @@
  margin-left: 0.35rem;
 }
 
+#admissionForm ::placeholder {
+ font-family: "Open Sans", sans-serif !important;
+}
+
 @media print {
 
  #admissionForm .form {
@@ -86,6 +96,10 @@
 
  #admissionForm ::placeholder {
   color: transparent;
+ }
+
+ #admissionForm p {
+    line-height: 1.2rem !important;
  }
 }
 
