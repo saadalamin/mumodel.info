@@ -12,6 +12,8 @@
     ...document.querySelectorAll(".__home .__section-two .row>div"),
     ...document.querySelectorAll(".__home .__section-three .row>div"),
     ...document.querySelectorAll(".__facilities .row>div"),
+    ...document.querySelectorAll(".__home .__about-section .row>div>*"),
+
    ];
 
    function fadeIn(elem) {

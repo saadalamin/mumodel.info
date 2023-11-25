@@ -181,6 +181,67 @@
           </div>
         </div>
       </div>
+      <div class="__about-section">
+        <div class="__section-one">
+          <div class="row p-0 m-0">
+            <div class="__video col-md-6 h-auto d-flex justify-content-center align-items-center p-0">
+              <div class="play-btn" onclick="
+              document.querySelector('.play-btn').classList.add('d-none');
+              document.querySelector('.__video .video').classList.remove('d-none');
+              document.querySelector('.__video .video').play();
+              ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
+                  class="bi bi-play-fill" viewBox="0 0 16 16">
+                  <path
+                    d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                </svg>
+              </div>
+              <video class="video d-none" src="assets/videos/intro.mp4" controls></video>
+              <script>
+                document.querySelector('.__video .video').addEventListener('ended', () => {
+                  document.querySelector('.play-btn').classList.remove('d-none');
+                  document.querySelector('.__video .video').classList.add('d-none');
+                });
+                window.addEventListener('scroll', () => {
+                  let container = document.querySelector('.__video');
+                  if (document.querySelector('.__video .video').classList.contains('d-none')) {
+                    return;
+                  }
+                  if (container.getBoundingClientRect().top < -document.querySelector('.__video .video').offsetHeight || container.getBoundingClientRect().bottom > window.innerHeight + document.querySelector('.__video .video').offsetHeight) {
+                    document.querySelector('.__video .video').pause();
+                  } else {
+                    document.querySelector('.__video .video').play();
+                  }
+                });
+              </script>
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-uppercase">About Us</h4>
+              <p class="py-3">
+                গণপ্রজাতন্ত্রী
+                বাংলাদেশ
+                সরকারের ডিজিটাল বাংলাদেশ গড়ার প্রত্যয় সাড়া দিয়ে <b>সৃজনশীলতাই আমাদের লক্ষ্য</b> এই
+                শ্লোগানকে সামনে নিয়ে ২০১৭ সাল
+                থেকে
+                প্রতিষ্ঠা লাভ করে সর্বমহলে সুনামের সাথে পরিচালিত হয়ে আসছে শিক্ষা বান্ধব পরিবেশে আপনাদের হাতের নাগালে
+                সেরা
+                মানের
+                আদর্শ শিক্ষা প্রতিষ্ঠান <b>"মিছবাহুল উম্মাহ মডেল মাদরাসা"</b>
+              </p>
+              <h6 class="text-uppercase mt-4">Our Mission</h6>
+              <ul class="py-3">
+                <li>নৈতিকতা সম্পন্ন আদর্শবান মানুষ তৈরি</li>
+                <li>খাঁটি মুসলিম, প্রকৃত দেশ প্রেমিক ও বিশ্বমানের যোগ্যতা অর্জন</li>
+                <li>আল্লাহর সন্তুষ্টি অর্জন, মানবতার কল্যাণে খিদমত, দুনিয়ার শান্তি ও আখিরাতের মুক্তি</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="__explore-section">
+        <div class="container py-5">
+        </div>
+      </div>
     </div>
     <footer>
       <div class="__footer-links d-flex justify-content-between py-3">

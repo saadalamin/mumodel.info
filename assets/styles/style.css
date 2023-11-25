@@ -15,23 +15,23 @@ body {
   background-color: #fff;
   border-top: 4px solid #00901e;
 }
-.__navbar a {
+.__navbar .navbar-brand {
   color: #00901e;
   font-weight: 700;
   text-transform: uppercase;
 }
-.__navbar a p {
+.__navbar .navbar-brand p {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: 1px solid #00901e;
 }
-.__navbar a span {
+.__navbar .navbar-brand span {
   color: #333;
   font-size: 0.8rem;
   font-weight: 300;
   letter-spacing: 1px;
 }
-.__navbar a:hover, .__navbar a:focus {
+.__navbar .navbar-brand:hover, .__navbar .navbar-brand:focus {
   color: #00901e;
 }
 
@@ -80,7 +80,7 @@ body {
 }
 
 footer {
-  background-color: #333;
+  background-color: #198754;
 }
 footer .__footer-bottom {
   padding: 2rem 0 !important;
@@ -102,10 +102,13 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
-  .__navbar a p {
+  .__navbar {
+    padding: 1rem !important;
+  }
+  .__navbar .navbar-brand p {
     font-size: 0.8rem;
   }
-  .__navbar a span {
+  .__navbar .navbar-brand span {
     font-size: 0.6rem;
   }
   .__home .__hero-section .__main p {

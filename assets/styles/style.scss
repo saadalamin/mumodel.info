@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 
-$primary-action: #333;
+$primary-action: #198754;
 
 * {
  margin: 0;
@@ -17,7 +17,7 @@ body {
 .__navbar {
  background-color: #fff;
  border-top: 4px solid #00901e;
- a {
+ .navbar-brand {
   color: #00901e;
   font-weight: 700;
   text-transform: uppercase;
@@ -109,7 +109,8 @@ footer {
 
 @media screen and (max-width: 768px) {
  .__navbar {
-  a {
+  padding: 1rem !important;
+  .navbar-brand {
    p {
     font-size: 0.8rem;
    }
