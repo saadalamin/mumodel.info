@@ -1,21 +1,21 @@
 User-agent: *
+
 Disallow: *
 Disallow: /*?*
 Disallow: /index.html*?*
-Disallow: /madrasah/*?*
-Disallow: /school/*?*
-Disallow: /madrasah/index.html*?*
-Disallow: /school/index.html*?*
 Allow: /$
 Allow: /index.html
-Allow: /madrasah/*
-Allow: /school/*
-Allow: /updates.html
-Allow: /wisdom.html
-Allow: /contact.html
 Allow: /assets/
 Allow: /sitemap.xml
 Allow: /robots.txt
 Allow: /favicon.ico
+
+Disallow: /madrasah/*?*
+Disallow: /school/*?*
+Disallow: /madrasah/index.html*?*
+Disallow: /school/index.html*?*
+Allow: /madrasah/*
+Allow: /school/*
+
 
 Sitemap: https://www.mumodel.info/sitemap.xml
