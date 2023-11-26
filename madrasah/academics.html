@@ -486,9 +486,10 @@
         document.querySelectorAll('div[data-toggle="tab"]').forEach((el) => {
           el.classList.add("d-none");
         });
-        document.querySelector(`a[href="academics.html?tab=class"]`).classList.add("active");
-        document.querySelector(`div.__class`).classList.remove("d-none");
-        document.getElementById("title").innerHTML = "CLASS";
+        document.querySelector(`a[href="academics.html?tab=information"]`).classList.add("active");
+        document.querySelector(`div.__information`).classList.remove("d-none");
+        document.getElementById("title").innerHTML = "INFORMATION";
+        window.location.search = "tab=information";
       }
     };
     window.onload = tabFunction;
