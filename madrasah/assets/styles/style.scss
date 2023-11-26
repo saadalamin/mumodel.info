@@ -41,19 +41,19 @@ body {
  text-align: center;
  margin-bottom: 0;
 }
+.title {
+ color: #457;
+ border: 1px solid #457;
+ width: fit-content;
+ padding: 0.5rem 1rem;
+ margin: 0 auto;
+}
 .__hero-section {
  min-height: 70vh;
  background-color: #fff;
  padding: 1rem;
  padding-bottom: 5rem !important;
  border-radius: 0.5rem;
- .t {
-  color: #457;
-  border: 1px solid #457;
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  margin: 0 auto;
- }
 }
 
 /*** ALL ***/
@@ -151,8 +151,90 @@ body {
     }
    }
   }
-  .__section-three {
-   padding: 8rem 1rem;
+ }
+ .__about-section {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-top: 5rem;
+  .container {
+   padding: 0;
+   background-color: #fff;
+   background-image: url("../images/about-banner.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   border-radius: 0.8rem;
+   .__section-one {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 0.8rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    & > .row {
+     width: 100%;
+     height: 100%;
+     .__video {
+      min-height: 300px;
+      height: 100%;
+      .play-btn {
+       border: 1px solid #fff;
+       border-radius: 100rem;
+       padding: 1rem;
+       transition: all 0.5s ease-in-out 0s;
+       animation: pulse 1.5s infinite;
+       cursor: pointer;
+       &:hover {
+        background-color: #fff;
+        color: #333;
+       }
+       @keyframes pulse {
+        /* Border animation */
+        0% {
+         transform: scale(1);
+         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+        }
+        70% {
+         transform: scale(1.1);
+         box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+        }
+        100% {
+         transform: scale(1);
+         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+       }
+      }
+      .video {
+       width: 100%;
+       height: auto;
+      }
+     }
+     .__about {
+      background-color: $primary-action;
+      padding: 3rem 2rem;
+      .title {
+       color: #fff;
+       border: 1px solid #fff;
+      }
+      p {
+       font-family: "Hind Siliguri", sans-serif;
+       font-size: 1.1rem;
+       b {
+        font-weight: 700;
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ .__explore-section {
+  width: 100%;
+  background-color: #f5f5f5;
+  .__section-one {
+   padding: 4.5rem 0;
    margin-top: -2rem;
    .title1,
    .title2 {
@@ -203,78 +285,6 @@ body {
     }
    }
   }
- }
- .__about-section {
-  width: 100%;
-  background-color: #fff;
-  background-image: url("../images/about-banner.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  .__section-one {
-   width: 100%;
-   height: 100%;
-   background-color: rgba(0, 0, 0, 0.7);
-   color: #fff;
-   backdrop-filter: blur(5px);
-   -webkit-backdrop-filter: blur(5px);
-   & > .row {
-    width: 100%;
-    height: 100%;
-    & > div {
-     min-height: 300px;
-     height: 100%;
-     .play-btn {
-      border: 1px solid #fff;
-      border-radius: 100rem;
-      padding: 1rem;
-      transition: all 0.5s ease-in-out 0s;
-      animation: pulse 1.5s infinite;
-      cursor: pointer;
-      &:hover {
-       background-color: #fff;
-       color: #333;
-      }
-      @keyframes pulse {
-       /* Border animation */
-       0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-       }
-       70% {
-        transform: scale(1.1);
-        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-       }
-       100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-       }
-      }
-     }
-     .video {
-      width: 100%;
-      height: auto;
-     }
-    }
-    & > div:last-child {
-     background-color: $primary-action;
-     padding: 5rem 2rem;
-     p {
-      font-family: "Hind Siliguri", sans-serif;
-      font-size: 1.1rem;
-      b {
-       font-weight: 700;
-      }
-     }
-    }
-   }
-  }
- }
- .__explore-section {
-  width: 100%;
-  min-height: 350px;
-  background-color: #fff;
  }
 }
 
@@ -469,9 +479,14 @@ footer {
    .__section-two {
     padding: 2rem 1rem;
    }
-   .__section-three {
-    padding: 2rem 1rem;
-   }
+  }
+  .__about-section,
+  .__explore-section {
+   padding: 2rem 1rem;
+  }
+  .__explore-section .__section-one {
+   padding: 0;
+   margin-top: -5rem;
   }
  }
  .__about {

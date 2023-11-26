@@ -34,9 +34,7 @@
     }
    });
   };
-  window.addEventListener("load", function () {
-   $fade();
-  });
+  $fade();
   /*------------------------------------------------
         Home Page Interaction
         -

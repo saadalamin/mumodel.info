@@ -9,11 +9,14 @@
   /////
   const $fade = function () {
    let elementsArray = [
-    ...document.querySelectorAll(".__home .__section-two .row>div"),
-    ...document.querySelectorAll(".__home .__section-three .row>div"),
+    ...document.querySelectorAll(
+     ".__home .__hero-section .__section-two .row>div"
+    ),
+    ...document.querySelectorAll(
+     ".__home .__explore-section .__section-one .row>div"
+    ),
+    document.querySelector(".__home .__about-section .row section"),
     ...document.querySelectorAll(".__facilities .row>div"),
-    ...document.querySelectorAll(".__home .__about-section .row>div>*"),
-
    ];
 
    function fadeIn(elem) {
@@ -36,9 +39,7 @@
     }
    });
   };
-  window.addEventListener("load", function () {
-   $fade();
-  });
+  $fade();
   /*------------------------------------------------
         Home Page Interaction
         -

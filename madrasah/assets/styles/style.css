@@ -38,19 +38,20 @@ body {
   margin-bottom: 0;
 }
 
+.title {
+  color: #457;
+  border: 1px solid #457;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+}
+
 .__hero-section {
   min-height: 70vh;
   background-color: #fff;
   padding: 1rem;
   padding-bottom: 5rem !important;
   border-radius: 0.5rem;
-}
-.__hero-section .t {
-  color: #457;
-  border: 1px solid #457;
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  margin: 0 auto;
 }
 
 /*** ALL ***/
@@ -142,86 +143,39 @@ body {
 .__home .__hero-section .__section-two .boxes > div .card p {
   color: #457;
 }
-.__home .__hero-section .__section-three {
-  padding: 8rem 1rem;
-  margin-top: -2rem;
-}
-.__home .__hero-section .__section-three .title1,
-.__home .__hero-section .__section-three .title2 {
-  background-color: #fff;
-  font-family: "Open Sans", sans-serif;
-}
-.__home .__hero-section .__section-three .lists {
-  height: 100%;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-}
-.__home .__hero-section .__section-three .lists ul {
-  border-radius: 0.4rem;
-  border-top-left-radius: 0rem;
-  border-top-right-radius: 0rem;
-}
-.__home .__hero-section .__section-three .lists ul li {
-  position: relative;
-  padding-left: 2rem;
-}
-.__home .__hero-section .__section-three .lists ul li.notice {
-  padding: 0.5rem 0;
-}
-@media screen and (max-width: 576px) {
-  .__home .__hero-section .__section-three .lists ul li.notice {
-    padding: 1rem 0;
-  }
-}
-.__home .__hero-section .__section-three .lists ul li.notice p {
-  margin-bottom: 0.2rem !important;
-  font-family: "Hind Siliguri", sans-serif;
-}
-.__home .__hero-section .__section-three .lists ul li.notice a > div {
-  width: fit-content;
-}
-.__home .__hero-section .__section-three .lists ul li:not(.notice)::before {
-  content: "";
-  position: absolute;
-  left: 0.5rem;
-  background: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-arrow-right-circle-fill' viewBox='0 0 16 16' fill='grey'%3E%3Cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'%3E%3C/path%3E%3C/svg%3E");
-  width: 16px;
-  height: 16px;
-  margin-top: 0.3rem;
-}
-.__home .__hero-section .__section-three .lists p {
-  font-size: 1.1rem;
-  font-weight: 300;
-  border-top-left-radius: 0.4rem;
-  border-top-right-radius: 0.4rem;
-  margin: 0;
-  padding: 1rem;
-}
 .__home .__about-section {
   width: 100%;
+  background-color: #f5f5f5;
+  padding-top: 5rem;
+}
+.__home .__about-section .container {
+  padding: 0;
   background-color: #fff;
   background-image: url("../images/about-banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  border-radius: 0.8rem;
 }
-.__home .__about-section .__section-one {
+.__home .__about-section .container .__section-one {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
+  border-radius: 0.8rem;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-.__home .__about-section .__section-one > .row {
+.__home .__about-section .container .__section-one > .row {
   width: 100%;
   height: 100%;
 }
-.__home .__about-section .__section-one > .row > div {
+.__home .__about-section .container .__section-one > .row .__video {
   min-height: 300px;
   height: 100%;
 }
-.__home .__about-section .__section-one > .row > div .play-btn {
+.__home .__about-section .container .__section-one > .row .__video .play-btn {
   border: 1px solid #fff;
   border-radius: 100rem;
   padding: 1rem;
@@ -229,7 +183,7 @@ body {
   animation: pulse 1.5s infinite;
   cursor: pointer;
 }
-.__home .__about-section .__section-one > .row > div .play-btn:hover {
+.__home .__about-section .container .__section-one > .row .__video .play-btn:hover {
   background-color: #fff;
   color: #333;
 }
@@ -248,25 +202,82 @@ body {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
-.__home .__about-section .__section-one > .row > div .video {
+.__home .__about-section .container .__section-one > .row .__video .video {
   width: 100%;
   height: auto;
 }
-.__home .__about-section .__section-one > .row > div:last-child {
+.__home .__about-section .container .__section-one > .row .__about {
   background-color: #1ab06a;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
 }
-.__home .__about-section .__section-one > .row > div:last-child p {
+.__home .__about-section .container .__section-one > .row .__about .title {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.__home .__about-section .container .__section-one > .row .__about p {
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1.1rem;
 }
-.__home .__about-section .__section-one > .row > div:last-child p b {
+.__home .__about-section .container .__section-one > .row .__about p b {
   font-weight: 700;
 }
 .__home .__explore-section {
   width: 100%;
-  min-height: 350px;
+  background-color: #f5f5f5;
+}
+.__home .__explore-section .__section-one {
+  padding: 4.5rem 0;
+  margin-top: -2rem;
+}
+.__home .__explore-section .__section-one .title1,
+.__home .__explore-section .__section-one .title2 {
   background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+.__home .__explore-section .__section-one .lists {
+  height: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+.__home .__explore-section .__section-one .lists ul {
+  border-radius: 0.4rem;
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+}
+.__home .__explore-section .__section-one .lists ul li {
+  position: relative;
+  padding-left: 2rem;
+}
+.__home .__explore-section .__section-one .lists ul li.notice {
+  padding: 0.5rem 0;
+}
+@media screen and (max-width: 576px) {
+  .__home .__explore-section .__section-one .lists ul li.notice {
+    padding: 1rem 0;
+  }
+}
+.__home .__explore-section .__section-one .lists ul li.notice p {
+  margin-bottom: 0.2rem !important;
+  font-family: "Hind Siliguri", sans-serif;
+}
+.__home .__explore-section .__section-one .lists ul li.notice a > div {
+  width: fit-content;
+}
+.__home .__explore-section .__section-one .lists ul li:not(.notice)::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  background: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-arrow-right-circle-fill' viewBox='0 0 16 16' fill='grey'%3E%3Cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'%3E%3C/path%3E%3C/svg%3E");
+  width: 16px;
+  height: 16px;
+  margin-top: 0.3rem;
+}
+.__home .__explore-section .__section-one .lists p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  margin: 0;
+  padding: 1rem;
 }
 
 .__about .__hero-section div > p,
@@ -436,8 +447,13 @@ footer p {
   .__home .__hero-section .__section-two {
     padding: 2rem 1rem;
   }
-  .__home .__hero-section .__section-three {
+  .__home .__about-section,
+  .__home .__explore-section {
     padding: 2rem 1rem;
+  }
+  .__home .__explore-section .__section-one {
+    padding: 0;
+    margin-top: -5rem;
   }
   .__about .__hero-section div > p,
   .__about .__hero-section div > b {
