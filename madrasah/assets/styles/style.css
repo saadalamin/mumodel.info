@@ -207,12 +207,14 @@ body {
   height: auto;
 }
 .__home .__about-section .container .__section-one > .row .__about {
-  background-color: #1ab06a;
+  background-color: #fff;
+  color: #333;
   padding: 3rem 2rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .__home .__about-section .container .__section-one > .row .__about .title {
-  color: #fff;
-  border: 1px solid #fff;
+  color: #333;
+  border: 1px solid #333;
 }
 .__home .__about-section .container .__section-one > .row .__about p {
   font-family: "Hind Siliguri", sans-serif;
@@ -278,6 +280,12 @@ body {
   border-top-right-radius: 0.4rem;
   margin: 0;
   padding: 1rem;
+}
+.__home .__explore-section .__section-two {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 0.5rem;
+  padding-bottom: 0.2rem;
 }
 
 .__about .__hero-section div > p,

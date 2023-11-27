@@ -212,11 +212,13 @@ body {
       }
      }
      .__about {
-      background-color: $primary-action;
+      background-color: #fff;
+      color: #333;
       padding: 3rem 2rem;
+      box-shadow: $shadow;
       .title {
-       color: #fff;
-       border: 1px solid #fff;
+       color: #333;
+       border: 1px solid #333;
       }
       p {
        font-family: "Hind Siliguri", sans-serif;
@@ -284,6 +286,12 @@ body {
      padding: 1rem;
     }
    }
+  }
+  .__section-two {
+   box-shadow: $shadow;
+   background-color: #fff;
+   padding: 0.5rem;
+   padding-bottom: 0.2rem;
   }
  }
 }

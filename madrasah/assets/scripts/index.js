@@ -12,10 +12,10 @@
     ...document.querySelectorAll(
      ".__home .__hero-section .__section-two .row>div"
     ),
+    document.querySelector(".__home .__about-section > .container"),
     ...document.querySelectorAll(
      ".__home .__explore-section .__section-one .row>div"
     ),
-    document.querySelector(".__home .__about-section .row section"),
     document.querySelector(".__home .__explore-section .__section-two"),
     ...document.querySelectorAll(".__facilities .row>div"),
    ];
