@@ -91,6 +91,7 @@ Navigation Bar
   margin: 0.2rem 0;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 100rem;
+  margin-top: 0.3rem;
 }
 @media screen and (max-width: 576px) {
   .__navbar .navbar-brand p {
