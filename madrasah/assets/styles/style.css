@@ -11,7 +11,11 @@ body {
   font-weight: 300;
 }
 
-/*** COMMON ***/
+/* 
+---------------------------------------------
+Global Classes
+--------------------------------------------- 
+*/
 .__animation {
   -webkit-transform: translateY(100px) scale(0.9);
   transform: translateY(100px) scale(0.9);
@@ -54,7 +58,11 @@ body {
   border-radius: 0.5rem;
 }
 
-/*** ALL ***/
+/* 
+---------------------------------------------
+Navigation Bar
+--------------------------------------------- 
+*/
 .__navbar {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   padding: 0.7rem 0;
@@ -89,6 +97,11 @@ body {
   }
 }
 
+/* 
+---------------------------------------------
+HOME
+--------------------------------------------- 
+*/
 .__home .__hero-section {
   background-color: #f5f5f5;
   padding: 0;
@@ -288,6 +301,11 @@ body {
   padding-bottom: 0.2rem;
 }
 
+/* 
+---------------------------------------------
+ABOUT
+--------------------------------------------- 
+*/
 .__about .__hero-section div > p,
 .__about .__hero-section div > b {
   font-family: "Hind Siliguri", sans-serif;
@@ -297,6 +315,11 @@ body {
   font-weight: 700;
 }
 
+/* 
+---------------------------------------------
+ADMISSION
+--------------------------------------------- 
+*/
 .__admission p,
 .__admission button {
   font-family: "Open Sans", sans-serif;
@@ -314,6 +337,11 @@ body {
   box-shadow: none !important;
 }
 
+/* 
+---------------------------------------------
+ACADEMICS
+--------------------------------------------- 
+*/
 .__academics .__hero-section {
   background-color: #fff;
   padding: 1rem;
@@ -366,6 +394,11 @@ body {
   background-color: #ccc;
 }
 
+/* 
+---------------------------------------------
+FACILITIES
+--------------------------------------------- 
+*/
 .__facilities .__hero-section img {
   width: 100%;
   min-height: 100px;
@@ -385,6 +418,11 @@ body {
   z-index: 2;
 }
 
+/* 
+---------------------------------------------
+NOTICES
+--------------------------------------------- 
+*/
 .__notices .lists ul {
   border-radius: 0.4rem;
   border-top-left-radius: 0rem;
@@ -419,6 +457,11 @@ body {
   margin-top: 0.3rem;
 }
 
+/* 
+---------------------------------------------
+FOOTER
+--------------------------------------------- 
+*/
 footer {
   background-color: #1ab06a;
 }
@@ -441,6 +484,28 @@ footer p {
   font-family: "Open Sans", sans-serif;
 }
 
+.__b2t {
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10000;
+}
+.__b2t button {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.__b2t button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: #fff;
+}
+
+/* 
+---------------------------------------------
+MEDIA QUERIES
+--------------------------------------------- 
+*/
 @media screen and (max-width: 576px) {
   .__home .__hero-section .__section-one img.logo {
     max-width: 150px;

@@ -44,9 +44,28 @@
   /*------------------------------------------------
         Home Page Interaction
         -
+        @ Bottom to Top Button
         @ 
         ------------------------------------------------
       */
+  //////
+
+  let btn = document.querySelector(".__b2t");
+  if (btn) {
+   window.addEventListener("scroll", () => {
+    if (
+     document.body.scrollTop > 20 ||
+     document.documentElement.scrollTop > 20
+    ) {
+     btn.style.display = "block";
+    } else {
+     btn.style.display = "none";
+    }
+   });
+   btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+   });
+  }
   //////
  };
  window.addEventListener("load", $$$);

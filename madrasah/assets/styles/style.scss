@@ -15,8 +15,11 @@ body {
  font-weight: 300;
 }
 
-/*** COMMON ***/
-
+/* 
+---------------------------------------------
+Global Classes
+--------------------------------------------- 
+*/
 .__animation {
  -webkit-transform: translateY(100px) scale(0.9);
  transform: translateY(100px) scale(0.9);
@@ -56,8 +59,11 @@ body {
  border-radius: 0.5rem;
 }
 
-/*** ALL ***/
-
+/* 
+---------------------------------------------
+Navigation Bar
+--------------------------------------------- 
+*/
 .__navbar {
  box-shadow: $shadow;
  padding: 0.7rem 0;
@@ -93,6 +99,11 @@ body {
  }
 }
 
+/* 
+---------------------------------------------
+HOME
+--------------------------------------------- 
+*/
 .__home {
  .__hero-section {
   background-color: #f5f5f5;
@@ -296,6 +307,11 @@ body {
  }
 }
 
+/* 
+---------------------------------------------
+ABOUT
+--------------------------------------------- 
+*/
 .__about {
  .__hero-section {
   div > p,
@@ -309,6 +325,11 @@ body {
  }
 }
 
+/* 
+---------------------------------------------
+ADMISSION
+--------------------------------------------- 
+*/
 .__admission {
  p,
  button {
@@ -328,6 +349,11 @@ body {
  }
 }
 
+/* 
+---------------------------------------------
+ACADEMICS
+--------------------------------------------- 
+*/
 .__academics {
  .__hero-section {
   background-color: #fff;
@@ -388,6 +414,11 @@ body {
  }
 }
 
+/* 
+---------------------------------------------
+FACILITIES
+--------------------------------------------- 
+*/
 .__facilities {
  .__hero-section {
   img {
@@ -411,6 +442,11 @@ body {
  }
 }
 
+/* 
+---------------------------------------------
+NOTICES
+--------------------------------------------- 
+*/
 .__notices {
  .lists {
   ul {
@@ -447,6 +483,11 @@ body {
  }
 }
 
+/* 
+---------------------------------------------
+FOOTER
+--------------------------------------------- 
+*/
 footer {
  background-color: $primary-action;
  .__footer-bottom {
@@ -468,7 +509,28 @@ footer {
   font-family: "Open Sans", sans-serif;
  }
 }
+.__b2t {
+ display: none;
+ position: fixed;
+ bottom: 1rem;
+ right: 1rem;
+ z-index: 10000;
+ button {
+  box-shadow: $shadow;
+  cursor: pointer;
+  svg {
+   width: 1.1rem;
+   height: 1.1rem;
+   fill: #fff;
+  }
+ }
+}
 
+/* 
+---------------------------------------------
+MEDIA QUERIES
+--------------------------------------------- 
+*/
 @media screen and (max-width: 576px) {
  .__home {
   .__hero-section {
