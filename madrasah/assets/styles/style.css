@@ -40,6 +40,7 @@ Global Classes
   padding: 2.5rem;
   text-align: center;
   margin-bottom: 0;
+  background-image: linear-gradient(90deg, rgba(26, 176, 106, 0.08) 0%, rgba(254, 246, 195, 0.08) 100%);
 }
 
 .title {
@@ -114,6 +115,7 @@ HOME
   justify-content: center;
   align-items: center;
   background-color: rgba(254, 246, 195, 0.08);
+  background-image: linear-gradient(90deg, rgba(26, 176, 106, 0.08) 0%, rgba(254, 246, 195, 0.08) 100%);
   border-bottom: 15px solid rgba(26, 176, 106, 0.34);
 }
 .__home .__hero-section .__section-one img.logo {
@@ -160,6 +162,7 @@ HOME
   width: 100%;
   background-color: #f5f5f5;
   padding-top: 5rem;
+  position: relative;
 }
 .__home .__about-section .container {
   padding: 0;
@@ -168,13 +171,12 @@ HOME
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   border-radius: 0.8rem;
 }
 .__home .__about-section .container .__section-one {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   border-radius: 0.8rem;
   backdrop-filter: blur(5px);
@@ -306,6 +308,9 @@ HOME
 ABOUT
 --------------------------------------------- 
 */
+.__about .__hero-section {
+  background-color: #f5f5f5;
+}
 .__about .__hero-section div > p,
 .__about .__hero-section div > b {
   font-family: "Hind Siliguri", sans-serif;
@@ -520,13 +525,20 @@ MEDIA QUERIES
   .__home .__hero-section .__section-two {
     padding: 2rem 1rem;
   }
-  .__home .__about-section,
+  .__home .__about-section {
+    padding: 0 1rem;
+  }
   .__home .__explore-section {
-    padding: 2rem 1rem;
+    padding: 0 1rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0;
   }
   .__home .__explore-section .__section-one {
     padding: 0;
-    margin-top: -5rem;
+  }
+  .__home .__explore-section .__section-two {
+    margin: 0 !important;
+    margin-top: 2rem !important;
   }
   .__about .__hero-section div > p,
   .__about .__hero-section div > b {
