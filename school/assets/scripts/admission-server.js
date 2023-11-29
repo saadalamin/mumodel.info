@@ -54,10 +54,10 @@ document.getElementById("submitFormInput").onkeydown = function (e) {
    return;
   }
   data["apply_mobile"] = mobile;
-  let ref = push(dbRef(db, "admissions/apply/"));
+  let ref = push(dbRef(db, "websites/admissions/apply/"));
   let id = ref.key.replace(/-/g, "").replace(/_/g, "");
   data["id"] = id;
-  set(dbRef(db, "mums/admissions/apply/" + id), data)
+  set(dbRef(db, "websites/mums/admissions/apply/" + id), data)
    .then(() => {
     document.getElementById("submitFormInput").disabled = true;
     alertBox.innerHTML =
