@@ -140,6 +140,9 @@ body {
 .__home .__hero-section .__section-two .boxes > div .card p {
   color: #457;
 }
+.__home .__hero-section .__section-two .boxes > div .card a {
+  margin-top: auto;
+}
 .__home .__hero-section .__section-three {
   padding: 8rem 1rem;
   margin-top: -2rem;
@@ -198,7 +201,9 @@ body {
 .__about .__hero-section div > p,
 .__about .__hero-section div > b {
   font-family: "Hind Siliguri", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  word-spacing: 0.1rem;
 }
 .__about .__hero-section b {
   font-weight: 700;

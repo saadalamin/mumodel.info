@@ -144,6 +144,9 @@ body {
       p {
        color: #457;
       }
+      a{
+        margin-top: auto;
+      }
      }
     }
    }
@@ -208,7 +211,9 @@ body {
   div > p,
   div > b {
    font-family: "Hind Siliguri", sans-serif;
-   font-size: 1.1rem;
+   font-size: 1rem;
+   line-height: 1.7rem;
+   word-spacing: 0.1rem;
   }
   b {
    font-weight: 700;
