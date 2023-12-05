@@ -70,12 +70,12 @@ Navigation Bar
 --------------------------------------------- 
 */
 .__navbar {
- box-shadow: $shadow;
  padding: 0.7rem 0;
  background-color: rgba(255, 255, 255, 0.9);
  backdrop-filter: blur(10px);
  -webkit-backdrop-filter: blur(10px);
  z-index: 99999999;
+ box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
  .navbar-toggler {
   transform: scale(0.7);
   &:hover,
@@ -125,7 +125,7 @@ HOME
    background-image: linear-gradient(
     90deg,
     rgba($primary-action, 0.08) 0%,
-    rgba(254, 246, 195, 0.08) 100%
+    rgba(254, 246, 195, 0.18) 100%
    );
    border-bottom: 15px solid rgba($primary-action, 0.34);
    img.logo {
@@ -168,6 +168,9 @@ HOME
       }
       p {
        color: #457;
+      }
+      a {
+       margin-top: auto;
       }
      }
     }
@@ -242,9 +245,12 @@ HOME
        color: #333;
        border: 1px solid #333;
       }
-      p {
+      p,
+      li {
        font-family: "Hind Siliguri", sans-serif;
-       font-size: 1.1rem;
+       font-size: 1rem;
+       line-height: 1.7rem;
+       word-spacing: 0.1rem;
        b {
         font-weight: 700;
        }
@@ -328,8 +334,10 @@ ABOUT
   background-color: #f5f5f5;
   div > p,
   div > b {
-   font-family: "Hind Siliguri", sans-serif;
-   font-size: 1.1rem;
+    font-family: "Hind Siliguri", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7rem;
+    word-spacing: 0.1rem;
   }
   b {
    font-weight: 700;

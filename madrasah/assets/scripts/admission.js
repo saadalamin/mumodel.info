@@ -46,7 +46,7 @@ function saveFormToBrowser() {
   }
   data["photo"] = document.getElementById("admissionPhoto").src;
   document.querySelectorAll(".division").forEach(function (e) {
-   if (e.checked) data["division"] = e.name;
+   if (e.checked) data["division"] = e.value;
   });
   document.getElementById("admissionClass").value = document.getElementById(
    "admissionClassSelect"
@@ -128,7 +128,7 @@ window.onload = function () {
   if (data["photo"])
    document.getElementById("admissionPhoto").src = data["photo"];
   document.querySelectorAll(".division").forEach(function (e) {
-   if (e.name == data["division"]) e.checked = true;
+   if (e.value == data["division"]) e.checked = true;
    else e.checked = false;
   });
   document.getElementById("admissionClass").value = data["class"];

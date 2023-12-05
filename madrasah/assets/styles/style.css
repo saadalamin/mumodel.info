@@ -65,12 +65,12 @@ Navigation Bar
 --------------------------------------------- 
 */
 .__navbar {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   padding: 0.7rem 0;
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 99999999;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .__navbar .navbar-toggler {
   transform: scale(0.7);
@@ -116,7 +116,7 @@ HOME
   justify-content: center;
   align-items: center;
   background-color: rgba(254, 246, 195, 0.08);
-  background-image: linear-gradient(90deg, rgba(26, 176, 106, 0.08) 0%, rgba(254, 246, 195, 0.08) 100%);
+  background-image: linear-gradient(90deg, rgba(26, 176, 106, 0.08) 0%, rgba(254, 246, 195, 0.18) 100%);
   border-bottom: 15px solid rgba(26, 176, 106, 0.34);
 }
 .__home .__hero-section .__section-one img.logo {
@@ -158,6 +158,9 @@ HOME
 }
 .__home .__hero-section .__section-two .boxes > div .card p {
   color: #457;
+}
+.__home .__hero-section .__section-two .boxes > div .card a {
+  margin-top: auto;
 }
 .__home .__about-section {
   width: 100%;
@@ -232,11 +235,15 @@ HOME
   color: #333;
   border: 1px solid #333;
 }
-.__home .__about-section .container .__section-one > .row .__about p {
+.__home .__about-section .container .__section-one > .row .__about p,
+.__home .__about-section .container .__section-one > .row .__about li {
   font-family: "Hind Siliguri", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  word-spacing: 0.1rem;
 }
-.__home .__about-section .container .__section-one > .row .__about p b {
+.__home .__about-section .container .__section-one > .row .__about p b,
+.__home .__about-section .container .__section-one > .row .__about li b {
   font-weight: 700;
 }
 .__home .__explore-section {
@@ -315,7 +322,9 @@ ABOUT
 .__about .__hero-section div > p,
 .__about .__hero-section div > b {
   font-family: "Hind Siliguri", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  word-spacing: 0.1rem;
 }
 .__about .__hero-section b {
   font-weight: 700;

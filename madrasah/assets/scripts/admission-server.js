@@ -35,7 +35,7 @@ document.getElementById("submitFormInput").onkeydown = function (e) {
    data["photo"] = document.getElementById("admissionPhoto").src;
   }
   document.querySelectorAll(".division").forEach(function (e) {
-   if (e.checked) data["division"] = e.name;
+   if (e.checked) data["division"] = e.value;
   });
   document.getElementById("admissionClass").value = document.getElementById(
    "admissionClassSelect"
