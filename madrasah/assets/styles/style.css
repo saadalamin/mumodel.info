@@ -7,7 +7,7 @@
 
 body {
   background-color: #fff;
-  font-family: "Oswald", sans-serif;
+  font-family: Oswald, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-weight: 300;
 }
 
@@ -105,7 +105,7 @@ HOME
 --------------------------------------------- 
 */
 .__home .__hero-section {
-  background-color: #f5f5f5;
+  background-color: #fbfbfb;
   padding: 0;
   padding-bottom: 0 !important;
 }
@@ -164,7 +164,7 @@ HOME
 }
 .__home .__about-section {
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #fbfbfb;
   padding-top: 5rem;
   position: relative;
 }
@@ -239,7 +239,7 @@ HOME
 .__home .__about-section .container .__section-one > .row .__about li {
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1rem;
-  line-height: 1.7rem;
+  line-height: 1.5rem;
   word-spacing: 0.1rem;
 }
 .__home .__about-section .container .__section-one > .row .__about p b,
@@ -248,7 +248,7 @@ HOME
 }
 .__home .__explore-section {
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #fbfbfb;
 }
 .__home .__explore-section .__section-one {
   padding: 4.5rem 0;
@@ -317,13 +317,13 @@ ABOUT
 --------------------------------------------- 
 */
 .__about .__hero-section {
-  background-color: #f5f5f5;
+  background-color: #fbfbfb;
 }
 .__about .__hero-section div > p,
 .__about .__hero-section div > b {
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1rem;
-  line-height: 1.7rem;
+  line-height: 1.5rem;
   word-spacing: 0.1rem;
 }
 .__about .__hero-section b {
@@ -478,7 +478,8 @@ FOOTER
 --------------------------------------------- 
 */
 footer {
-  background-color: #1ab06a;
+  background-color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 footer .__footer-bottom {
   padding: 2rem 0 !important;
@@ -491,12 +492,16 @@ footer p,
 footer h5,
 footer a,
 footer span {
-  color: #fff !important;
+  color: #333 !important;
 }
 footer a,
 footer p {
+  color: #6c757d !important;
   font-size: 0.8rem !important;
   font-family: "Open Sans", sans-serif;
+}
+footer a:hover {
+  color: #333 !important;
 }
 
 .__b2t {
@@ -513,6 +518,7 @@ footer p {
 .__b2t button svg {
   width: 1.1rem;
   height: 1.1rem;
+  margin-top: -0.25rem;
   fill: #fff;
 }
 

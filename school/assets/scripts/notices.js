@@ -8,7 +8,7 @@ import {
 const db = getDatabase(app);
 const noticeRef = ref(db, "websites/mums/notices/");
 
-window.onload = () => {
+window.onload = async () => {
  let notices = [];
  function writeNotices() {
   let noticesElm = document.getElementById("notices");
@@ -26,7 +26,7 @@ window.onload = () => {
    noticesElm.innerHTML = snippet;
   }
  }
- onValue(noticeRef, (s) => {
+ await onValue(noticeRef, (s) => {
   notices = s.val();
   if (!notices) notices = [{ title: "No notice found!" }];
   writeNotices();
