@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
 }
 
 body {
@@ -107,7 +108,7 @@ HOME
 .__home .__hero-section {
   background-color: #fbfbfb;
   padding: 0;
-  padding-bottom: 0 !important;
+  padding-bottom: 1rem !important;
 }
 .__home .__hero-section .__section-one {
   width: 100%;
@@ -146,6 +147,7 @@ HOME
 .__home .__hero-section .__section-two .boxes > div .card:hover {
   background-color: #fff;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
 }
 .__home .__hero-section .__section-two .boxes > div .card svg {
   margin: 0 auto;

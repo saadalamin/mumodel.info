@@ -11,6 +11,7 @@ $font: Oswald, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
  margin: 0;
  padding: 0;
  box-sizing: border-box;
+ transition: all 0.4s ease-in-out;
 }
 
 body {
@@ -118,7 +119,7 @@ HOME
  .__hero-section {
   background-color: $whitish;
   padding: 0;
-  padding-bottom: 0 !important;
+  padding-bottom: 1rem !important;
   .__section-one {
    width: 100%;
    padding: 2rem 1rem;
@@ -160,6 +161,7 @@ HOME
       &:hover {
        background-color: #fff;
        box-shadow: $shadow;
+       transform: scale(1.02);
       }
       svg {
        margin: 0 auto;
