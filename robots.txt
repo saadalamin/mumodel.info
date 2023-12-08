@@ -4,6 +4,7 @@ Disallow: *
 Disallow: /*?*
 Disallow: /index.html*?*
 Allow: /$
+
 Allow: /index.html
 Allow: /assets/
 Allow: /sitemap.xml
