@@ -10,10 +10,6 @@ Allow: /sitemap.xml
 Allow: /robots.txt
 Allow: /favicon.ico
 
-Disallow: /madrasah/*?*
-Disallow: /school/*?*
-Disallow: /madrasah/index.html*?*
-Disallow: /school/index.html*?*
 Allow: /madrasah/*
 Allow: /school/*
 
