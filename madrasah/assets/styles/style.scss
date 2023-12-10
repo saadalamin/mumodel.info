@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Open+Sans:wght@400;500;700&family=Hind+Siliguri:wght@300&display=swap");
 
 $primary-action: #1ab06a;
-$whitish: #fbfbfb;
+$whitish: #f7f7f7;
 $shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 $font: Oswald, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
  Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
@@ -60,6 +60,31 @@ Global Classes
  width: fit-content;
  padding: 0.5rem 1rem;
  margin: 0 auto;
+}
+.head-title {
+ position: relative;
+ margin-bottom: 2rem;
+ .head {
+  width: fit-content;
+  background-color: $whitish;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: "Open Sans", sans-serif;
+  svg {
+    fill: $primary-action;
+  }
+ }
+ &::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: $primary-action;
+  top: 1rem;
+  left: 0;
+  z-index: -1;
+ }
 }
 .__hero-section {
  min-height: 70vh;
@@ -251,11 +276,9 @@ HOME
        color: #333;
        border: 1px solid #333;
       }
-      p,
-      li {
-       font-family: "Hind Siliguri", sans-serif;
+      p {
        font-size: 1rem;
-       line-height: 1.5rem;
+       line-height: 1.8rem;
        word-spacing: 0.1rem;
        b {
         font-weight: 700;
@@ -272,6 +295,7 @@ HOME
   .__section-one {
    padding: 4.5rem 0;
    margin-top: -2rem;
+   border-radius: 0.5rem;
    .title1,
    .title2 {
     background-color: #fff;
@@ -322,10 +346,7 @@ HOME
    }
   }
   .__section-two {
-   box-shadow: $shadow;
-   background-color: #fff;
-   padding: 0.5rem;
-   padding-bottom: 0.2rem;
+   padding-top: 2rem;
   }
  }
 }

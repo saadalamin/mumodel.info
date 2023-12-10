@@ -52,6 +52,32 @@ Global Classes
   margin: 0 auto;
 }
 
+.head-title {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.head-title .head {
+  width: fit-content;
+  background-color: #f7f7f7;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: "Open Sans", sans-serif;
+}
+.head-title .head svg {
+  fill: #1ab06a;
+}
+.head-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #1ab06a;
+  top: 1rem;
+  left: 0;
+  z-index: -1;
+}
+
 .__hero-section {
   min-height: 70vh;
   background-color: #fff;
@@ -106,7 +132,7 @@ HOME
 --------------------------------------------- 
 */
 .__home .__hero-section {
-  background-color: #fbfbfb;
+  background-color: #f7f7f7;
   padding: 0;
   padding-bottom: 1rem !important;
 }
@@ -166,7 +192,7 @@ HOME
 }
 .__home .__about-section {
   width: 100%;
-  background-color: #fbfbfb;
+  background-color: #f7f7f7;
   padding-top: 5rem;
   position: relative;
 }
@@ -237,24 +263,22 @@ HOME
   color: #333;
   border: 1px solid #333;
 }
-.__home .__about-section .container .__section-one > .row .__about p,
-.__home .__about-section .container .__section-one > .row .__about li {
-  font-family: "Hind Siliguri", sans-serif;
+.__home .__about-section .container .__section-one > .row .__about p {
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
   word-spacing: 0.1rem;
 }
-.__home .__about-section .container .__section-one > .row .__about p b,
-.__home .__about-section .container .__section-one > .row .__about li b {
+.__home .__about-section .container .__section-one > .row .__about p b {
   font-weight: 700;
 }
 .__home .__explore-section {
   width: 100%;
-  background-color: #fbfbfb;
+  background-color: #f7f7f7;
 }
 .__home .__explore-section .__section-one {
   padding: 4.5rem 0;
   margin-top: -2rem;
+  border-radius: 0.5rem;
 }
 .__home .__explore-section .__section-one .title1,
 .__home .__explore-section .__section-one .title2 {
@@ -307,10 +331,7 @@ HOME
   padding: 1rem;
 }
 .__home .__explore-section .__section-two {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  padding: 0.5rem;
-  padding-bottom: 0.2rem;
+  padding-top: 2rem;
 }
 
 /* 
@@ -319,7 +340,7 @@ ABOUT
 --------------------------------------------- 
 */
 .__about .__hero-section {
-  background-color: #fbfbfb;
+  background-color: #f7f7f7;
 }
 .__about .__hero-section div > p,
 .__about .__hero-section div > b {
