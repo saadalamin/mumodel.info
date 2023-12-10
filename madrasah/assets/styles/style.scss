@@ -71,7 +71,7 @@ Global Classes
   padding: 0 2rem;
   font-family: "Open Sans", sans-serif;
   svg {
-    fill: $primary-action;
+   fill: $primary-action;
   }
  }
  &::before {
@@ -442,12 +442,12 @@ ACADEMICS
     }
    }
    p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 0.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
    }
    span {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 300;
     color: #333;
    }
@@ -630,7 +630,13 @@ MEDIA QUERIES
   }
  }
 }
-
+@media screen and (max-width: 1200px){
+ .navbar {
+  .nav-link {
+   padding: 0.2rem 0.8rem !important;
+  }
+ }
+}
 @media screen and (min-width: 1200px) {
  .__home {
   .__hero-section {

@@ -416,12 +416,12 @@ ACADEMICS
   text-align: center;
 }
 .__academics .__hero-section .__faculty p {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.1rem;
 }
 .__academics .__hero-section .__faculty span {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 300;
   color: #333;
 }
@@ -582,6 +582,11 @@ MEDIA QUERIES
   .__about .__hero-section div > p,
   .__about .__hero-section div > b {
     font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navbar .nav-link {
+    padding: 0.2rem 0.8rem !important;
   }
 }
 @media screen and (min-width: 1200px) {
