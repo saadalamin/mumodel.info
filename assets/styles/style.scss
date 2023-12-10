@@ -43,56 +43,75 @@ body {
  .__hero-section {
   width: 100%;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: #757575;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   padding: 5rem 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: url("../images/hero-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  h1 {
+   font-size: 3rem;
+   font-weight: 600;
+   margin-bottom: 1rem;
+  }
+  p {
+   font-size: 1.2rem;
+   font-weight: 300;
+   margin-bottom: 1rem;
+   line-height: 2.35rem;
+  }
+  p.lead {
+   font-size: 1.5rem;
+   font-weight: 400;
+   margin: 1rem 0;
+  }
+  a {
+   padding: 0.5rem 1rem;
+   border-radius: 0.5rem;
+   font-size: 1.1rem;
+   margin-top: 1rem;
+  }
+ }
+ .__main-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 2rem;
   background-image: url("../images/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  .__main {
-   padding: 4rem 1rem;
+  background-attachment: fixed;
+  p {
+   font-size: 1.2rem;
+   font-weight: 300;
+   margin-bottom: 1rem;
+  }
+  img {
+   height: 200px;
+   width: 200px;
+   object-fit: contain;
+   background-color: #eee;
+   border-radius: 100rem;
+   z-index: 2;
+  }
+  .box {
+   min-width: 300px;
+   background-color: #fbf6d8;
+   padding: 2rem;
+   margin-top: 0.5rem;
+   border-radius: 1.9rem;
+   z-index: 1;
    p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-   }
-   img {
-    height: 200px;
-    width: 200px;
-    object-fit: contain;
-    background-color: #eee;
-    border-radius: 100rem;
-    z-index: 2;
-   }
-   .box {
-    min-width: 300px;
-    background-color: #fbf6d8;
-    padding: 2rem;
-    margin-top: 0.5rem;
-    border-radius: 1.9rem;
-    z-index: 1;
-    p {
-     color: #333;
-     font-weight: 700;
-     font-size: 1.1rem;
-    }
-   }
-   button {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    color: #333;
+    font-weight: 700;
+    font-size: 1.1rem;
    }
   }
- }
-}
-
-footer {
- background-color: #757575;
- .__footer-bottom {
-  padding: 2rem 0 !important;
- }
- span {
-  color: #fff !important;
-  font-size: 0.85rem !important;
+  button {
+   padding: 0.5rem 1rem;
+   border-radius: 0.5rem;
+  }
  }
 }
 
@@ -108,7 +127,7 @@ footer {
    }
   }
  }
- .__home .__hero-section .__main {
+ .__home .__main-section {
   p {
    font-size: 0.8rem;
   }
@@ -124,7 +143,7 @@ footer {
  }
 }
 @media screen and (min-width: 1400px) {
- .__home .__hero-section .__main {
+ .__home .__main-section {
   padding: 8rem 1rem;
   img {
    width: 300px;
