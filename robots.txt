@@ -1,18 +1,17 @@
 User-agent: *
 
 Disallow: *
-Disallow: /*?*
-Disallow: /index.html*?*
-Allow: /$
 
 Allow: /index.html
+Allow: /about.html
+Allow: /search.html
 Allow: /assets/
 Allow: /sitemap.xml
 Allow: /robots.txt
 Allow: /favicon.ico
 
-Allow: /madrasah/*
-Allow: /school/*
+Allow: /madrasah/
+Allow: /school/
 
 
 Sitemap: https://www.mumodel.info/sitemap.xml

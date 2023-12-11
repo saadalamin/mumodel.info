@@ -33,12 +33,6 @@
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://www.mumodel.info/madrasah/index.html</loc>
-       <lastmod>2023-12-07T13:37:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
        <loc>https://www.mumodel.info/madrasah/admission.html</loc>
        <lastmod>2023-12-07T13:37:00+00:00</lastmod>
        <changefreq>daily</changefreq>
@@ -46,12 +40,6 @@
   </url>
   <url>
        <loc>https://www.mumodel.info/madrasah/facilities.html</loc>
-       <lastmod>2023-12-07T13:37:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://www.mumodel.info/madrasah/academics.html</loc>
        <lastmod>2023-12-07T13:37:00+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
@@ -87,12 +75,6 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://www.mumodel.info/school/index.html</loc>
-       <lastmod>2023-12-07T13:37:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
        <loc>https://www.mumodel.info/school/admission.html</loc>
        <lastmod>2023-12-07T13:37:00+00:00</lastmod>
        <changefreq>daily</changefreq>
@@ -100,12 +82,6 @@
   </url>
   <url>
        <loc>https://www.mumodel.info/school/facilities.html</loc>
-       <lastmod>2023-12-07T13:37:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://www.mumodel.info/school/academics.html</loc>
        <lastmod>2023-12-07T13:37:00+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
