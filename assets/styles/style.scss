@@ -16,7 +16,6 @@ body {
 
 .__navbar {
  background-color: #fff;
- border-top: 6px solid $primary-action;
  .navbar-brand {
   color: $primary-action;
   font-weight: 700;
@@ -40,17 +39,19 @@ body {
 }
 
 .__home {
+ background-image: url("../images/banner.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
  .__hero-section {
   width: 100%;
   min-height: 100vh;
-  background-color: #757575;
+  background-color: rgba(34, 32, 32, 0.8);
   color: #fff;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   padding: 5rem 1rem;
-  background-image: url("../images/hero-banner.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   h1 {
    font-size: 3rem;
    font-weight: 600;
@@ -58,9 +59,9 @@ body {
   }
   p {
    font-size: 1.2rem;
-   font-weight: 300;
+   font-weight: 400;
    margin-bottom: 1rem;
-   line-height: 2.35rem;
+   line-height: 2rem;
   }
   p.lead {
    font-size: 1.5rem;
@@ -78,10 +79,6 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 4rem 2rem;
-  background-image: url("../images/banner.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   p {
    font-size: 1.2rem;
    font-weight: 300;
@@ -127,39 +124,66 @@ body {
    }
   }
  }
- .__home .__main-section {
-  p {
-   font-size: 0.8rem;
-  }
-  .box {
-   p {
-    font-size: 0.8rem !important;
+ .__home {
+  .__hero-section {
+   padding: 2rem 1rem;
+   .row {
+    .col-12 {
+     text-align: center;
+    }
+    a.btn {
+     font-size: 0.8rem;
+    }
    }
-   .btn {
+   h1 {
+    font-size: 2rem;
+   }
+   p {
+    font-size: 1rem;
+   }
+   p.lead {
+    font-size: 1.2rem;
+   }
+   a {
+    font-size: 0.9rem;
+   }
+  }
+  .__main-section {
+   p {
     font-size: 0.8rem;
-    padding: 0.3rem 0.5rem;
+   }
+   .box {
+    p {
+     font-size: 0.8rem !important;
+    }
+    .btn {
+     font-size: 0.8rem;
+     padding: 0.3rem 0.5rem;
+    }
    }
   }
  }
 }
 @media screen and (min-width: 1400px) {
- .__home .__main-section {
-  padding: 8rem 1rem;
-  img {
-   width: 300px;
-   height: 300px;
-  }
-  .box {
-   width: 100%;
-   height: 200px;
-   max-width: 400px;
-   border-radius: 0;
-   border-top-right-radius: 1.9rem;
-   border-bottom-right-radius: 1.9rem;
-   margin-left: -60px;
-   margin-top: 0;
-   padding: 2.5rem 1rem 2rem 5rem;
-   z-index: 1;
+ .__home {
+  .__main-section {
+   padding: 8rem 1rem;
+   img {
+    width: 300px;
+    height: 300px;
+   }
+   .box {
+    width: 100%;
+    height: 200px;
+    max-width: 400px;
+    border-radius: 0;
+    border-top-right-radius: 1.9rem;
+    border-bottom-right-radius: 1.9rem;
+    margin-left: -60px;
+    margin-top: 0;
+    padding: 2.5rem 1rem 2rem 5rem;
+    z-index: 1;
+   }
   }
  }
 }
