@@ -23,7 +23,7 @@ window.onload = async () => {
           date &&
           `<span class="d-block bg-danger text-white p-2 py-0" style="border-radius: 0.25rem 0.25rem 0 0;">${month}</span><span class="d-block p-2 py-0">${day}</span><span class="d-block bg-dark-subtle p-2 py-0" style="border-radius: 0 0 0.25rem 0.25rem; font-size: 0.67rem;">${dayName}</span>`
         }</div><div><p class="p-0 lh-1">${
-          n.noticeLink ? `<a href="${n.noticeLink}">${n.title}</a>` : n.title
+          n.noticeLink ? `<a href="search/?notice=${n.id}">${n.title}</a>` : n.title
         }</p><p class="p-0 text-muted" style="font-size: 0.75rem;overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 5;  line-clamp: 5; -webkit-box-orient: vertical;">${
           n.body || ""
         }</p><p class="p-0 text-muted" style="font-size: 0.75rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ccc" class="bi bi-clock-fill" viewBox="0 0 18 18">
