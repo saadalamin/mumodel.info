@@ -212,7 +212,6 @@ HOME
     width: 100%;
     background-color: $whitish;
     padding-top: 5rem;
-    position: relative;
     .container {
       padding: 0;
       background-color: #fff;
@@ -224,7 +223,7 @@ HOME
       .__section-one {
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.1);
         color: #fff;
         border-radius: 0.8rem;
         backdrop-filter: blur(5px);
