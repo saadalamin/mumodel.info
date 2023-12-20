@@ -25,7 +25,7 @@ window.onload = async () => {
         }</div><div><p class="p-0 lh-1">${
           n.noticeLink ? `<a href="search/?notice=${n.id}">${n.title}</a>` : n.title
         }</p><p class="p-0 text-muted" style="font-size: 0.75rem;overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 5;  line-clamp: 5; -webkit-box-orient: vertical;">${
-          n.body || ""
+          n.body?.replaceAll("\\n", '') || ""
         }</p><p class="p-0 text-muted" style="font-size: 0.75rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ccc" class="bi bi-clock-fill" viewBox="0 0 18 18">
     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
   </svg> Published: ${n.publishedDate}</p></div></li>`;
