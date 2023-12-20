@@ -18,10 +18,7 @@ Global Classes
 --------------------------------------------- 
 */
 .__animation {
-  -webkit-transform: translateY(100px) scale(0.9);
   transform: translateY(100px) scale(0.9);
-  -webkit-transition-delay: 0.3s;
-  -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
@@ -30,7 +27,6 @@ Global Classes
 }
 .__animation.active {
   opacity: 1;
-  -webkit-transform: translateY(0px) scale(1);
   transform: translateY(0px) scale(1);
 }
 
@@ -47,6 +43,7 @@ Global Classes
 .title {
   color: #457;
   border: 1px solid #457;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0.5rem 1rem;
   margin: 0 auto;
@@ -57,6 +54,7 @@ Global Classes
   margin-bottom: 2rem;
 }
 .head-title .head {
+  width: -moz-fit-content;
   width: fit-content;
   background-color: #f7f7f7;
   margin: 0 auto;
@@ -311,6 +309,7 @@ HOME
   font-family: "Hind Siliguri", sans-serif;
 }
 .__home .__explore-section .__section-one .lists ul li.notice a > div {
+  width: -moz-fit-content;
   width: fit-content;
 }
 .__home .__explore-section .__section-one .lists ul li:not(.notice)::before {
@@ -448,6 +447,7 @@ FACILITIES
   text-align: center;
   padding: 1rem;
   color: #fff;
+  width: -moz-fit-content;
   width: fit-content;
   z-index: 2;
   margin: 0 auto;
@@ -483,6 +483,7 @@ NOTICES
   margin-bottom: 0.2rem !important;
 }
 .__notices .lists ul li.notice a > div {
+  width: -moz-fit-content;
   width: fit-content;
 }
 .__notices .lists ul li:not(.notice)::before {

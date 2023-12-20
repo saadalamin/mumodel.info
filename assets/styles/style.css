@@ -35,7 +35,7 @@ body {
 }
 
 .__home {
-  background-image: url("../images/banner.jpg");
+  background-image: url("../images/hero-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -85,7 +85,8 @@ body {
 .__home .__main-section img {
   height: 200px;
   width: 200px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   background-color: #eee;
   border-radius: 100rem;
   z-index: 2;
