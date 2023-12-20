@@ -76,6 +76,9 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 4rem 2rem;
+  background-image: url("../images/hero-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .__home .__main-section p {
   font-size: 1.2rem;
