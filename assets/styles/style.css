@@ -13,6 +13,7 @@ body {
 
 .__navbar {
   background-color: #fff;
+  border-bottom: 4px solid #4a4f53;
 }
 .__navbar .navbar-brand {
   color: #4a4f53;

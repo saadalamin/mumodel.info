@@ -16,6 +16,7 @@ body {
 
 .__navbar {
   background-color: #fff;
+  border-bottom: 4px solid $primary-action;
   .navbar-brand {
     color: $primary-action;
     font-weight: 700;
