@@ -111,7 +111,7 @@ window.onload = function () {
   });
   document.getElementById("date").valueAsDate = new Date();
   document.getElementById("admissionAcademicYear").value =
-    new Date().getFullYear() + 1 + " - " + (new Date().getFullYear() + 2);
+    new Date().getFullYear() + 1;
   if (localStorage.getItem(localStorageName)) {
     let data = JSON.parse(localStorage.getItem(localStorageName));
     for (let i in data) {
