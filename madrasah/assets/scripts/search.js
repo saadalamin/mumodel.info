@@ -36,7 +36,7 @@ window.onload = async () => {
           <div>
             <p class="card-text mt-3" style="font-family: ${
               post.body.match(/[^\x00-\x7F]/) ? "'Hind Siliguri'" : "'Roboto'"
-            }, sans-serif; line-height: 2">${post.body?.replaceAll("\\n", "<br/>")}</p>
+            }, sans-serif; line-height: 1.85">${post.body?.replaceAll("\\n", "<br/>")}</p>
 
             <div class="d-flex flex-wrap gap-2 mt-5">
                 ${
@@ -44,7 +44,7 @@ window.onload = async () => {
                     ? post.tags
                         .map(
                           (tag) =>
-                            `<a href="/search?tag=${tag}" class="btn btn-sm btn-outline-primary" style="font-family: 'Open Sans', sans-serif";>${tag}</a>`
+                            `<a href="/search?tag=${tag}" class="btn btn-sm btn-light border" style="font-family: 'Open Sans', sans-serif";>${tag}</a>`
                         )
                         .join("")
                     : ""
@@ -75,7 +75,11 @@ window.onload = async () => {
           <p class="p-0 text-muted" style="font-size: 0.8rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ccc" class="bi bi-clock-fill" viewBox="0 0 18 18">
       <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
     </svg> Published: ${n.publishedDate}</p>
-          <p class="py-2">${n.body?.replaceAll("\\n", "<br/>") || ""}</p>
+          <p class="py-3" style="font-family: ${
+            n.body && n.body.match(/[^\x00-\x7F]/)
+              ? "'Hind Siliguri', sans-serif; font-weight: 500"
+              : "'Roboto', sans-serif;"
+          }">${n.body?.replaceAll("\\n", "<br/>") || ""}</p>
           <embed src="${n.noticeLink}" width="100%" ${
           n.noticeLink.match(/\.pdf$/) ? 'height="500px"' : ""
         }
