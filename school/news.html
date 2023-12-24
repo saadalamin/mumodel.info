@@ -75,8 +75,16 @@
     </nav>
     <div class="__news">
       <div class="__hero-section">
-        <div class="container py-5">
-          NEWS
+        <div class="container px-0">
+          <div class="lists">
+            <div class="card h-100 border-0">
+              <div class="card-body">
+                <h5>News</h5>
+                <hr class="mb-5" />
+                <div class="row row-gap-4" id="posts"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -91,12 +99,12 @@
                   Education</a>
               </li>
               <li class="nav-item mb-2">
-                <a class="nav-link p-0" href="http://www.dme.gov.bd/" target="_blank">Directorate of Madrasha
-                  Education</a>
+                <a class="nav-link p-0" href="http://www.dshe.gov.bd/" target="_blank">Directorate of Secondary and
+                  Higher Education</a>
               </li>
               <li class="nav-item mb-2">
-                <a class="nav-link p-0" href="https://www.bmeb.gov.bd" target="_blank">Bangladesh Madrasah
-                  Education Board
+                <a class="nav-link p-0" href="http://www.educationboard.gov.bd/" target="_blank">Bangladesh Education
+                  Board
                 </a>
               </li>
               <li class="nav-item mb-2">
@@ -106,7 +114,6 @@
               </li>
             </ul>
           </div>
-
           <div class="col-6 col-md-2 mb-3 ms-auto">
             <ul class="nav flex-column mt-4">
               <li class="nav-item mb-2">
@@ -131,9 +138,9 @@
             <h5>Contact</h5>
             <div class="mt-4">
               <p>
-                (Madrasah Branch) Molla Tower, 42, Baniarbag, Matuail South
-                para, Jatrabari, Dhaka-1362<br />
-                Mobile : 01787070380, 01864116188
+                (School Branch) 554, Donia, Goalbarimor, Kadomtoli,
+                Dhaka-1236<br />
+                Mobile : 01708420067, 01608883176
               </p>
             </div>
           </div>
@@ -141,7 +148,7 @@
       </div>
       <div class="__footer-bottom d-flex flex-wrap justify-content-between align-items-center py-3">
         <div class="col-md-4 d-flex align-items-center">
-          <span class="ms-5">© <span id="cpYear">2023</span> Misbahul Ummah Model Madrasah</span>
+          <span class="ms-5">© <span id="cpYear">2023</span> Misbahul Ummah Model School</span>
         </div>
       </div>
     </footer>
@@ -153,6 +160,7 @@
   <script>
     document.getElementById("cpYear").innerHTML = new Date().getFullYear();
   </script>
+  <script type="module" src="assets/scripts/news.js"></script>
 </body>
 
 </html>

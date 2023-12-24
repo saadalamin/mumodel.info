@@ -74,7 +74,19 @@
       </div>
     </nav>
     <div class="__notices">
-      <div class="__hero-section"></div>
+      <div class="__hero-section">
+        <div class="container px-0">
+          <div class="lists">
+            <div class="card h-100 border-0">
+              <div class="card-body">
+                <h5>Notices</h5>
+                <hr class="mb-1" />
+                <ul class="list-group list-group-flush" id="notices"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <footer>
       <div class="__footer-links d-flex justify-content-between py-3">
@@ -148,6 +160,7 @@
   <script>
     document.getElementById("cpYear").innerHTML = new Date().getFullYear();
   </script>
+  <script type="module" src="assets/scripts/notices.js"></script>
 </body>
 
 </html>
