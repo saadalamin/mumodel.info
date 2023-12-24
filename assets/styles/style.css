@@ -131,27 +131,26 @@ main {
   font-size: 0.85rem !important;
 }
 
+.__footer .__top {
+  text-align: center;
+}
 .__footer .__top p {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
-.__footer .__top ul {
-  list-style: none;
-}
 .__footer .__top ul li {
-  font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
 .__footer .__top ul li a {
-  color: #60646a;
+  color: #8996a0;
   font-weight: 400;
   text-decoration: none;
   font-size: 1.1rem;
+  padding-bottom: 0.2rem;
 }
 .__footer .__top ul li a:hover, .__footer .__top ul li a:focus {
   color: #777;
-  padding-bottom: 0.2rem;
   border-bottom: 1px solid #777;
 }
 .__footer .__bottom p {

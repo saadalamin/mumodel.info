@@ -143,25 +143,24 @@ main {
 
 .__footer {
  .__top {
+  text-align: center;
   p {
    font-size: 1.1rem;
    font-weight: 600;
    margin-bottom: 1rem;
   }
   ul {
-   list-style: none;
    li {
-    font-size: 0.9rem;
     margin-bottom: 0.5rem;
     a {
-     color: #60646a;
+     color: #8996a0;
      font-weight: 400;
      text-decoration: none;
      font-size: 1.1rem;
+      padding-bottom: 0.2rem;
      &:hover,
      &:focus {
       color: #777;
-      padding-bottom: 0.2rem;
       border-bottom: 1px solid #777;
      }
     }
