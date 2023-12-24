@@ -53,7 +53,7 @@ main {
   color: #333;
   padding: 1rem;
   .row {
-   animation: g 0.5s linear forwards;
+   animation: g 0.3s ease-in-out;
   }
   @keyframes g {
    0% {
