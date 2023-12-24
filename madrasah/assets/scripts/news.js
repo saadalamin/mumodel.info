@@ -15,8 +15,8 @@ window.onload = async () => {
     if (postsElm) {
       let snippet = "";
       Object.entries(posts).map(([p, n]) => {
-        snippet += `<div class="col-md-6 col-lg-4"><div class="card bg-light post h-100">
-        <div class="card-img-top bg-primary-subtle" style="min-height: 200px;">
+        snippet += `<div class="col-md-6 col-lg-4 col-xxl-3"><div class="card bg-white post h-100">
+        <div class="card-img-top bg-dark-subtle" style="min-height: 200px;">
         ${
           n.picture
             ? `<img class="card-img-top" src="${n.picture}" style="height: 100%; object-fit: cover;">`

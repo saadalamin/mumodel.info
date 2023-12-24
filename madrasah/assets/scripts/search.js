@@ -25,7 +25,7 @@ window.onload = async () => {
         <p class="card-text text-muted mb-4" style="font-family: 'Open Sans', sans-serif; font-size: 0.8rem">Created on ${
           post.date
         }</p>
-        <div class="card-img-top bg-primary-subtle" style="min-height: 200px;">
+        <div class="card-img-top bg-dark-subtle" style="min-height: 300px;">
         ${
           post.picture
             ? `<img class="card-img-top" src="${post.picture}" style="height: 100%; object-fit: cover;">`
