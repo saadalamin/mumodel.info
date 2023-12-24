@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=PT+Serif:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +11,15 @@ body {
   font-weight: 300;
 }
 
+main {
+  background-image: url("../images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .__navbar {
-  background-color: #fff;
-  border-bottom: 4px solid #4a4f53;
+  background-color: transparent;
 }
 .__navbar .navbar-brand {
   color: #4a4f53;
@@ -35,29 +41,21 @@ body {
   color: #4a4f53;
 }
 
-.__home {
-  background-image: url("../images/hero-banner.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
 .__home .__hero-section {
   width: 100%;
-  min-height: 100vh;
-  background-color: rgba(34, 32, 32, 0.8);
-  color: #fff;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  padding: 5rem 1rem;
+  min-height: 90vh;
+  background: linear-gradient(180deg, hsla(0, 0%, 88%, 0) 29.9%, #f3f4f4);
+  color: #333;
+  padding: 1rem;
 }
 .__home .__hero-section h1 {
-  font-size: 3rem;
+  font-family: "PT Serif", serif;
+  font-size: 4.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 .__home .__hero-section p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 1rem;
   line-height: 2rem;
@@ -77,40 +75,89 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 4rem 2rem;
-  background-image: url("../images/hero-banner.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f3f4f4;
+  margin: 0;
 }
-.__home .__main-section p {
+.__home .__main-section .__top h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: "PT Serif", serif;
+}
+.__home .__main-section .__top p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #54585c;
+}
+.__home .__main-section .__bottom p {
   font-size: 1.2rem;
   font-weight: 300;
   margin-bottom: 1rem;
 }
-.__home .__main-section img {
+.__home .__main-section .__bottom img {
   height: 200px;
   width: 200px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   background-color: #eee;
+  border: 1px solid rgba(74, 79, 83, 0.1);
   border-radius: 100rem;
   z-index: 2;
 }
-.__home .__main-section .box {
-  min-width: 300px;
-  background-color: #fbf6d8;
+.__home .__main-section .__bottom .box {
+  width: 100%;
+  background-color: rgba(74, 79, 83, 0.1);
   padding: 2rem;
   margin-top: 0.5rem;
   border-radius: 1.9rem;
   z-index: 1;
 }
-.__home .__main-section .box p {
+.__home .__main-section .__bottom .box p {
   color: #333;
   font-weight: 700;
   font-size: 1.1rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-family: "PT Serif", serif;
 }
-.__home .__main-section button {
+.__home .__main-section .__bottom .box span {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #333;
+}
+.__home .__main-section .__bottom .box a {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+  font-size: 0.85rem !important;
+}
+
+.__footer .__top p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.__footer .__top ul {
+  list-style: none;
+}
+.__footer .__top ul li {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.__footer .__top ul li a {
+  color: #60646a;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.__footer .__top ul li a:hover, .__footer .__top ul li a:focus {
+  color: #777;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #777;
+}
+.__footer .__bottom p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -133,10 +180,11 @@ body {
     font-size: 0.8rem;
   }
   .__home .__hero-section h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .__home .__hero-section p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
   }
   .__home .__hero-section p.lead {
     font-size: 1.2rem;
@@ -144,13 +192,19 @@ body {
   .__home .__hero-section a {
     font-size: 0.9rem;
   }
-  .__home .__main-section p {
+  .__home .__main-section .__top h1 {
+    font-size: 1.8rem;
+  }
+  .__home .__main-section .__top p {
+    font-size: 0.9rem;
+  }
+  .__home .__main-section .__bottom p {
     font-size: 0.8rem;
   }
-  .__home .__main-section .box p {
+  .__home .__main-section .__bottom .box p {
     font-size: 0.8rem !important;
   }
-  .__home .__main-section .box .btn {
+  .__home .__main-section .__bottom .box .btn {
     font-size: 0.8rem;
     padding: 0.3rem 0.5rem;
   }
@@ -159,13 +213,12 @@ body {
   .__home .__main-section {
     padding: 8rem 1rem;
   }
-  .__home .__main-section img {
+  .__home .__main-section .__bottom img {
     width: 300px;
     height: 300px;
   }
-  .__home .__main-section .box {
+  .__home .__main-section .__bottom .box {
     width: 100%;
-    height: 200px;
     max-width: 400px;
     border-radius: 0;
     border-top-right-radius: 1.9rem;
