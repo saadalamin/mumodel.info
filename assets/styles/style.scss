@@ -190,7 +190,7 @@ main {
 
 @media screen and (max-width: 768px) {
  .__navbar {
-  padding: 1rem !important;
+  padding: 0.5rem 1rem !important;
   .navbar-brand {
    p {
     font-size: 0.8rem;
@@ -240,7 +240,10 @@ main {
     }
     .box {
      p {
-      font-size: 0.8rem !important;
+      font-size: 1rem !important;
+     }
+     span {
+      font-size: 0.75rem;
      }
      .btn {
       font-size: 0.8rem;

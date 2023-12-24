@@ -173,7 +173,7 @@ main {
 
 @media screen and (max-width: 768px) {
   .__navbar {
-    padding: 1rem !important;
+    padding: 0.5rem 1rem !important;
   }
   .__navbar .navbar-brand p {
     font-size: 0.8rem;
@@ -213,7 +213,10 @@ main {
     font-size: 0.8rem;
   }
   .__home .__main-section .__bottom .box p {
-    font-size: 0.8rem !important;
+    font-size: 1rem !important;
+  }
+  .__home .__main-section .__bottom .box span {
+    font-size: 0.75rem;
   }
   .__home .__main-section .__bottom .box .btn {
     font-size: 0.8rem;
