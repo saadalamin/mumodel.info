@@ -48,6 +48,17 @@ main {
   color: #333;
   padding: 1rem;
 }
+.__home .__hero-section .row {
+  animation: g 0.5s linear forwards;
+}
+@keyframes g {
+  0% {
+    margin-bottom: -100px;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
 .__home .__hero-section h1 {
   font-family: "PT Serif", serif;
   font-size: 4.5rem;
