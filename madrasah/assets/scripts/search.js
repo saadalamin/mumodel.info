@@ -80,10 +80,10 @@ window.onload = async () => {
               ? "'Hind Siliguri', sans-serif; font-weight: 500"
               : "'Roboto', sans-serif;"
           }">${n.body?.replaceAll("\\n", "<br/>") || ""}</p>
-          <embed src="${n.noticeLink}" width="100%" ${
+          ${n.noticeLink ? `<embed src="${n.noticeLink}" width="100%" ${
           n.noticeLink.match(/\.pdf$/) ? 'height="500px"' : ""
         }
-           style="object-fit: cover; object-position: center center; border: 1px dashed grey; margin-bottom: 1rem; display: block;">
+           style="object-fit: cover; object-position: center center; border: 1px dashed grey; margin-bottom: 1rem; display: block;"/>`:""}
           </div>`;
       }
     });
